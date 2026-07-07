@@ -1,0 +1,1750 @@
+{
+  "requirements": [
+    {
+      "reqid": "EUL-006C",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy c1xc1Transpose = 1.0 & c2xc2Transpose = 1.0 & c3xc3Transpose = 1.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "c1xc1Transpose",
+          "c2xc2Transpose",
+          "c3xc3Transpose"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(c1xc1Transpose = 1.0 & c2xc2Transpose = 1.0 & c3xc3Transpose = 1.0)",
+        "responseTextRange": [
+          19,
+          92
+        ],
+        "diagramVariables": "Response = <b><i>(c1xc1Transpose = 1.0 & c2xc2Transpose = 1.0 & c3xc3Transpose = 1.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(c1xc1Transpose = 1.0 & c2xc2Transpose = 1.0 & c3xc3Transpose = 1.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(c1xc1Transpose = 1.0 & c2xc2Transpose = 1.0 & c3xc3Transpose = 1.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "post_condition_unexp_ft": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "post_condition_unexp_pctl": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "post_condition_SMV_pt": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "post_condition_SMV_ft": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "post_condition_MLTL_ft": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "post_condition_PRISM_pctl": "(((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "ft": "(LAST V (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0)))",
+        "pt": "(H (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0)))",
+        "pctl": "(P>=1[(G (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0)))])",
+        "ptExpanded": "(((H (c1xc1Transpose = 1.0)) & (H (c2xc2Transpose = 1.0))) & (H (c3xc3Transpose = 1.0)))",
+        "CoCoSpecCode": "((H((c1xc1Transpose = 1.0)) and H((c2xc2Transpose = 1.0))) and H((c3xc3Transpose = 1.0)))",
+        "ftExpanded": "(LAST V (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0)))",
+        "pctlExpanded": "(P>=1[(G (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0)))])",
+        "ftInfAUExpanded": "(G (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((c1xc1Transpose = 1.0) & (c2xc2Transpose = 1.0)) & (c3xc3Transpose = 1.0))",
+        "R2U2Code": "(((c1xc1Transpose == 1.0) && (c2xc2Transpose == 1.0)) && (c3xc3Transpose == 1.0))",
+        "component": "Euler"
+      },
+      "_id": "6sk9rbsp90o6e5wlkisdch"
+    },
+    {
+      "reqid": "EUL-006D",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy c1xc2Transpose = 0.0 & c1xc3Transpose = 0.0 & c2xc3Transpose = 0.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "c1xc2Transpose",
+          "c1xc3Transpose",
+          "c2xc3Transpose"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(c1xc2Transpose = 0.0 & c1xc3Transpose = 0.0 & c2xc3Transpose = 0.0)",
+        "responseTextRange": [
+          19,
+          92
+        ],
+        "diagramVariables": "Response = <b><i>(c1xc2Transpose = 0.0 & c1xc3Transpose = 0.0 & c2xc3Transpose = 0.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(c1xc2Transpose = 0.0 & c1xc3Transpose = 0.0 & c2xc3Transpose = 0.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(c1xc2Transpose = 0.0 & c1xc3Transpose = 0.0 & c2xc3Transpose = 0.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "post_condition_unexp_ft": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "post_condition_unexp_pctl": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "post_condition_SMV_pt": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "post_condition_SMV_ft": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "post_condition_MLTL_ft": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "post_condition_PRISM_pctl": "(((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "ft": "(LAST V (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0)))",
+        "pt": "(H (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0)))",
+        "pctl": "(P>=1[(G (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0)))])",
+        "ptExpanded": "(((H (c1xc2Transpose = 0.0)) & (H (c1xc3Transpose = 0.0))) & (H (c2xc3Transpose = 0.0)))",
+        "CoCoSpecCode": "((H((c1xc2Transpose = 0.0)) and H((c1xc3Transpose = 0.0))) and H((c2xc3Transpose = 0.0)))",
+        "ftExpanded": "(LAST V (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0)))",
+        "pctlExpanded": "(P>=1[(G (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0)))])",
+        "ftInfAUExpanded": "(G (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((c1xc2Transpose = 0.0) & (c1xc3Transpose = 0.0)) & (c2xc3Transpose = 0.0))",
+        "R2U2Code": "(((c1xc2Transpose == 0.0) && (c1xc3Transpose == 0.0)) && (c2xc3Transpose == 0.0))",
+        "component": "Euler"
+      },
+      "_id": "pzeg8dat7wk9i2g6ei3d06"
+    },
+    {
+      "reqid": "EUL-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy absReal(theta) != pi/2.0 => det_3x3(DCM321_11, DCM321_21, DCM321_31, DCM321_12, DCM321_22, DCM321_32, DCM321_23, DCM321_33)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "theta",
+          "pi",
+          "det_3x3",
+          "DCM321_11",
+          "DCM321_21",
+          "DCM321_31",
+          "DCM321_12",
+          "DCM321_22",
+          "DCM321_32",
+          "DCM321_23",
+          "DCM321_33"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(absReal ( theta ) != pi / 2.0 => det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_23 , DCM321_33 ))",
+        "responseTextRange": [
+          19,
+          149
+        ],
+        "diagramVariables": "Response = <b><i>(absReal ( theta ) != pi / 2.0 => det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_23 , DCM321_33 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(absReal ( theta ) != pi / 2.0 => det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_23 , DCM321_33 ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(absReal ( theta ) != pi / 2.0 => det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_23 , DCM321_33 ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "post_condition_unexp_ft": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "post_condition_unexp_pctl": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "post_condition_SMV_pt": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "post_condition_SMV_ft": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "post_condition_MLTL_ft": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "post_condition_PRISM_pctl": "((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "ft": "(LAST V ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))",
+        "pt": "(H ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))",
+        "pctl": "(P>=1[(G ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))])",
+        "ptExpanded": "(H ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))",
+        "CoCoSpecCode": "H(((absReal(theta) <> (pi / 2.0)) => det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))",
+        "ftExpanded": "(LAST V ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))",
+        "pctlExpanded": "(P>=1[(G ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))])",
+        "ftInfAUExpanded": "(G ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((absReal(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "R2U2Code": "((abs(theta) != (pi / 2.0)) -> det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_23,DCM321_33))",
+        "component": "Euler"
+      },
+      "_id": "ty4jyr3n1ojva373ckx05"
+    },
+    {
+      "reqid": "EUL-003",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy Vb_1 * Vb_1 + Vb_2 * Vb_2 + Vb_3 * Vb_3 = Vi_1 * Vi_1 + Vi_2 * Vi_2 + Vi_3 * Vi_3",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "Vb_1",
+          "Vb_2",
+          "Vb_3",
+          "Vi_1",
+          "Vi_2",
+          "Vi_3"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(Vb_1 * Vb_1 + Vb_2 * Vb_2 + Vb_3 * Vb_3 = Vi_1 * Vi_1 + Vi_2 * Vi_2 + Vi_3 * Vi_3)",
+        "responseTextRange": [
+          19,
+          107
+        ],
+        "diagramVariables": "Response = <b><i>(Vb_1 * Vb_1 + Vb_2 * Vb_2 + Vb_3 * Vb_3 = Vi_1 * Vi_1 + Vi_2 * Vi_2 + Vi_3 * Vi_3)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(Vb_1 * Vb_1 + Vb_2 * Vb_2 + Vb_3 * Vb_3 = Vi_1 * Vi_1 + Vi_2 * Vi_2 + Vi_3 * Vi_3)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(Vb_1 * Vb_1 + Vb_2 * Vb_2 + Vb_3 * Vb_3 = Vi_1 * Vi_1 + Vi_2 * Vi_2 + Vi_3 * Vi_3)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "post_condition_unexp_ft": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "post_condition_unexp_pctl": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "post_condition_SMV_pt": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "post_condition_SMV_ft": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "post_condition_MLTL_ft": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "post_condition_PRISM_pctl": "((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3)))",
+        "ft": "(LAST V ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))",
+        "pt": "(H ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))",
+        "pctl": "(P>=1[(G ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))])",
+        "ptExpanded": "(H ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))",
+        "CoCoSpecCode": "H(((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))",
+        "ftExpanded": "(LAST V ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))",
+        "pctlExpanded": "(P>=1[(G ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))])",
+        "ftInfAUExpanded": "(G ((((Vb_1 * Vb_1) + (Vb_2 * Vb_2)) + (Vb_3 * Vb_3)) = (((Vi_1 * Vi_1) + (Vi_2 * Vi_2)) + (Vi_3 * Vi_3))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((Vb_1 * Rb_1) + (Vb_2 * Rb_2)) + (Vb_3 * Rb_3)) = (((Vi_1 * Ri_1) + (Vi_2 * Ri_2)) + (Vi_3 * Ri_3)))",
+        "R2U2Code": "((((Vb_1 * Rb_1) + (Vb_2 * Rb_2)) + (Vb_3 * Rb_3)) == (((Vi_1 * Ri_1) + (Vi_2 * Ri_2)) + (Vi_3 * Ri_3)))",
+        "component": "Euler"
+      },
+      "_id": "rqmjvsemymgqds7ewmh9v"
+    },
+    {
+      "reqid": "EUL-007",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCMxDCMTranspose_11 = 1.0 & DCMxDCMTranspose_12 = 0.0 & DCMxDCMTranspose_13 = 0.0 & DCMxDCMTranspose_21 = 0.0 & DCMxDCMTranspose_22 = 1.0 & DCMxDCMTranspose_23 = 0.0 & DCMxDCMTranspose_31 = 0.0 & DCMxDCMTranspose_32 = 0.0 & DCMxDCMTranspose_33 = 1.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCMxDCMTranspose_11",
+          "DCMxDCMTranspose_12",
+          "DCMxDCMTranspose_13",
+          "DCMxDCMTranspose_21",
+          "DCMxDCMTranspose_22",
+          "DCMxDCMTranspose_23",
+          "DCMxDCMTranspose_31",
+          "DCMxDCMTranspose_32",
+          "DCMxDCMTranspose_33"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCMxDCMTranspose_11 = 1.0 & DCMxDCMTranspose_12 = 0.0 & DCMxDCMTranspose_13 = 0.0 & DCMxDCMTranspose_21 = 0.0 & DCMxDCMTranspose_22 = 1.0 & DCMxDCMTranspose_23 = 0.0 & DCMxDCMTranspose_31 = 0.0 & DCMxDCMTranspose_32 = 0.0 & DCMxDCMTranspose_33 = 1.0)",
+        "responseTextRange": [
+          19,
+          275
+        ],
+        "diagramVariables": "Response = <b><i>(DCMxDCMTranspose_11 = 1.0 & DCMxDCMTranspose_12 = 0.0 & DCMxDCMTranspose_13 = 0.0 & DCMxDCMTranspose_21 = 0.0 & DCMxDCMTranspose_22 = 1.0 & DCMxDCMTranspose_23 = 0.0 & DCMxDCMTranspose_31 = 0.0 & DCMxDCMTranspose_32 = 0.0 & DCMxDCMTranspose_33 = 1.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCMxDCMTranspose_11 = 1.0 & DCMxDCMTranspose_12 = 0.0 & DCMxDCMTranspose_13 = 0.0 & DCMxDCMTranspose_21 = 0.0 & DCMxDCMTranspose_22 = 1.0 & DCMxDCMTranspose_23 = 0.0 & DCMxDCMTranspose_31 = 0.0 & DCMxDCMTranspose_32 = 0.0 & DCMxDCMTranspose_33 = 1.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCMxDCMTranspose_11 = 1.0 & DCMxDCMTranspose_12 = 0.0 & DCMxDCMTranspose_13 = 0.0 & DCMxDCMTranspose_21 = 0.0 & DCMxDCMTranspose_22 = 1.0 & DCMxDCMTranspose_23 = 0.0 & DCMxDCMTranspose_31 = 0.0 & DCMxDCMTranspose_32 = 0.0 & DCMxDCMTranspose_33 = 1.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "post_condition_unexp_ft": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "post_condition_unexp_pctl": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "post_condition_SMV_pt": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "post_condition_SMV_ft": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "post_condition_MLTL_ft": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "post_condition_PRISM_pctl": "(((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "ft": "(LAST V (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0)))",
+        "pt": "(H (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0)))",
+        "pctl": "(P>=1[(G (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0)))])",
+        "ptExpanded": "(((((((((H (DCMxDCMTranspose_11 = 1.0)) & (H (DCMxDCMTranspose_12 = 0.0))) & (H (DCMxDCMTranspose_13 = 0.0))) & (H (DCMxDCMTranspose_21 = 0.0))) & (H (DCMxDCMTranspose_22 = 1.0))) & (H (DCMxDCMTranspose_23 = 0.0))) & (H (DCMxDCMTranspose_31 = 0.0))) & (H (DCMxDCMTranspose_32 = 0.0))) & (H (DCMxDCMTranspose_33 = 1.0)))",
+        "CoCoSpecCode": "((((((((H((DCMxDCMTranspose_11 = 1.0)) and H((DCMxDCMTranspose_12 = 0.0))) and H((DCMxDCMTranspose_13 = 0.0))) and H((DCMxDCMTranspose_21 = 0.0))) and H((DCMxDCMTranspose_22 = 1.0))) and H((DCMxDCMTranspose_23 = 0.0))) and H((DCMxDCMTranspose_31 = 0.0))) and H((DCMxDCMTranspose_32 = 0.0))) and H((DCMxDCMTranspose_33 = 1.0)))",
+        "ftExpanded": "(LAST V (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0)))",
+        "pctlExpanded": "(P>=1[(G (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0)))])",
+        "ftInfAUExpanded": "(G (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((((((((DCMxDCMTranspose_11 = 1.0) & (DCMxDCMTranspose_12 = 0.0)) & (DCMxDCMTranspose_13 = 0.0)) & (DCMxDCMTranspose_21 = 0.0)) & (DCMxDCMTranspose_22 = 1.0)) & (DCMxDCMTranspose_23 = 0.0)) & (DCMxDCMTranspose_31 = 0.0)) & (DCMxDCMTranspose_32 = 0.0)) & (DCMxDCMTranspose_33 = 1.0))",
+        "R2U2Code": "(((((((((DCMxDCMTranspose_11 == 1.0) && (DCMxDCMTranspose_12 == 0.0)) && (DCMxDCMTranspose_13 == 0.0)) && (DCMxDCMTranspose_21 == 0.0)) && (DCMxDCMTranspose_22 == 1.0)) && (DCMxDCMTranspose_23 == 0.0)) && (DCMxDCMTranspose_31 == 0.0)) && (DCMxDCMTranspose_32 == 0.0)) && (DCMxDCMTranspose_33 == 1.0))",
+        "component": "Euler"
+      },
+      "_id": "u0kekpuctlc0u31azjpd38"
+    },
+    {
+      "reqid": "EUL-006A",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy r1xr1Transpose = 1.0 & r2xr2Transpose = 1.0 & r3xr3Transpose = 1.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "r1xr1Transpose",
+          "r2xr2Transpose",
+          "r3xr3Transpose"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(r1xr1Transpose = 1.0 & r2xr2Transpose = 1.0 & r3xr3Transpose = 1.0)",
+        "responseTextRange": [
+          19,
+          92
+        ],
+        "diagramVariables": "Response = <b><i>(r1xr1Transpose = 1.0 & r2xr2Transpose = 1.0 & r3xr3Transpose = 1.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(r1xr1Transpose = 1.0 & r2xr2Transpose = 1.0 & r3xr3Transpose = 1.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(r1xr1Transpose = 1.0 & r2xr2Transpose = 1.0 & r3xr3Transpose = 1.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "post_condition_unexp_ft": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "post_condition_unexp_pctl": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "post_condition_SMV_pt": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "post_condition_SMV_ft": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "post_condition_MLTL_ft": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "post_condition_PRISM_pctl": "(((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "ft": "(LAST V (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0)))",
+        "pt": "(H (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0)))",
+        "pctl": "(P>=1[(G (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0)))])",
+        "ptExpanded": "(((H (r1xr1Transpose = 1.0)) & (H (r2xr2Transpose = 1.0))) & (H (r3xr3Transpose = 1.0)))",
+        "CoCoSpecCode": "((H((r1xr1Transpose = 1.0)) and H((r2xr2Transpose = 1.0))) and H((r3xr3Transpose = 1.0)))",
+        "ftExpanded": "(LAST V (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0)))",
+        "pctlExpanded": "(P>=1[(G (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0)))])",
+        "ftInfAUExpanded": "(G (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((r1xr1Transpose = 1.0) & (r2xr2Transpose = 1.0)) & (r3xr3Transpose = 1.0))",
+        "R2U2Code": "(((r1xr1Transpose == 1.0) && (r2xr2Transpose == 1.0)) && (r3xr3Transpose == 1.0))",
+        "component": "Euler"
+      },
+      "_id": "lwcs7wvr26fo63un76g76"
+    },
+    {
+      "reqid": "EUL-008",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy det_3x3(DCM321_11, DCM321_21, DCM321_31, DCM321_12, DCM321_22, DCM321_32, DCM321_13, DCM321_23, DCM321_33)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "det_3x3",
+          "DCM321_11",
+          "DCM321_21",
+          "DCM321_31",
+          "DCM321_12",
+          "DCM321_22",
+          "DCM321_32",
+          "DCM321_13",
+          "DCM321_23",
+          "DCM321_33"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_13 , DCM321_23 , DCM321_33 ))",
+        "responseTextRange": [
+          19,
+          132
+        ],
+        "diagramVariables": "Response = <b><i>(det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_13 , DCM321_23 , DCM321_33 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_13 , DCM321_23 , DCM321_33 ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(det_3x3 ( DCM321_11 , DCM321_21 , DCM321_31 , DCM321_12 , DCM321_22 , DCM321_32 , DCM321_13 , DCM321_23 , DCM321_33 ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "post_condition_unexp_ft": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "post_condition_unexp_pctl": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "post_condition_SMV_pt": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "post_condition_SMV_ft": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "post_condition_MLTL_ft": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "post_condition_PRISM_pctl": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "ft": "(LAST V det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))",
+        "pt": "(H det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))",
+        "pctl": "(P>=1[(G det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))])",
+        "ptExpanded": "(H det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))",
+        "CoCoSpecCode": "H(det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))",
+        "ftExpanded": "(LAST V det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))",
+        "pctlExpanded": "(P>=1[(G det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))])",
+        "ftInfAUExpanded": "(G det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "R2U2Code": "det_3x3(DCM321_11,DCM321_21,DCM321_31,DCM321_12,DCM321_22,DCM321_32,DCM321_13,DCM321_23,DCM321_33)",
+        "component": "Euler"
+      },
+      "_id": "vfwqz828avopu3ay3q7gum"
+    },
+    {
+      "reqid": "EUL-001C",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_13 = - sin(theta)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_13",
+          "sin",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_13 = - sin ( theta ))",
+        "responseTextRange": [
+          19,
+          50
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_13 = - sin ( theta ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_13 = - sin ( theta ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_13 = - sin ( theta ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_13 = (- sin(theta)))",
+        "post_condition_unexp_ft": "(DCM321_13 = (- sin(theta)))",
+        "post_condition_unexp_pctl": "(DCM321_13 = (- sin(theta)))",
+        "post_condition_SMV_pt": "(DCM321_13 = (- sin(theta)))",
+        "post_condition_SMV_ft": "(DCM321_13 = (- sin(theta)))",
+        "post_condition_MLTL_ft": "(DCM321_13 = (- sin(theta)))",
+        "post_condition_PRISM_pctl": "(DCM321_13 = (- sin(theta)))",
+        "ft": "(LAST V (DCM321_13 = (- sin(theta))))",
+        "pt": "(H (DCM321_13 = (- sin(theta))))",
+        "pctl": "(P>=1[(G (DCM321_13 = (- sin(theta))))])",
+        "ptExpanded": "(H (DCM321_13 = (- sin(theta))))",
+        "CoCoSpecCode": "H((DCM321_13 = -(sin(theta))))",
+        "ftExpanded": "(LAST V (DCM321_13 = (- sin(theta))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_13 = (- sin(theta))))])",
+        "ftInfAUExpanded": "(G (DCM321_13 = (- sin(theta))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_13 = (- sin(theta)))",
+        "R2U2Code": "(DCM321_13 == (- sin(theta)))",
+        "component": "Euler"
+      },
+      "_id": "zt5mii1oddcpm8j09un1t"
+    },
+    {
+      "reqid": "EUL-001I",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_33 = cos(phi) * cos(theta)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_33",
+          "cos",
+          "phi",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_33 = cos ( phi ) * cos ( theta ))",
+        "responseTextRange": [
+          19,
+          59
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_33 = cos ( phi ) * cos ( theta ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_33 = cos ( phi ) * cos ( theta ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_33 = cos ( phi ) * cos ( theta ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "post_condition_unexp_ft": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "post_condition_unexp_pctl": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "post_condition_SMV_pt": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "post_condition_SMV_ft": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "post_condition_MLTL_ft": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "post_condition_PRISM_pctl": "(DCM321_33 = (cos(phi) * cos(theta)))",
+        "ft": "(LAST V (DCM321_33 = (cos(phi) * cos(theta))))",
+        "pt": "(H (DCM321_33 = (cos(phi) * cos(theta))))",
+        "pctl": "(P>=1[(G (DCM321_33 = (cos(phi) * cos(theta))))])",
+        "ptExpanded": "(H (DCM321_33 = (cos(phi) * cos(theta))))",
+        "CoCoSpecCode": "H((DCM321_33 = (cos(phi) * cos(theta))))",
+        "ftExpanded": "(LAST V (DCM321_33 = (cos(phi) * cos(theta))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_33 = (cos(phi) * cos(theta))))])",
+        "ftInfAUExpanded": "(G (DCM321_33 = (cos(phi) * cos(theta))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_33 = (cos(phi) * cos(theta)))",
+        "R2U2Code": "(DCM321_33 == (cos(phi) * cos(theta)))",
+        "component": "Euler"
+      },
+      "_id": "m5oefl9kla8czyz5d1uk4"
+    },
+    {
+      "reqid": "EUL-001A",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_11 = cos(theta) * cos(psi)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_11",
+          "cos",
+          "theta",
+          "psi"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_11 = cos ( theta ) * cos ( psi ))",
+        "responseTextRange": [
+          19,
+          59
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_11 = cos ( theta ) * cos ( psi ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_11 = cos ( theta ) * cos ( psi ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_11 = cos ( theta ) * cos ( psi ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "post_condition_unexp_ft": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "post_condition_unexp_pctl": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "post_condition_SMV_pt": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "post_condition_SMV_ft": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "post_condition_MLTL_ft": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "post_condition_PRISM_pctl": "(DCM321_11 = (cos(theta) * cos(psi)))",
+        "ft": "(LAST V (DCM321_11 = (cos(theta) * cos(psi))))",
+        "pt": "(H (DCM321_11 = (cos(theta) * cos(psi))))",
+        "pctl": "(P>=1[(G (DCM321_11 = (cos(theta) * cos(psi))))])",
+        "ptExpanded": "(H (DCM321_11 = (cos(theta) * cos(psi))))",
+        "CoCoSpecCode": "H((DCM321_11 = (cos(theta) * cos(psi))))",
+        "ftExpanded": "(LAST V (DCM321_11 = (cos(theta) * cos(psi))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_11 = (cos(theta) * cos(psi))))])",
+        "ftInfAUExpanded": "(G (DCM321_11 = (cos(theta) * cos(psi))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_11 = (cos(theta) * cos(psi)))",
+        "R2U2Code": "(DCM321_11 == (cos(theta) * cos(psi)))",
+        "component": "Euler"
+      },
+      "_id": "ubn3z0epjk8gu1ne8xw138"
+    },
+    {
+      "reqid": "EUL-002C",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy Vb_3 = Vi_1 * DCM321_31 + Vi_2 * DCM321_32 + Vi_3 * DCM321_33",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "Vb_3",
+          "Vi_1",
+          "DCM321_31",
+          "Vi_2",
+          "DCM321_32",
+          "Vi_3",
+          "DCM321_33"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(Vb_3 = Vi_1 * DCM321_31 + Vi_2 * DCM321_32 + Vi_3 * DCM321_33)",
+        "responseTextRange": [
+          19,
+          87
+        ],
+        "diagramVariables": "Response = <b><i>(Vb_3 = Vi_1 * DCM321_31 + Vi_2 * DCM321_32 + Vi_3 * DCM321_33)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(Vb_3 = Vi_1 * DCM321_31 + Vi_2 * DCM321_32 + Vi_3 * DCM321_33)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(Vb_3 = Vi_1 * DCM321_31 + Vi_2 * DCM321_32 + Vi_3 * DCM321_33)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "post_condition_unexp_ft": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "post_condition_unexp_pctl": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "post_condition_SMV_pt": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "post_condition_SMV_ft": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "post_condition_MLTL_ft": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "post_condition_PRISM_pctl": "(Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "ft": "(LAST V (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))",
+        "pt": "(H (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))",
+        "pctl": "(P>=1[(G (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))])",
+        "ptExpanded": "(H (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))",
+        "CoCoSpecCode": "H((Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))",
+        "ftExpanded": "(LAST V (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))",
+        "pctlExpanded": "(P>=1[(G (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))])",
+        "ftInfAUExpanded": "(G (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (Vb_3 = (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "R2U2Code": "(Vb_3 == (((Vi_1 * DCM321_31) + (Vi_2 * DCM321_32)) + (Vi_3 * DCM321_33)))",
+        "component": "Euler"
+      },
+      "_id": "gstgnchulzuhoo953pltc6"
+    },
+    {
+      "reqid": "EUL-001d",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_21 = (- cos(phi) * sin(psi) + sin(phi) * sin(theta) * cos(psi))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_21",
+          "cos",
+          "phi",
+          "sin",
+          "psi",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_21 = ( - cos ( phi ) * sin ( psi ) + sin ( phi ) * sin ( theta ) * cos ( psi ) ))",
+        "responseTextRange": [
+          19,
+          96
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_21 = ( - cos ( phi ) * sin ( psi ) + sin ( phi ) * sin ( theta ) * cos ( psi ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_21 = ( - cos ( phi ) * sin ( psi ) + sin ( phi ) * sin ( theta ) * cos ( psi ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_21 = ( - cos ( phi ) * sin ( psi ) + sin ( phi ) * sin ( theta ) * cos ( psi ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "post_condition_unexp_ft": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "post_condition_unexp_pctl": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "post_condition_SMV_pt": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "post_condition_SMV_ft": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "post_condition_MLTL_ft": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "post_condition_PRISM_pctl": "(DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "ft": "(LAST V (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))",
+        "pt": "(H (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))",
+        "pctl": "(P>=1[(G (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))])",
+        "ptExpanded": "(H (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))",
+        "CoCoSpecCode": "H((DCM321_21 = ((-(cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))",
+        "ftExpanded": "(LAST V (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))])",
+        "ftInfAUExpanded": "(G (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_21 = (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "R2U2Code": "(DCM321_21 == (((- cos(phi)) * sin(psi)) + ((sin(phi) * sin(theta)) * cos(psi))))",
+        "component": "Euler"
+      },
+      "_id": "xtr0tdpifte217gwtyib7m"
+    },
+    {
+      "reqid": "EUL-002A",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy Vb_1 = Vi_1 * DCM321_11 + Vi_2 * DCM321_12 + Vi_3 * DCM321_13",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "Vb_1",
+          "Vi_1",
+          "DCM321_11",
+          "Vi_2",
+          "DCM321_12",
+          "Vi_3",
+          "DCM321_13"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(Vb_1 = Vi_1 * DCM321_11 + Vi_2 * DCM321_12 + Vi_3 * DCM321_13)",
+        "responseTextRange": [
+          19,
+          87
+        ],
+        "diagramVariables": "Response = <b><i>(Vb_1 = Vi_1 * DCM321_11 + Vi_2 * DCM321_12 + Vi_3 * DCM321_13)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(Vb_1 = Vi_1 * DCM321_11 + Vi_2 * DCM321_12 + Vi_3 * DCM321_13)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(Vb_1 = Vi_1 * DCM321_11 + Vi_2 * DCM321_12 + Vi_3 * DCM321_13)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "post_condition_unexp_ft": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "post_condition_unexp_pctl": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "post_condition_SMV_pt": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "post_condition_SMV_ft": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "post_condition_MLTL_ft": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "post_condition_PRISM_pctl": "(Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "ft": "(LAST V (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))",
+        "pt": "(H (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))",
+        "pctl": "(P>=1[(G (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))])",
+        "ptExpanded": "(H (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))",
+        "CoCoSpecCode": "H((Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))",
+        "ftExpanded": "(LAST V (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))",
+        "pctlExpanded": "(P>=1[(G (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))])",
+        "ftInfAUExpanded": "(G (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (Vb_1 = (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "R2U2Code": "(Vb_1 == (((Vi_1 * DCM321_11) + (Vi_2 * DCM321_12)) + (Vi_3 * DCM321_13)))",
+        "component": "Euler"
+      },
+      "_id": "euxi8p7xtqj1wlacf1i5kfj"
+    },
+    {
+      "reqid": "EUL-001F",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_23 = sin(phi) * cos(theta)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_23",
+          "sin",
+          "phi",
+          "cos",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_23 = sin ( phi ) * cos ( theta ))",
+        "responseTextRange": [
+          19,
+          59
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_23 = sin ( phi ) * cos ( theta ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_23 = sin ( phi ) * cos ( theta ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_23 = sin ( phi ) * cos ( theta ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "post_condition_unexp_ft": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "post_condition_unexp_pctl": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "post_condition_SMV_pt": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "post_condition_SMV_ft": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "post_condition_MLTL_ft": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "post_condition_PRISM_pctl": "(DCM321_23 = (sin(phi) * cos(theta)))",
+        "ft": "(LAST V (DCM321_23 = (sin(phi) * cos(theta))))",
+        "pt": "(H (DCM321_23 = (sin(phi) * cos(theta))))",
+        "pctl": "(P>=1[(G (DCM321_23 = (sin(phi) * cos(theta))))])",
+        "ptExpanded": "(H (DCM321_23 = (sin(phi) * cos(theta))))",
+        "CoCoSpecCode": "H((DCM321_23 = (sin(phi) * cos(theta))))",
+        "ftExpanded": "(LAST V (DCM321_23 = (sin(phi) * cos(theta))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_23 = (sin(phi) * cos(theta))))])",
+        "ftInfAUExpanded": "(G (DCM321_23 = (sin(phi) * cos(theta))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_23 = (sin(phi) * cos(theta)))",
+        "R2U2Code": "(DCM321_23 == (sin(phi) * cos(theta)))",
+        "component": "Euler"
+      },
+      "_id": "alzdlb5stchw7mb2lucsa"
+    },
+    {
+      "reqid": "EUL-001G",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_31 = sin(phi) * sin(psi) + cos(theta) * sin(theta) * cos(psi)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_31",
+          "sin",
+          "phi",
+          "psi",
+          "cos",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_31 = sin ( phi ) * sin ( psi ) + cos ( theta ) * sin ( theta ) * cos ( psi ))",
+        "responseTextRange": [
+          19,
+          94
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_31 = sin ( phi ) * sin ( psi ) + cos ( theta ) * sin ( theta ) * cos ( psi ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_31 = sin ( phi ) * sin ( psi ) + cos ( theta ) * sin ( theta ) * cos ( psi ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_31 = sin ( phi ) * sin ( psi ) + cos ( theta ) * sin ( theta ) * cos ( psi ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "post_condition_unexp_ft": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "post_condition_unexp_pctl": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "post_condition_SMV_pt": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "post_condition_SMV_ft": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "post_condition_MLTL_ft": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "post_condition_PRISM_pctl": "(DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "ft": "(LAST V (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))",
+        "pt": "(H (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))",
+        "pctl": "(P>=1[(G (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))])",
+        "ptExpanded": "(H (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))",
+        "CoCoSpecCode": "H((DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))",
+        "ftExpanded": "(LAST V (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))])",
+        "ftInfAUExpanded": "(G (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_31 = ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "R2U2Code": "(DCM321_31 == ((sin(phi) * sin(psi)) + ((cos(theta) * sin(theta)) * cos(psi))))",
+        "component": "Euler"
+      },
+      "_id": "tbbc5u4poucsosijekray"
+    },
+    {
+      "reqid": "EUL-001E",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_22 = (cos(phi) * cos(psi) + sin(phi) * sin(theta) * sin(psi))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_22",
+          "cos",
+          "phi",
+          "psi",
+          "sin",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_22 = ( cos ( phi ) * cos ( psi ) + sin ( phi ) * sin ( theta ) * sin ( psi ) ))",
+        "responseTextRange": [
+          19,
+          94
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_22 = ( cos ( phi ) * cos ( psi ) + sin ( phi ) * sin ( theta ) * sin ( psi ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_22 = ( cos ( phi ) * cos ( psi ) + sin ( phi ) * sin ( theta ) * sin ( psi ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_22 = ( cos ( phi ) * cos ( psi ) + sin ( phi ) * sin ( theta ) * sin ( psi ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_unexp_ft": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_unexp_pctl": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_SMV_pt": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_SMV_ft": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_MLTL_ft": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_PRISM_pctl": "(DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "ft": "(LAST V (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))",
+        "pt": "(H (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))",
+        "pctl": "(P>=1[(G (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))])",
+        "ptExpanded": "(H (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))",
+        "CoCoSpecCode": "H((DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))",
+        "ftExpanded": "(LAST V (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))])",
+        "ftInfAUExpanded": "(G (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_22 = ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "R2U2Code": "(DCM321_22 == ((cos(phi) * cos(psi)) + ((sin(phi) * sin(theta)) * sin(psi))))",
+        "component": "Euler"
+      },
+      "_id": "rrc44m2yx8qv2u5d6k08"
+    },
+    {
+      "reqid": "EUL-002B",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy Vb_2 = Vi_1 * DCM321_21 + Vi_2 * DCM321_22 + Vi_3 * DCM321_23",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "Vb_2",
+          "Vi_1",
+          "DCM321_21",
+          "Vi_2",
+          "DCM321_22",
+          "Vi_3",
+          "DCM321_23"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(Vb_2 = Vi_1 * DCM321_21 + Vi_2 * DCM321_22 + Vi_3 * DCM321_23)",
+        "responseTextRange": [
+          19,
+          87
+        ],
+        "diagramVariables": "Response = <b><i>(Vb_2 = Vi_1 * DCM321_21 + Vi_2 * DCM321_22 + Vi_3 * DCM321_23)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(Vb_2 = Vi_1 * DCM321_21 + Vi_2 * DCM321_22 + Vi_3 * DCM321_23)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(Vb_2 = Vi_1 * DCM321_21 + Vi_2 * DCM321_22 + Vi_3 * DCM321_23)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "post_condition_unexp_ft": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "post_condition_unexp_pctl": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "post_condition_SMV_pt": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "post_condition_SMV_ft": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "post_condition_MLTL_ft": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "post_condition_PRISM_pctl": "(Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "ft": "(LAST V (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))",
+        "pt": "(H (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))",
+        "pctl": "(P>=1[(G (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))])",
+        "ptExpanded": "(H (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))",
+        "CoCoSpecCode": "H((Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))",
+        "ftExpanded": "(LAST V (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))",
+        "pctlExpanded": "(P>=1[(G (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))])",
+        "ftInfAUExpanded": "(G (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (Vb_2 = (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "R2U2Code": "(Vb_2 == (((Vi_1 * DCM321_21) + (Vi_2 * DCM321_22)) + (Vi_3 * DCM321_23)))",
+        "component": "Euler"
+      },
+      "_id": "x284asykfucotvklp6fv4"
+    },
+    {
+      "reqid": "EUL-001B",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_12 = cos(theta) * sin(psi)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_12",
+          "cos",
+          "theta",
+          "sin",
+          "psi"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_12 = cos ( theta ) * sin ( psi ))",
+        "responseTextRange": [
+          19,
+          59
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_12 = cos ( theta ) * sin ( psi ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_12 = cos ( theta ) * sin ( psi ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_12 = cos ( theta ) * sin ( psi ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "post_condition_unexp_ft": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "post_condition_unexp_pctl": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "post_condition_SMV_pt": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "post_condition_SMV_ft": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "post_condition_MLTL_ft": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "post_condition_PRISM_pctl": "(DCM321_12 = (cos(theta) * sin(psi)))",
+        "ft": "(LAST V (DCM321_12 = (cos(theta) * sin(psi))))",
+        "pt": "(H (DCM321_12 = (cos(theta) * sin(psi))))",
+        "pctl": "(P>=1[(G (DCM321_12 = (cos(theta) * sin(psi))))])",
+        "ptExpanded": "(H (DCM321_12 = (cos(theta) * sin(psi))))",
+        "CoCoSpecCode": "H((DCM321_12 = (cos(theta) * sin(psi))))",
+        "ftExpanded": "(LAST V (DCM321_12 = (cos(theta) * sin(psi))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_12 = (cos(theta) * sin(psi))))])",
+        "ftInfAUExpanded": "(G (DCM321_12 = (cos(theta) * sin(psi))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_12 = (cos(theta) * sin(psi)))",
+        "R2U2Code": "(DCM321_12 == (cos(theta) * sin(psi)))",
+        "component": "Euler"
+      },
+      "_id": "otnma7qif5dh7j3p5hr7q9"
+    },
+    {
+      "reqid": "EUL-001H",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy DCM321_32 = (- sin(phi) * cos(psi)) + (cos(phi) * sin(theta) * sin(psi))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "DCM321_32",
+          "sin",
+          "phi",
+          "cos",
+          "psi",
+          "theta"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(DCM321_32 = ( - sin ( phi ) * cos ( psi ) ) + ( cos ( phi ) * sin ( theta ) * sin ( psi ) ))",
+        "responseTextRange": [
+          19,
+          98
+        ],
+        "diagramVariables": "Response = <b><i>(DCM321_32 = ( - sin ( phi ) * cos ( psi ) ) + ( cos ( phi ) * sin ( theta ) * sin ( psi ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DCM321_32 = ( - sin ( phi ) * cos ( psi ) ) + ( cos ( phi ) * sin ( theta ) * sin ( psi ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DCM321_32 = ( - sin ( phi ) * cos ( psi ) ) + ( cos ( phi ) * sin ( theta ) * sin ( psi ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_unexp_ft": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_unexp_pctl": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_SMV_pt": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_SMV_ft": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_MLTL_ft": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "post_condition_PRISM_pctl": "(DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "ft": "(LAST V (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))",
+        "pt": "(H (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))",
+        "pctl": "(P>=1[(G (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))])",
+        "ptExpanded": "(H (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))",
+        "CoCoSpecCode": "H((DCM321_32 = ((-(sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))",
+        "ftExpanded": "(LAST V (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))",
+        "pctlExpanded": "(P>=1[(G (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))])",
+        "ftInfAUExpanded": "(G (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (DCM321_32 = (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "R2U2Code": "(DCM321_32 == (((- sin(phi)) * cos(psi)) + ((cos(phi) * sin(theta)) * sin(psi))))",
+        "component": "Euler"
+      },
+      "_id": "6p5l2yv26xvunrxbz3adqo"
+    },
+    {
+      "reqid": "EUL-006B",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Euler shall always satisfy r1xr2Transpose = 0.0 & r1xr3Transpose = 0.0 & r2xr3Transpose = 0.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "r1xr2Transpose",
+          "r1xr3Transpose",
+          "r2xr3Transpose"
+        ],
+        "component_name": "Euler",
+        "componentTextRange": [
+          0,
+          4
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(r1xr2Transpose = 0.0 & r1xr3Transpose = 0.0 & r2xr3Transpose = 0.0)",
+        "responseTextRange": [
+          19,
+          92
+        ],
+        "diagramVariables": "Response = <b><i>(r1xr2Transpose = 0.0 & r1xr3Transpose = 0.0 & r2xr3Transpose = 0.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(r1xr2Transpose = 0.0 & r1xr3Transpose = 0.0 & r2xr3Transpose = 0.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(r1xr2Transpose = 0.0 & r1xr3Transpose = 0.0 & r2xr3Transpose = 0.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "post_condition_unexp_ft": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "post_condition_unexp_pctl": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "post_condition_SMV_pt": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "post_condition_SMV_ft": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "post_condition_MLTL_ft": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "post_condition_PRISM_pctl": "(((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "ft": "(LAST V (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0)))",
+        "pt": "(H (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0)))",
+        "pctl": "(P>=1[(G (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0)))])",
+        "ptExpanded": "(((H (r1xr2Transpose = 0.0)) & (H (r1xr3Transpose = 0.0))) & (H (r2xr3Transpose = 0.0)))",
+        "CoCoSpecCode": "((H((r1xr2Transpose = 0.0)) and H((r1xr3Transpose = 0.0))) and H((r2xr3Transpose = 0.0)))",
+        "ftExpanded": "(LAST V (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0)))",
+        "pctlExpanded": "(P>=1[(G (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0)))])",
+        "ftInfAUExpanded": "(G (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((r1xr2Transpose = 0.0) & (r1xr3Transpose = 0.0)) & (r2xr3Transpose = 0.0))",
+        "R2U2Code": "(((r1xr2Transpose == 0.0) && (r1xr3Transpose == 0.0)) && (r2xr3Transpose == 0.0))",
+        "component": "Euler"
+      },
+      "_id": "gd66pkxjyadly753eve01m"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_11",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "tozltg6nsn1oovyuhe9jl",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_12",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "vzhy0vvy8nfvfnden7478l",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_13",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "49xmu4xk9hogs50twixito",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_21",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "60p204vww97ydp33xp7o9d",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_22",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "v0utcay9kupyx8bdzlgbp",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_23",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "dyeml4v9omju6la40epwz",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_31",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "t9envhmhmecz090542596l",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_32",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "wcq9ohh0pk4iv543509ve",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCM321_33",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6mv1qff36hpmo9h3a6pee",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_11",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "vz13s2f6xfakkxesqlggkj",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_12",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "rsb3iq0j4d0e8egzepukp",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_13",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ipfy8ql1u9b4idinfpdpfx",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_21",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "8n0gj2ubfxjtbr0452f7",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_22",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "13s7hts8dzxb5on39a126er",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_23",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "p42dtlclide3as7c89x11f",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_31",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "2htku346b5xb2i3k50aqf6",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_32",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "psck6bh5vjrm625midh79",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "DCMxDCMTranspose_33",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "p91dhis79sqtzsj8l8z68",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "Vb_1",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "apu9ug5519pmk1zc9iwo9",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "Vb_2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "8am2ublfp772y6bx3axqbw",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "Vb_3",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "8e9kuiu83s7kg3i4fawgn",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "Vi_1",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "kd4mohkqnbcmxpupaqru0k",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "Vi_2",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "w2dir2smev96xqgxr3h5hl",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "Vi_3",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "yxydmgezgv2pvx95x261w",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "c1xc1Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "tcrpygoe7hb3h1p5moj4pe",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "c1xc2Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "4w5oa0b4aw412ammirwz8zh",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "c1xc3Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "de3jlc0mspqnefm7i4zali",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "c2xc2Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ubbuv3aonrdfplr6luczyj",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "c2xc3Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "vpx891ukuftls6co3bncc",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "c3xc3Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6r2nd700gwezgywnf7ntsl",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "cos",
+      "idType": "Function",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "3e8snj7zehwr4q3xoyf81a",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "det_3x3",
+      "idType": "Function",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "tojlxj2r0xl7vdi1mxqs0e",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "phi",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "uenpqoprolls7nearhpuc",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "pi",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "u7scyru1crme4lvoel4b6m",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "psi",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "46fwubgb25k99m0hr9fx7m",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "r1xr1Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "y3scmmi99z3dijr7zv30d",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "r1xr2Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "1gjtzo6c84fwqp1xg7v0ka",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "r1xr3Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "h4m9umat8uhcjkou3eyar8",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "r2xr2Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "kd4m66vtc8j9qlnldy4qn",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "r2xr3Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "69vvs0b7zohbdq2y7zypc",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "r3xr3Transpose",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "7tzlumfg8xm8cstream0l8",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "sin",
+      "idType": "Function",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6y2x75w3imxer2ryua6vv",
+      "completed": true
+    },
+    {
+      "component_name": "Euler",
+      "variable_name": "theta",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "8fyvzzjfuzr22rsytmppzw",
+      "completed": true
+    }
+  ]
+}

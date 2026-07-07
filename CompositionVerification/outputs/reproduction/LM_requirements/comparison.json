@@ -1,0 +1,1567 @@
+{
+  "dataset": "D:\\myWorkspace\\FirstYear\\第二学期\\算法与设计分析作业\\作业＋汇报\\CompositionVerification\\datasets\\LMCPS\\LM_requirements.json",
+  "datasetName": "LM_requirements",
+  "componentCount": 13,
+  "generatedAt": "2026-07-07T07:30:58.481Z",
+  "comparisons": [
+    {
+      "component": "Autopilot",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "Autopilot",
+        "requirementCount": 9,
+        "inputCount": 3,
+        "outputCount": 6,
+        "internalCount": 4,
+        "functionCount": 0,
+        "dependencyOutputRefs": 17,
+        "componentSizeSummary": {
+          "sizes": [
+            4,
+            3,
+            1,
+            1
+          ],
+          "count": 4,
+          "total": 9,
+          "max": 4,
+          "min": 1,
+          "average": 2.25
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 3,
+            "outputCount": 2,
+            "requirements": [
+              "AP-010a",
+              "AP-010av2",
+              "AP-010bv2"
+            ],
+            "outputs": [
+              "HDGmodeCmd",
+              "Psi"
+            ]
+          },
+          {
+            "id": "cc1",
+            "requirementCount": 4,
+            "outputCount": 2,
+            "requirements": [
+              "AP-004a",
+              "AP-004b",
+              "AP-006",
+              "AP-010b"
+            ],
+            "outputs": [
+              "roll_angle",
+              "roll_cmd"
+            ]
+          },
+          {
+            "id": "cc2",
+            "requirementCount": 1,
+            "outputCount": 1,
+            "requirements": [
+              "AP-000"
+            ],
+            "outputs": [
+              "altitude"
+            ]
+          },
+          {
+            "id": "cc3",
+            "requirementCount": 1,
+            "outputCount": 1,
+            "requirements": [
+              "AP-005"
+            ],
+            "outputs": [
+              "roll_rate"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "Autopilot",
+        "requirementCount": 9,
+        "edgeCount": 32,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 32
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            4,
+            3,
+            1,
+            1
+          ],
+          "count": 4,
+          "total": 9,
+          "max": 4,
+          "min": 1,
+          "average": 2.25
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "AP-000",
+            "requirementCount": 1,
+            "requirements": [
+              "AP-000"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "AP-005",
+            "requirementCount": 1,
+            "requirements": [
+              "AP-005"
+            ]
+          },
+          {
+            "id": "Group_3",
+            "root": "Cycle_3",
+            "requirementCount": 4,
+            "requirements": [
+              "AP-004a",
+              "AP-004b",
+              "AP-006",
+              "AP-010b"
+            ]
+          },
+          {
+            "id": "Group_4",
+            "root": "Cycle_4",
+            "requirementCount": 3,
+            "requirements": [
+              "AP-010a",
+              "AP-010av2",
+              "AP-010bv2"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "EB",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "EB",
+        "requirementCount": 3,
+        "inputCount": 15,
+        "outputCount": 13,
+        "internalCount": 2,
+        "functionCount": 1,
+        "dependencyOutputRefs": 23,
+        "componentSizeSummary": {
+          "sizes": [
+            2,
+            1
+          ],
+          "count": 2,
+          "total": 3,
+          "max": 2,
+          "min": 1,
+          "average": 1.5
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 2,
+            "outputCount": 10,
+            "requirements": [
+              "EB-001",
+              "EB-002"
+            ],
+            "outputs": [
+              "check_11",
+              "check_12",
+              "check_13",
+              "check_21",
+              "check_22",
+              "check_23",
+              "check_31",
+              "check_32",
+              "check_33",
+              "ridge_on"
+            ]
+          },
+          {
+            "id": "cc1",
+            "requirementCount": 1,
+            "outputCount": 3,
+            "requirements": [
+              "EB-004"
+            ],
+            "outputs": [
+              "Buminusd_1",
+              "Buminusd_2",
+              "Buminusd_3"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "EB",
+        "requirementCount": 3,
+        "edgeCount": 22,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 22
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            2,
+            1
+          ],
+          "count": 2,
+          "total": 3,
+          "max": 2,
+          "min": 1,
+          "average": 1.5
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_2",
+            "requirementCount": 2,
+            "requirements": [
+              "EB-001",
+              "EB-002"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "EB-004",
+            "requirementCount": 1,
+            "requirements": [
+              "EB-004"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "Euler",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "Euler",
+        "requirementCount": 20,
+        "inputCount": 6,
+        "outputCount": 12,
+        "internalCount": 22,
+        "functionCount": 3,
+        "dependencyOutputRefs": 185,
+        "componentSizeSummary": {
+          "sizes": [
+            20
+          ],
+          "count": 1,
+          "total": 20,
+          "max": 20,
+          "min": 20,
+          "average": 20
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 20,
+            "outputCount": 12,
+            "requirements": [
+              "EUL-001A",
+              "EUL-001B",
+              "EUL-001C",
+              "EUL-001E",
+              "EUL-001F",
+              "EUL-001G",
+              "EUL-001H",
+              "EUL-001I",
+              "EUL-001d",
+              "EUL-002A",
+              "EUL-002B",
+              "EUL-002C",
+              "EUL-003",
+              "EUL-004",
+              "EUL-006A",
+              "EUL-006B",
+              "EUL-006C",
+              "EUL-006D",
+              "EUL-007",
+              "EUL-008"
+            ],
+            "outputs": [
+              "DCM321_11",
+              "DCM321_12",
+              "DCM321_13",
+              "DCM321_21",
+              "DCM321_22",
+              "DCM321_23",
+              "DCM321_31",
+              "DCM321_32",
+              "DCM321_33",
+              "Vb_1",
+              "Vb_2",
+              "Vb_3"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "Euler",
+        "requirementCount": 20,
+        "edgeCount": 108,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 108
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            15,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "count": 6,
+          "total": 20,
+          "max": 15,
+          "min": 1,
+          "average": 3.33
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_4",
+            "requirementCount": 15,
+            "requirements": [
+              "EUL-001A",
+              "EUL-001B",
+              "EUL-001C",
+              "EUL-001E",
+              "EUL-001F",
+              "EUL-001G",
+              "EUL-001H",
+              "EUL-001I",
+              "EUL-001d",
+              "EUL-002A",
+              "EUL-002B",
+              "EUL-002C",
+              "EUL-003",
+              "EUL-004",
+              "EUL-008"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "EUL-006A",
+            "requirementCount": 1,
+            "requirements": [
+              "EUL-006A"
+            ]
+          },
+          {
+            "id": "Group_3",
+            "root": "EUL-006B",
+            "requirementCount": 1,
+            "requirements": [
+              "EUL-006B"
+            ]
+          },
+          {
+            "id": "Group_4",
+            "root": "EUL-006C",
+            "requirementCount": 1,
+            "requirements": [
+              "EUL-006C"
+            ]
+          },
+          {
+            "id": "Group_5",
+            "root": "EUL-006D",
+            "requirementCount": 1,
+            "requirements": [
+              "EUL-006D"
+            ]
+          },
+          {
+            "id": "Group_6",
+            "root": "EUL-007",
+            "requirementCount": 1,
+            "requirements": [
+              "EUL-007"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 5,
+        "maxGroupSize": -5,
+        "averageGroupSize": -16.67
+      }
+    },
+    {
+      "component": "FSM",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "FSM",
+        "requirementCount": 3,
+        "inputCount": 4,
+        "outputCount": 1,
+        "internalCount": 1,
+        "functionCount": 0,
+        "dependencyOutputRefs": 3,
+        "componentSizeSummary": {
+          "sizes": [
+            3
+          ],
+          "count": 1,
+          "total": 3,
+          "max": 3,
+          "min": 3,
+          "average": 3
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 3,
+            "outputCount": 1,
+            "requirements": [
+              "FSM-001v1",
+              "FSM-001v2",
+              "FSM-001v3"
+            ],
+            "outputs": [
+              "pullup"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "FSM",
+        "requirementCount": 3,
+        "edgeCount": 6,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 6
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            3
+          ],
+          "count": 1,
+          "total": 3,
+          "max": 3,
+          "min": 3,
+          "average": 3
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 3,
+            "requirements": [
+              "FSM-001v1",
+              "FSM-001v2",
+              "FSM-001v3"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "FSM_Autopilot",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "FSM_Autopilot",
+        "requirementCount": 12,
+        "inputCount": 5,
+        "outputCount": 1,
+        "internalCount": 4,
+        "functionCount": 0,
+        "dependencyOutputRefs": 12,
+        "componentSizeSummary": {
+          "sizes": [
+            12
+          ],
+          "count": 1,
+          "total": 12,
+          "max": 12,
+          "min": 12,
+          "average": 12
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 12,
+            "outputCount": 1,
+            "requirements": [
+              "FSM-002",
+              "FSM-003",
+              "FSM-003v2",
+              "FSM-004",
+              "FSM-004v2",
+              "FSM-005",
+              "FSM-006",
+              "FSM-007",
+              "FSM-007v2",
+              "FSM-008v1",
+              "FSM-008v2",
+              "FSM-009"
+            ],
+            "outputs": [
+              "STATE"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "FSM_Autopilot",
+        "requirementCount": 12,
+        "edgeCount": 254,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 254
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            12
+          ],
+          "count": 1,
+          "total": 12,
+          "max": 12,
+          "min": 12,
+          "average": 12
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 12,
+            "requirements": [
+              "FSM-002",
+              "FSM-003",
+              "FSM-003v2",
+              "FSM-004",
+              "FSM-004v2",
+              "FSM-005",
+              "FSM-006",
+              "FSM-007",
+              "FSM-007v2",
+              "FSM-008v1",
+              "FSM-008v2",
+              "FSM-009"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "FSM_Sensor",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "FSM_Sensor",
+        "requirementCount": 6,
+        "inputCount": 4,
+        "outputCount": 1,
+        "internalCount": 3,
+        "functionCount": 0,
+        "dependencyOutputRefs": 6,
+        "componentSizeSummary": {
+          "sizes": [
+            6
+          ],
+          "count": 1,
+          "total": 6,
+          "max": 6,
+          "min": 6,
+          "average": 6
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 6,
+            "outputCount": 1,
+            "requirements": [
+              "FSM-010",
+              "FSM-011v1",
+              "FSM-011v2",
+              "FSM-012",
+              "FSM-012_weak",
+              "FSM-013"
+            ],
+            "outputs": [
+              "SENSTATE"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "FSM_Sensor",
+        "requirementCount": 6,
+        "edgeCount": 68,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 68
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            6
+          ],
+          "count": 1,
+          "total": 6,
+          "max": 6,
+          "min": 6,
+          "average": 6
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 6,
+            "requirements": [
+              "FSM-010",
+              "FSM-011v1",
+              "FSM-011v2",
+              "FSM-012",
+              "FSM-012_weak",
+              "FSM-013"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "NLGuidance",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "NLGuidance",
+        "requirementCount": 7,
+        "inputCount": 0,
+        "outputCount": 0,
+        "internalCount": 0,
+        "functionCount": 0,
+        "dependencyOutputRefs": 0,
+        "componentSizeSummary": {
+          "sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "count": 7,
+          "total": 7,
+          "max": 1,
+          "min": 1,
+          "average": 1
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-001"
+            ],
+            "outputs": []
+          },
+          {
+            "id": "cc1",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-002&3"
+            ],
+            "outputs": []
+          },
+          {
+            "id": "cc2",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-005a"
+            ],
+            "outputs": []
+          },
+          {
+            "id": "cc3",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-005b"
+            ],
+            "outputs": []
+          },
+          {
+            "id": "cc4",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-006"
+            ],
+            "outputs": []
+          },
+          {
+            "id": "cc5",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-004"
+            ],
+            "outputs": []
+          },
+          {
+            "id": "cc6",
+            "requirementCount": 1,
+            "outputCount": 0,
+            "requirements": [
+              "NLG-007"
+            ],
+            "outputs": []
+          }
+        ]
+      },
+      "ours": {
+        "component": "NLGuidance",
+        "requirementCount": 7,
+        "edgeCount": 0,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 0
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "count": 7,
+          "total": 7,
+          "max": 1,
+          "min": 1,
+          "average": 1
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "NLG-001",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-001"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "NLG-002&3",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-002&3"
+            ]
+          },
+          {
+            "id": "Group_3",
+            "root": "NLG-004",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-004"
+            ]
+          },
+          {
+            "id": "Group_4",
+            "root": "NLG-005a",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-005a"
+            ]
+          },
+          {
+            "id": "Group_5",
+            "root": "NLG-005b",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-005b"
+            ]
+          },
+          {
+            "id": "Group_6",
+            "root": "NLG-006",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-006"
+            ]
+          },
+          {
+            "id": "Group_7",
+            "root": "NLG-007",
+            "requirementCount": 1,
+            "requirements": [
+              "NLG-007"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "NN",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "NN",
+        "requirementCount": 5,
+        "inputCount": 2,
+        "outputCount": 1,
+        "internalCount": 5,
+        "functionCount": 0,
+        "dependencyOutputRefs": 7,
+        "componentSizeSummary": {
+          "sizes": [
+            5
+          ],
+          "count": 1,
+          "total": 5,
+          "max": 5,
+          "min": 5,
+          "average": 5
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 5,
+            "outputCount": 1,
+            "requirements": [
+              "NN-001",
+              "NN-002",
+              "NN-003A",
+              "NN-003B",
+              "NN-004"
+            ],
+            "outputs": [
+              "z"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "NN",
+        "requirementCount": 5,
+        "edgeCount": 6,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 6
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            3,
+            1,
+            1
+          ],
+          "count": 3,
+          "total": 5,
+          "max": 3,
+          "min": 1,
+          "average": 1.67
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_3",
+            "requirementCount": 3,
+            "requirements": [
+              "NN-001",
+              "NN-002",
+              "NN-004"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "NN-003A",
+            "requirementCount": 1,
+            "requirements": [
+              "NN-003A"
+            ]
+          },
+          {
+            "id": "Group_3",
+            "root": "NN-003B",
+            "requirementCount": 1,
+            "requirements": [
+              "NN-003B"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 2,
+        "maxGroupSize": -2,
+        "averageGroupSize": -3.33
+      }
+    },
+    {
+      "component": "Regulator",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "Regulator",
+        "requirementCount": 10,
+        "inputCount": 0,
+        "outputCount": 5,
+        "internalCount": 5,
+        "functionCount": 0,
+        "dependencyOutputRefs": 15,
+        "componentSizeSummary": {
+          "sizes": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "count": 5,
+          "total": 10,
+          "max": 2,
+          "min": 2,
+          "average": 2
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "REG-004",
+              "REG-009"
+            ],
+            "outputs": [
+              "xcvdt_cmd_fcs_fps2"
+            ]
+          },
+          {
+            "id": "cc1",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "REG-001",
+              "REG-006"
+            ],
+            "outputs": [
+              "lcvdt_cmd_fcs_dps2"
+            ]
+          },
+          {
+            "id": "cc2",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "REG-005",
+              "REG-010"
+            ],
+            "outputs": [
+              "hcvdt_cmd_fcs_fps2"
+            ]
+          },
+          {
+            "id": "cc3",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "REG-002",
+              "REG-007"
+            ],
+            "outputs": [
+              "mcvdt_cmd_fcs_dps2"
+            ]
+          },
+          {
+            "id": "cc4",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "REG-003",
+              "REG-008"
+            ],
+            "outputs": [
+              "ncvdt_cmd_fcs_dps2"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "Regulator",
+        "requirementCount": 10,
+        "edgeCount": 0,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 0
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "count": 10,
+          "total": 10,
+          "max": 1,
+          "min": 1,
+          "average": 1
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "REG-001",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-001"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "REG-002",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-002"
+            ]
+          },
+          {
+            "id": "Group_3",
+            "root": "REG-003",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-003"
+            ]
+          },
+          {
+            "id": "Group_4",
+            "root": "REG-004",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-004"
+            ]
+          },
+          {
+            "id": "Group_5",
+            "root": "REG-005",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-005"
+            ]
+          },
+          {
+            "id": "Group_6",
+            "root": "REG-006",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-006"
+            ]
+          },
+          {
+            "id": "Group_7",
+            "root": "REG-007",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-007"
+            ]
+          },
+          {
+            "id": "Group_8",
+            "root": "REG-008",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-008"
+            ]
+          },
+          {
+            "id": "Group_9",
+            "root": "REG-009",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-009"
+            ]
+          },
+          {
+            "id": "Group_10",
+            "root": "REG-010",
+            "requirementCount": 1,
+            "requirements": [
+              "REG-010"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 5,
+        "maxGroupSize": -1,
+        "averageGroupSize": -1
+      }
+    },
+    {
+      "component": "RollAutopilot",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "RollAutopilot",
+        "requirementCount": 8,
+        "inputCount": 4,
+        "outputCount": 4,
+        "internalCount": 6,
+        "functionCount": 0,
+        "dependencyOutputRefs": 10,
+        "componentSizeSummary": {
+          "sizes": [
+            6,
+            2
+          ],
+          "count": 2,
+          "total": 8,
+          "max": 6,
+          "min": 2,
+          "average": 4
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 6,
+            "outputCount": 3,
+            "requirements": [
+              "AP-002",
+              "AP-003A",
+              "AP-003B",
+              "AP-003C",
+              "AP-003D",
+              "AP-008"
+            ],
+            "outputs": [
+              "hdg_hold_mode_cmd",
+              "roll_cmd",
+              "roll_hold_reference"
+            ]
+          },
+          {
+            "id": "cc1",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "AP-001",
+              "AP-007"
+            ],
+            "outputs": [
+              "aileron_cmd"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "RollAutopilot",
+        "requirementCount": 8,
+        "edgeCount": 24,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 24
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            6,
+            2
+          ],
+          "count": 2,
+          "total": 8,
+          "max": 6,
+          "min": 2,
+          "average": 4
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 2,
+            "requirements": [
+              "AP-001",
+              "AP-007"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "Cycle_2",
+            "requirementCount": 6,
+            "requirements": [
+              "AP-002",
+              "AP-003A",
+              "AP-003B",
+              "AP-003C",
+              "AP-003D",
+              "AP-008"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "SWIM",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "SWIM",
+        "requirementCount": 3,
+        "inputCount": 3,
+        "outputCount": 4,
+        "internalCount": 3,
+        "functionCount": 1,
+        "dependencyOutputRefs": 5,
+        "componentSizeSummary": {
+          "sizes": [
+            2,
+            1
+          ],
+          "count": 2,
+          "total": 3,
+          "max": 2,
+          "min": 1,
+          "average": 1.5
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 1,
+            "outputCount": 3,
+            "requirements": [
+              "SWIM-002"
+            ],
+            "outputs": [
+              "lowSpeedWarningAllowed",
+              "swimGet_AgcasLowSpeedWarn",
+              "warningTrigForMinPress"
+            ]
+          },
+          {
+            "id": "cc1",
+            "requirementCount": 2,
+            "outputCount": 1,
+            "requirements": [
+              "SWIM-001a",
+              "SWIM-001b"
+            ],
+            "outputs": [
+              "CalAirspeedMin"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "SWIM",
+        "requirementCount": 3,
+        "edgeCount": 2,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 2
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            2,
+            1
+          ],
+          "count": 2,
+          "total": 3,
+          "max": 2,
+          "min": 1,
+          "average": 1.5
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 2,
+            "requirements": [
+              "SWIM-001a",
+              "SWIM-001b"
+            ]
+          },
+          {
+            "id": "Group_2",
+            "root": "SWIM-002",
+            "requirementCount": 1,
+            "requirements": [
+              "SWIM-002"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "TriplexSignalMonitor",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "TriplexSignalMonitor",
+        "requirementCount": 6,
+        "inputCount": 5,
+        "outputCount": 3,
+        "internalCount": 3,
+        "functionCount": 0,
+        "dependencyOutputRefs": 15,
+        "componentSizeSummary": {
+          "sizes": [
+            6
+          ],
+          "count": 1,
+          "total": 6,
+          "max": 6,
+          "min": 6,
+          "average": 6
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 6,
+            "outputCount": 3,
+            "requirements": [
+              "TSM-001",
+              "TSM-002",
+              "TSM-003a",
+              "TSM-003b",
+              "TSM-003c",
+              "TSM-004"
+            ],
+            "outputs": [
+              "FC",
+              "PC",
+              "set_val"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "TriplexSignalMonitor",
+        "requirementCount": 6,
+        "edgeCount": 32,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 32
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            6
+          ],
+          "count": 1,
+          "total": 6,
+          "max": 6,
+          "min": 6,
+          "average": 6
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 6,
+            "requirements": [
+              "TSM-001",
+              "TSM-002",
+              "TSM-003a",
+              "TSM-003b",
+              "TSM-003c",
+              "TSM-004"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    },
+    {
+      "component": "Tustin_Integrator",
+      "requirementCountMatches": true,
+      "nasa": {
+        "component": "Tustin_Integrator",
+        "requirementCount": 5,
+        "inputCount": 6,
+        "outputCount": 1,
+        "internalCount": 5,
+        "functionCount": 0,
+        "dependencyOutputRefs": 8,
+        "componentSizeSummary": {
+          "sizes": [
+            5
+          ],
+          "count": 1,
+          "total": 5,
+          "max": 5,
+          "min": 5,
+          "average": 5
+        },
+        "connectedComponents": [
+          {
+            "id": "cc0",
+            "requirementCount": 5,
+            "outputCount": 1,
+            "requirements": [
+              "TUI-001",
+              "TUI-002",
+              "TUI-003",
+              "TUI-003v2",
+              "TUI-003v3"
+            ],
+            "outputs": [
+              "yout"
+            ]
+          }
+        ]
+      },
+      "ours": {
+        "component": "Tustin_Integrator",
+        "requirementCount": 5,
+        "edgeCount": 32,
+        "edgeKindCounts": {
+          "data_requires": 0,
+          "state_requires": 0,
+          "shared_target": 32
+        },
+        "effectCount": 0,
+        "groupSizeSummary": {
+          "sizes": [
+            5
+          ],
+          "count": 1,
+          "total": 5,
+          "max": 5,
+          "min": 5,
+          "average": 5
+        },
+        "stateVariableCount": 0,
+        "stateCarrierCount": 0,
+        "stateValueCount": 0,
+        "groups": [
+          {
+            "id": "Group_1",
+            "root": "Cycle_1",
+            "requirementCount": 5,
+            "requirements": [
+              "TUI-001",
+              "TUI-002",
+              "TUI-003",
+              "TUI-003v2",
+              "TUI-003v3"
+            ]
+          }
+        ]
+      },
+      "deltas": {
+        "componentCount": 0,
+        "maxGroupSize": 0,
+        "averageGroupSize": 0
+      }
+    }
+  ]
+}

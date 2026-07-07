@@ -1,0 +1,6 @@
+reqid,component,project,fulltext
+NN-004,NN,LM_requirements,NN shall for 200 secs satisfy ( x = xt & y = yt  => absReal(zt - z) <= 0.01)
+NN-003B,NN,LM_requirements,NN shall for 200 secs satisfy DeltaZDividedByYt <= 10.0 & DeltaZDividedByYt >= -35.0
+NN-003A,NN,LM_requirements,NN shall for 200 secs satisfy DeltaZDividedByXt<= 10.0 & DeltaZDividedByXt >= -35.0
+NN-002,NN,LM_requirements,NN shall always satisfy z >= -0.2
+NN-001,NN,LM_requirements,NN shall always satisfy z <=1.1

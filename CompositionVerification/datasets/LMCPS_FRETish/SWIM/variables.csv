@@ -1,0 +1,12 @@
+component,variable_name,idType,dataType,variableType
+SWIM,CAT1,Internal,integer,data
+SWIM,CAT3,Internal,integer,data
+SWIM,CalAirspeedMin,Output,double,data
+SWIM,E_SWIM_WARNING_ON,Internal,double,data
+SWIM,lowSpeedWarningAllowed,Output,double,data
+SWIM,sqrt,Function,double,data
+SWIM,storeCat,Input,int32,data
+SWIM,swimGet_AgcasLowSpeedWarn,Output,double,data
+SWIM,vehAirPress,Input,double,data
+SWIM,warningTrigForMinPress,Output,double,data
+SWIM,weight,Input,double,data

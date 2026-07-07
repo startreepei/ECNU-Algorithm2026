@@ -1,0 +1,13 @@
+reqid,component,project,fulltext
+FSM-003v2,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_transition_state & good & supported & !standby) => STATE = ap_nominal_state
+FSM-002,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (standby & state = ap_transition_state) => STATE = ap_standby_state
+FSM-005,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state=ap_nominal_state & standby)  => STATE = ap_standby_state
+FSM-003,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_transition_state & good & supported) => STATE = ap_nominal_state
+FSM-008v1,FSM_Autopilot,LM_requirements, FSM_Autopilot shall always satisfy (state = ap_standby_state & !standby) => STATE = ap_transition_state
+FSM-009,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_standby_state & apfail )=> STATE = ap_maneuver_state
+FSM-004v2,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_nominal_state & ! good & ! standby) => STATE = ap_maneuver_state
+FSM-008v2,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_standby_state & ! standby & ! apfail ) => STATE = ap_transition_state
+FSM-007,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_maneuver_state & supported & good) => STATE = ap_transition_state
+FSM-004,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (! good & state = ap_nominal_state) => STATE = ap_maneuver_state
+FSM-007v2,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_maneuver_state & supported & good & ! standby) => STATE = ap_transition_state
+FSM-006,FSM_Autopilot,LM_requirements,FSM_Autopilot shall always satisfy (state = ap_maneuver_state & standby & good) => STATE = ap_standby_state

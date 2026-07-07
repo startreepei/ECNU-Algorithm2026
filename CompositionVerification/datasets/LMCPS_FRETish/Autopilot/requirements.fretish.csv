@@ -1,0 +1,10 @@
+reqid,component,project,fulltext
+AP-010bv2,Autopilot,LM_requirements,When in hdg Autopilot shall always satisfy (Psi - (HDGmodeCmd - psiAtZero))/(HDGmodeCmd - psiAtZero) <=0.1
+AP-010av2,Autopilot,LM_requirements,"When in hdg when preBool(false, absReal(Psi - HDGmodeCmd - preReal(113.0, Psi - HDGmodeCmd)) <= 1.0) Autopilot shall immediately satisfy absReal(Psi - HDGmodeCmd) <= 1.0"
+AP-010a,Autopilot,LM_requirements,"whenever hdg & preBool(false, absReal(Psi - HDGmodeCmd - preReal(113.0, Psi - HDGmodeCmd)) <= 1.0) Autopilot shall immediately satisfy absReal(Psi - HDGmodeCmd) <= 1.0"
+AP-010b,Autopilot,LM_requirements,when in hdg mode Autopilot shall always satisfy (roll_angle - roll_cmd - rollAtZero)/(roll_cmd - rollAtZero) <= 0.1
+AP-004a,Autopilot,LM_requirements,"whenever (autopilot_engaged & !hdg) & preBool(false, roll_angle - roll_cmd - preReal(roll_angle - roll_cmd, roll_angle - roll_cmd) <= epsilon) Autopilot shall immediately satisfy absReal(roll_angle - roll_cmd) <= 1.0 "
+AP-000,Autopilot,LM_requirements,Autopilot shall always satisfy altitude_hold => absReal(altitude - altitude_IC) <= 35.0
+AP-004b,Autopilot,LM_requirements,while (autopilot_engaged & !hdg) Autopilot shall always satisfy (roll_angle - roll_cmd - rollAtZero)/(roll_cmd - rollAtZero) <= 0.1
+AP-005,Autopilot,LM_requirements,Autopilot shall always satisfy  absReal(roll_rate) <= 6.6
+AP-006,Autopilot,LM_requirements,Autopilot shall always satisfy -33.0 < roll_angle & roll_angle < 33.0

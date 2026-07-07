@@ -1,0 +1,1066 @@
+{
+  "requirements": [
+    {
+      "reqid": "LM-001",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when start_button liquid_mixer shall immediately satisfy if ! liquid_level_1 then valve_0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "start_button",
+          "liquid_level_1",
+          "valve_0"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(start_button)",
+        "regular_condition": "(start_button)",
+        "conditionTextRange": [
+          0,
+          16
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          18,
+          29
+        ],
+        "timingTextRange": [
+          37,
+          47
+        ],
+        "post_condition": "(! liquid_level_1 => valve_0)",
+        "responseTextRange": [
+          49,
+          88
+        ],
+        "diagramVariables": "TC = <b><i>(start_button)</i></b>, Response = <b><i>(! liquid_level_1 => valve_0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(start_button)</i></b> is true and any point in the interval where <b><i>(start_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! liquid_level_1 => valve_0)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(start_button)</i></b> is true and any point in the interval where <b><i>(start_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! liquid_level_1 => valve_0)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "start_button",
+        "regular_condition_unexp_ft": "start_button",
+        "regular_condition_unexp_pctl": "start_button",
+        "regular_condition_SMV_pt": "start_button",
+        "regular_condition_SMV_ft": "start_button",
+        "regular_condition_MLTL_ft": "start_button",
+        "regular_condition_PRISM_pctl": "start_button",
+        "post_condition_unexp_pt": "((! liquid_level_1) -> valve_0)",
+        "post_condition_unexp_ft": "((! liquid_level_1) -> valve_0)",
+        "post_condition_unexp_pctl": "((! liquid_level_1) -> valve_0)",
+        "post_condition_SMV_pt": "((! liquid_level_1) -> valve_0)",
+        "post_condition_SMV_ft": "((! liquid_level_1) -> valve_0)",
+        "post_condition_MLTL_ft": "((! liquid_level_1) -> valve_0)",
+        "post_condition_PRISM_pctl": "((! liquid_level_1) -> valve_0)",
+        "ft": "((LAST V (((! start_button) & ((! LAST) & (X start_button))) -> (X ((! liquid_level_1) -> valve_0)))) & (start_button -> ((! liquid_level_1) -> valve_0)))",
+        "pt": "(H ((start_button & (Z (! start_button))) -> ((! liquid_level_1) -> valve_0)))",
+        "pctl": "P>=1[((G (((! start_button) & (X start_button)) => (X (P>=1[((! liquid_level_1) -> valve_0)])))) & (start_button => (P>=1[((! liquid_level_1) -> valve_0)])))]",
+        "ptExpanded": "(H ((start_button & (Z (! start_button))) -> ((! liquid_level_1) -> valve_0)))",
+        "CoCoSpecCode": "H(((start_button and ZtoPre(not (start_button))) => (not (liquid_level_1) => valve_0)))",
+        "ftExpanded": "((LAST V (((! start_button) & ((! LAST) & (X start_button))) -> (X ((! liquid_level_1) -> valve_0)))) & (start_button -> ((! liquid_level_1) -> valve_0)))",
+        "pctlExpanded": "P>=1[((G (((! start_button) & (X start_button)) => (X (P>=1[((! liquid_level_1) -> valve_0)])))) & (start_button => (P>=1[((! liquid_level_1) -> valve_0)])))]",
+        "ftInfAUExpanded": "((G (((! start_button) & (X start_button)) -> (X ((! liquid_level_1) -> valve_0)))) & (start_button -> ((! liquid_level_1) -> valve_0)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: start_button<br/>p1: ((! liquid_level_1) -> valve_0)",
+        "R2U2Code": "((((! start_button) && (F[1,1] start_button)) -> (F[1,1] ((! liquid_level_1) -> valve_0))) && (((TAU == 0) && (start_button && (! liquid_level_1))) -> valve_0))",
+        "component": "liquid_mixer"
+      },
+      "_id": "svzxqnunq0hn0ugo39baj"
+    },
+    {
+      "reqid": "LM-002",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when liquid_level_1 liquid_mixer shall immediately satisfy ! valve_0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "liquid_level_1",
+          "valve_0"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(liquid_level_1)",
+        "regular_condition": "(liquid_level_1)",
+        "conditionTextRange": [
+          0,
+          18
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          20,
+          31
+        ],
+        "timingTextRange": [
+          39,
+          49
+        ],
+        "post_condition": "(! valve_0)",
+        "responseTextRange": [
+          51,
+          67
+        ],
+        "diagramVariables": "TC = <b><i>(liquid_level_1)</i></b>, Response = <b><i>(! valve_0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_1)</i></b> is true and any point in the interval where <b><i>(liquid_level_1)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! valve_0)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_1)</i></b> is true and any point in the interval where <b><i>(liquid_level_1)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! valve_0)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "liquid_level_1",
+        "regular_condition_unexp_ft": "liquid_level_1",
+        "regular_condition_unexp_pctl": "liquid_level_1",
+        "regular_condition_SMV_pt": "liquid_level_1",
+        "regular_condition_SMV_ft": "liquid_level_1",
+        "regular_condition_MLTL_ft": "liquid_level_1",
+        "regular_condition_PRISM_pctl": "liquid_level_1",
+        "post_condition_unexp_pt": "(! valve_0)",
+        "post_condition_unexp_ft": "(! valve_0)",
+        "post_condition_unexp_pctl": "(! valve_0)",
+        "post_condition_SMV_pt": "(! valve_0)",
+        "post_condition_SMV_ft": "(! valve_0)",
+        "post_condition_MLTL_ft": "(! valve_0)",
+        "post_condition_PRISM_pctl": "(! valve_0)",
+        "ft": "((LAST V (((! liquid_level_1) & ((! LAST) & (X liquid_level_1))) -> (X (! valve_0)))) & (liquid_level_1 -> (! valve_0)))",
+        "pt": "(H ((liquid_level_1 & (Z (! liquid_level_1))) -> (! valve_0)))",
+        "pctl": "P>=1[((G (((! liquid_level_1) & (X liquid_level_1)) => (X (P>=1[(! valve_0)])))) & (liquid_level_1 => (P>=1[(! valve_0)])))]",
+        "ptExpanded": "(H ((liquid_level_1 & (Z (! liquid_level_1))) -> (! valve_0)))",
+        "CoCoSpecCode": "H(((liquid_level_1 and ZtoPre(not (liquid_level_1))) => not (valve_0)))",
+        "ftExpanded": "((LAST V (((! liquid_level_1) & ((! LAST) & (X liquid_level_1))) -> (X (! valve_0)))) & (liquid_level_1 -> (! valve_0)))",
+        "pctlExpanded": "P>=1[((G (((! liquid_level_1) & (X liquid_level_1)) => (X (P>=1[(! valve_0)])))) & (liquid_level_1 => (P>=1[(! valve_0)])))]",
+        "ftInfAUExpanded": "((G (((! liquid_level_1) & (X liquid_level_1)) -> (X (! valve_0)))) & (liquid_level_1 -> (! valve_0)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: liquid_level_1<br/>p1: (! valve_0)",
+        "R2U2Code": "((((! liquid_level_1) && (F[1,1] liquid_level_1)) -> (F[1,1] (! valve_0))) && (((TAU == 0) && liquid_level_1) -> (! valve_0)))",
+        "component": "liquid_mixer"
+      },
+      "_id": "4fhkm7gzfkucu07wp4tiro"
+    },
+    {
+      "reqid": "LM-003",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when liquid_level_1 the liquid_mixer shall until emergency_button satisfy if ! liquid_level_2 then valve_1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "until",
+        "response": "satisfaction",
+        "variables": [
+          "liquid_level_1",
+          "emergency_button",
+          "liquid_level_2",
+          "valve_1"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(liquid_level_1)",
+        "regular_condition": "(liquid_level_1)",
+        "conditionTextRange": [
+          0,
+          18
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          20,
+          35
+        ],
+        "stop_condition": "(emergency_button)",
+        "timingTextRange": [
+          43,
+          64
+        ],
+        "post_condition": "(! liquid_level_2 => valve_1)",
+        "responseTextRange": [
+          66,
+          105
+        ],
+        "diagramVariables": "TC = <b><i>(liquid_level_1)</i></b>, SC = <b><i>(emergency_button)</i></b>, Response = <b><i>(! liquid_level_2 => valve_1)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_1)</i></b> is true and any point in the interval where <b><i>(liquid_level_1)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(! liquid_level_2 => valve_1)</i></b> must remain true until (but not necessarily including) the point where the stop condition holds, or to the end of the interval. If the stop condition never occurs, <b><i>(! liquid_level_2 => valve_1)</i></b> must hold until the end of the scope, or forever.  If the stop condition holds at the trigger, the requirement is satisfied.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_1)</i></b> is true and any point in the interval where <b><i>(liquid_level_1)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(! liquid_level_2 => valve_1)</i></b> must remain true until (but not necessarily including) the point where the stop condition holds, or to the end of the interval. If the stop condition never occurs, <b><i>(! liquid_level_2 => valve_1)</i></b> must hold until the end of the scope, or forever.  If the stop condition holds at the trigger, the requirement is satisfied.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_until_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "liquid_level_1",
+        "regular_condition_unexp_ft": "liquid_level_1",
+        "regular_condition_unexp_pctl": "liquid_level_1",
+        "regular_condition_SMV_pt": "liquid_level_1",
+        "regular_condition_SMV_ft": "liquid_level_1",
+        "regular_condition_MLTL_ft": "liquid_level_1",
+        "regular_condition_PRISM_pctl": "liquid_level_1",
+        "post_condition_unexp_pt": "((! liquid_level_2) -> valve_1)",
+        "post_condition_unexp_ft": "((! liquid_level_2) -> valve_1)",
+        "post_condition_unexp_pctl": "((! liquid_level_2) -> valve_1)",
+        "post_condition_SMV_pt": "((! liquid_level_2) -> valve_1)",
+        "post_condition_SMV_ft": "((! liquid_level_2) -> valve_1)",
+        "post_condition_MLTL_ft": "((! liquid_level_2) -> valve_1)",
+        "post_condition_PRISM_pctl": "((! liquid_level_2) -> valve_1)",
+        "stop_condition_unexp_pt": "emergency_button",
+        "stop_condition_unexp_ft": "emergency_button",
+        "stop_condition_PRISM_pctl": "emergency_button",
+        "stop_condition_SMV_pt": "emergency_button",
+        "stop_condition_SMV_ft": "emergency_button",
+        "stop_condition_MLTL_ft": "emergency_button",
+        "ft": "((LAST V (((! liquid_level_1) & ((! LAST) & (X liquid_level_1))) -> (X ((emergency_button V (((! liquid_level_2) -> valve_1) | emergency_button)) | (LAST V ((! liquid_level_2) -> valve_1)))))) & (liquid_level_1 -> ((emergency_button V (((! liquid_level_2) -> valve_1) | emergency_button)) | (LAST V ((! liquid_level_2) -> valve_1)))))",
+        "pt": "(H ((H (! liquid_level_1)) | (((! emergency_button) S ((! emergency_button) & (liquid_level_1 & (Z (! liquid_level_1))))) -> ((! liquid_level_2) -> valve_1))))",
+        "pctl": "P>=1[((G (((! liquid_level_1) & (X liquid_level_1)) => (X (P>=1[((undefined R (((! liquid_level_2) -> valve_1) | undefined)) | (LAST R ((! liquid_level_2) -> valve_1)))])))) & (liquid_level_1 => (P>=1[((undefined R (((! liquid_level_2) -> valve_1) | undefined)) | (LAST R ((! liquid_level_2) -> valve_1)))])))]",
+        "ptExpanded": "(H ((H (! liquid_level_1)) | (((! emergency_button) S ((! emergency_button) & (liquid_level_1 & (Z (! liquid_level_1))))) -> ((! liquid_level_2) -> valve_1))))",
+        "CoCoSpecCode": "H((H(not (liquid_level_1)) or (SI((liquid_level_1 and ZtoPre(not (liquid_level_1))),not (emergency_button)) => (not (liquid_level_2) => valve_1))))",
+        "ftExpanded": "((LAST V (((! liquid_level_1) & ((! LAST) & (X liquid_level_1))) -> (X ((emergency_button V (((! liquid_level_2) -> valve_1) | emergency_button)) | (LAST V ((! liquid_level_2) -> valve_1)))))) & (liquid_level_1 -> ((emergency_button V (((! liquid_level_2) -> valve_1) | emergency_button)) | (LAST V ((! liquid_level_2) -> valve_1)))))",
+        "pctlExpanded": "P>=1[((G (((! liquid_level_1) & (X liquid_level_1)) => (X (P>=1[((emergency_button R (((! liquid_level_2) -> valve_1) | emergency_button)) | (false R ((! liquid_level_2) -> valve_1)))])))) & (liquid_level_1 => (P>=1[((emergency_button R (((! liquid_level_2) -> valve_1) | emergency_button)) | (false R ((! liquid_level_2) -> valve_1)))])))]",
+        "ftInfAUExpanded": "((G (((! liquid_level_1) & (X liquid_level_1)) -> (X (emergency_button V (((! liquid_level_2) -> valve_1) | emergency_button))))) & (liquid_level_1 -> (emergency_button V (((! liquid_level_2) -> valve_1) | emergency_button))))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (p1 R[1,M] (p2 | p1)))) & (p0 -> (p1 R[0,M] (p2 | p1))))",
+        "WESTMapping": "p0: liquid_level_1<br/>p1: emergency_button<br/>p2: ((! liquid_level_2) -> valve_1)",
+        "R2U2Code": "((((! liquid_level_1) && (F[1,1] liquid_level_1)) -> (emergency_button R[1,M] (((! liquid_level_2) -> valve_1) || emergency_button))) && (((TAU == 0) && liquid_level_1) -> (emergency_button R[0,M] (((! liquid_level_2) -> valve_1) || emergency_button))))",
+        "component": "liquid_mixer"
+      },
+      "_id": "p4n6xpzdcrmg4zs6cw6djk"
+    },
+    {
+      "reqid": "LM-004",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when liquid_level_2 the liquid_mixer shall immediately satisfy !valve_1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "liquid_level_2",
+          "valve_1"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(liquid_level_2)",
+        "regular_condition": "(liquid_level_2)",
+        "conditionTextRange": [
+          0,
+          18
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          20,
+          35
+        ],
+        "timingTextRange": [
+          43,
+          53
+        ],
+        "post_condition": "(! valve_1)",
+        "responseTextRange": [
+          55,
+          70
+        ],
+        "diagramVariables": "TC = <b><i>(liquid_level_2)</i></b>, Response = <b><i>(! valve_1)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_2)</i></b> is true and any point in the interval where <b><i>(liquid_level_2)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! valve_1)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_2)</i></b> is true and any point in the interval where <b><i>(liquid_level_2)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! valve_1)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "liquid_level_2",
+        "regular_condition_unexp_ft": "liquid_level_2",
+        "regular_condition_unexp_pctl": "liquid_level_2",
+        "regular_condition_SMV_pt": "liquid_level_2",
+        "regular_condition_SMV_ft": "liquid_level_2",
+        "regular_condition_MLTL_ft": "liquid_level_2",
+        "regular_condition_PRISM_pctl": "liquid_level_2",
+        "post_condition_unexp_pt": "(! valve_1)",
+        "post_condition_unexp_ft": "(! valve_1)",
+        "post_condition_unexp_pctl": "(! valve_1)",
+        "post_condition_SMV_pt": "(! valve_1)",
+        "post_condition_SMV_ft": "(! valve_1)",
+        "post_condition_MLTL_ft": "(! valve_1)",
+        "post_condition_PRISM_pctl": "(! valve_1)",
+        "ft": "((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X (! valve_1)))) & (liquid_level_2 -> (! valve_1)))",
+        "pt": "(H ((liquid_level_2 & (Z (! liquid_level_2))) -> (! valve_1)))",
+        "pctl": "P>=1[((G (((! liquid_level_2) & (X liquid_level_2)) => (X (P>=1[(! valve_1)])))) & (liquid_level_2 => (P>=1[(! valve_1)])))]",
+        "ptExpanded": "(H ((liquid_level_2 & (Z (! liquid_level_2))) -> (! valve_1)))",
+        "CoCoSpecCode": "H(((liquid_level_2 and ZtoPre(not (liquid_level_2))) => not (valve_1)))",
+        "ftExpanded": "((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X (! valve_1)))) & (liquid_level_2 -> (! valve_1)))",
+        "pctlExpanded": "P>=1[((G (((! liquid_level_2) & (X liquid_level_2)) => (X (P>=1[(! valve_1)])))) & (liquid_level_2 => (P>=1[(! valve_1)])))]",
+        "ftInfAUExpanded": "((G (((! liquid_level_2) & (X liquid_level_2)) -> (X (! valve_1)))) & (liquid_level_2 -> (! valve_1)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: liquid_level_2<br/>p1: (! valve_1)",
+        "R2U2Code": "((((! liquid_level_2) && (F[1,1] liquid_level_2)) -> (F[1,1] (! valve_1))) && (((TAU == 0) && liquid_level_2) -> (! valve_1)))",
+        "component": "liquid_mixer"
+      },
+      "_id": "p2y4ycsyixxs2jrk0uzn"
+    },
+    {
+      "reqid": "LM-005",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when liquid_level_2 the liquid_mixer shall immediately satisfy timer_60sec_start",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "liquid_level_2",
+          "timer_60sec_start"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(liquid_level_2)",
+        "regular_condition": "(liquid_level_2)",
+        "conditionTextRange": [
+          0,
+          18
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          20,
+          35
+        ],
+        "timingTextRange": [
+          43,
+          53
+        ],
+        "post_condition": "(timer_60sec_start)",
+        "responseTextRange": [
+          55,
+          79
+        ],
+        "diagramVariables": "TC = <b><i>(liquid_level_2)</i></b>, Response = <b><i>(timer_60sec_start)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_2)</i></b> is true and any point in the interval where <b><i>(liquid_level_2)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(timer_60sec_start)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_2)</i></b> is true and any point in the interval where <b><i>(liquid_level_2)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(timer_60sec_start)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "liquid_level_2",
+        "regular_condition_unexp_ft": "liquid_level_2",
+        "regular_condition_unexp_pctl": "liquid_level_2",
+        "regular_condition_SMV_pt": "liquid_level_2",
+        "regular_condition_SMV_ft": "liquid_level_2",
+        "regular_condition_MLTL_ft": "liquid_level_2",
+        "regular_condition_PRISM_pctl": "liquid_level_2",
+        "post_condition_unexp_pt": "timer_60sec_start",
+        "post_condition_unexp_ft": "timer_60sec_start",
+        "post_condition_unexp_pctl": "timer_60sec_start",
+        "post_condition_SMV_pt": "timer_60sec_start",
+        "post_condition_SMV_ft": "timer_60sec_start",
+        "post_condition_MLTL_ft": "timer_60sec_start",
+        "post_condition_PRISM_pctl": "timer_60sec_start",
+        "ft": "((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X timer_60sec_start))) & (liquid_level_2 -> timer_60sec_start))",
+        "pt": "(H ((liquid_level_2 & (Z (! liquid_level_2))) -> timer_60sec_start))",
+        "pctl": "P>=1[((G (((! liquid_level_2) & (X liquid_level_2)) => (X (P>=1[timer_60sec_start])))) & (liquid_level_2 => (P>=1[timer_60sec_start])))]",
+        "ptExpanded": "(H ((liquid_level_2 & (Z (! liquid_level_2))) -> timer_60sec_start))",
+        "CoCoSpecCode": "H(((liquid_level_2 and ZtoPre(not (liquid_level_2))) => timer_60sec_start))",
+        "ftExpanded": "((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X timer_60sec_start))) & (liquid_level_2 -> timer_60sec_start))",
+        "pctlExpanded": "P>=1[((G (((! liquid_level_2) & (X liquid_level_2)) => (X (P>=1[timer_60sec_start])))) & (liquid_level_2 => (P>=1[timer_60sec_start])))]",
+        "ftInfAUExpanded": "((G (((! liquid_level_2) & (X liquid_level_2)) -> (X timer_60sec_start))) & (liquid_level_2 -> timer_60sec_start))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: liquid_level_2<br/>p1: timer_60sec_start",
+        "R2U2Code": "((((! liquid_level_2) && (F[1,1] liquid_level_2)) -> (F[1,1] timer_60sec_start)) && (((TAU == 0) && liquid_level_2) -> timer_60sec_start))",
+        "component": "liquid_mixer"
+      },
+      "_id": "i8qzji1y0b8q9htvnafxl"
+    },
+    {
+      "reqid": "LM-006",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when liquid_level_2, the liquid_mixer shall until (timer_60sec_expire | emergency_button) satisfy stirring_motor",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "until",
+        "response": "satisfaction",
+        "variables": [
+          "liquid_level_2",
+          "timer_60sec_expire",
+          "emergency_button",
+          "stirring_motor"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(liquid_level_2)",
+        "regular_condition": "(liquid_level_2)",
+        "conditionTextRange": [
+          0,
+          19
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          21,
+          36
+        ],
+        "stop_condition": "(( timer_60sec_expire | emergency_button ))",
+        "timingTextRange": [
+          44,
+          88
+        ],
+        "post_condition": "(stirring_motor)",
+        "responseTextRange": [
+          90,
+          111
+        ],
+        "diagramVariables": "TC = <b><i>(liquid_level_2)</i></b>, SC = <b><i>(( timer_60sec_expire | emergency_button ))</i></b>, Response = <b><i>(stirring_motor)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_2)</i></b> is true and any point in the interval where <b><i>(liquid_level_2)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(stirring_motor)</i></b> must remain true until (but not necessarily including) the point where the stop condition holds, or to the end of the interval. If the stop condition never occurs, <b><i>(stirring_motor)</i></b> must hold until the end of the scope, or forever.  If the stop condition holds at the trigger, the requirement is satisfied.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(liquid_level_2)</i></b> is true and any point in the interval where <b><i>(liquid_level_2)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(stirring_motor)</i></b> must remain true until (but not necessarily including) the point where the stop condition holds, or to the end of the interval. If the stop condition never occurs, <b><i>(stirring_motor)</i></b> must hold until the end of the scope, or forever.  If the stop condition holds at the trigger, the requirement is satisfied.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_until_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "liquid_level_2",
+        "regular_condition_unexp_ft": "liquid_level_2",
+        "regular_condition_unexp_pctl": "liquid_level_2",
+        "regular_condition_SMV_pt": "liquid_level_2",
+        "regular_condition_SMV_ft": "liquid_level_2",
+        "regular_condition_MLTL_ft": "liquid_level_2",
+        "regular_condition_PRISM_pctl": "liquid_level_2",
+        "post_condition_unexp_pt": "stirring_motor",
+        "post_condition_unexp_ft": "stirring_motor",
+        "post_condition_unexp_pctl": "stirring_motor",
+        "post_condition_SMV_pt": "stirring_motor",
+        "post_condition_SMV_ft": "stirring_motor",
+        "post_condition_MLTL_ft": "stirring_motor",
+        "post_condition_PRISM_pctl": "stirring_motor",
+        "stop_condition_unexp_pt": "(timer_60sec_expire | emergency_button)",
+        "stop_condition_unexp_ft": "(timer_60sec_expire | emergency_button)",
+        "stop_condition_PRISM_pctl": "(timer_60sec_expire | emergency_button)",
+        "stop_condition_SMV_pt": "(timer_60sec_expire | emergency_button)",
+        "stop_condition_SMV_ft": "(timer_60sec_expire | emergency_button)",
+        "stop_condition_MLTL_ft": "(timer_60sec_expire | emergency_button)",
+        "ft": "((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X (((timer_60sec_expire | emergency_button) V (stirring_motor | (timer_60sec_expire | emergency_button))) | (LAST V stirring_motor))))) & (liquid_level_2 -> (((timer_60sec_expire | emergency_button) V (stirring_motor | (timer_60sec_expire | emergency_button))) | (LAST V stirring_motor))))",
+        "pt": "(H ((H (! liquid_level_2)) | (((! (timer_60sec_expire | emergency_button)) S ((! (timer_60sec_expire | emergency_button)) & (liquid_level_2 & (Z (! liquid_level_2))))) -> stirring_motor)))",
+        "pctl": "P>=1[((G (((! liquid_level_2) & (X liquid_level_2)) => (X (P>=1[((undefined R (stirring_motor | undefined)) | (LAST R stirring_motor))])))) & (liquid_level_2 => (P>=1[((undefined R (stirring_motor | undefined)) | (LAST R stirring_motor))])))]",
+        "ptExpanded": "(H ((H (! liquid_level_2)) | (((! (timer_60sec_expire | emergency_button)) S ((! (timer_60sec_expire | emergency_button)) & (liquid_level_2 & (Z (! liquid_level_2))))) -> stirring_motor)))",
+        "CoCoSpecCode": "H((H(not (liquid_level_2)) or (SI((liquid_level_2 and ZtoPre(not (liquid_level_2))),not ((timer_60sec_expire or emergency_button))) => stirring_motor)))",
+        "ftExpanded": "((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X (((timer_60sec_expire | emergency_button) V (stirring_motor | (timer_60sec_expire | emergency_button))) | (LAST V stirring_motor))))) & (liquid_level_2 -> (((timer_60sec_expire | emergency_button) V (stirring_motor | (timer_60sec_expire | emergency_button))) | (LAST V stirring_motor))))",
+        "pctlExpanded": "P>=1[((G (((! liquid_level_2) & (X liquid_level_2)) => (X (P>=1[(((timer_60sec_expire | emergency_button) R (stirring_motor | (timer_60sec_expire | emergency_button))) | (false R stirring_motor))])))) & (liquid_level_2 => (P>=1[(((timer_60sec_expire | emergency_button) R (stirring_motor | (timer_60sec_expire | emergency_button))) | (false R stirring_motor))])))]",
+        "ftInfAUExpanded": "((G (((! liquid_level_2) & (X liquid_level_2)) -> (X ((timer_60sec_expire | emergency_button) V (stirring_motor | (timer_60sec_expire | emergency_button)))))) & (liquid_level_2 -> ((timer_60sec_expire | emergency_button) V (stirring_motor | (timer_60sec_expire | emergency_button)))))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (p1 R[1,M] (p2 | p1)))) & (p0 -> (p1 R[0,M] (p2 | p1))))",
+        "WESTMapping": "p0: liquid_level_2<br/>p1: (timer_60sec_expire | emergency_button)<br/>p2: stirring_motor",
+        "R2U2Code": "((((! liquid_level_2) && (F[1,1] liquid_level_2)) -> ((timer_60sec_expire || emergency_button) R[1,M] (stirring_motor || (timer_60sec_expire || emergency_button)))) && (((TAU == 0) && liquid_level_2) -> ((timer_60sec_expire || emergency_button) R[0,M] (stirring_motor || (timer_60sec_expire || emergency_button)))))",
+        "component": "liquid_mixer"
+      },
+      "_id": "wm7onemvpam3pgd0cb9yk"
+    },
+    {
+      "reqid": "LM-007",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when timer_60sec_expire the liquid_mixer shall immediately satisfy timer_120sec_start",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "timer_60sec_expire",
+          "timer_120sec_start"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(timer_60sec_expire)",
+        "regular_condition": "(timer_60sec_expire)",
+        "conditionTextRange": [
+          0,
+          22
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          24,
+          39
+        ],
+        "timingTextRange": [
+          47,
+          57
+        ],
+        "post_condition": "(timer_120sec_start)",
+        "responseTextRange": [
+          59,
+          84
+        ],
+        "diagramVariables": "TC = <b><i>(timer_60sec_expire)</i></b>, Response = <b><i>(timer_120sec_start)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(timer_60sec_expire)</i></b> is true and any point in the interval where <b><i>(timer_60sec_expire)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(timer_120sec_start)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(timer_60sec_expire)</i></b> is true and any point in the interval where <b><i>(timer_60sec_expire)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(timer_120sec_start)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "timer_60sec_expire",
+        "regular_condition_unexp_ft": "timer_60sec_expire",
+        "regular_condition_unexp_pctl": "timer_60sec_expire",
+        "regular_condition_SMV_pt": "timer_60sec_expire",
+        "regular_condition_SMV_ft": "timer_60sec_expire",
+        "regular_condition_MLTL_ft": "timer_60sec_expire",
+        "regular_condition_PRISM_pctl": "timer_60sec_expire",
+        "post_condition_unexp_pt": "timer_120sec_start",
+        "post_condition_unexp_ft": "timer_120sec_start",
+        "post_condition_unexp_pctl": "timer_120sec_start",
+        "post_condition_SMV_pt": "timer_120sec_start",
+        "post_condition_SMV_ft": "timer_120sec_start",
+        "post_condition_MLTL_ft": "timer_120sec_start",
+        "post_condition_PRISM_pctl": "timer_120sec_start",
+        "ft": "((LAST V (((! timer_60sec_expire) & ((! LAST) & (X timer_60sec_expire))) -> (X timer_120sec_start))) & (timer_60sec_expire -> timer_120sec_start))",
+        "pt": "(H ((timer_60sec_expire & (Z (! timer_60sec_expire))) -> timer_120sec_start))",
+        "pctl": "P>=1[((G (((! timer_60sec_expire) & (X timer_60sec_expire)) => (X (P>=1[timer_120sec_start])))) & (timer_60sec_expire => (P>=1[timer_120sec_start])))]",
+        "ptExpanded": "(H ((timer_60sec_expire & (Z (! timer_60sec_expire))) -> timer_120sec_start))",
+        "CoCoSpecCode": "H(((timer_60sec_expire and ZtoPre(not (timer_60sec_expire))) => timer_120sec_start))",
+        "ftExpanded": "((LAST V (((! timer_60sec_expire) & ((! LAST) & (X timer_60sec_expire))) -> (X timer_120sec_start))) & (timer_60sec_expire -> timer_120sec_start))",
+        "pctlExpanded": "P>=1[((G (((! timer_60sec_expire) & (X timer_60sec_expire)) => (X (P>=1[timer_120sec_start])))) & (timer_60sec_expire => (P>=1[timer_120sec_start])))]",
+        "ftInfAUExpanded": "((G (((! timer_60sec_expire) & (X timer_60sec_expire)) -> (X timer_120sec_start))) & (timer_60sec_expire -> timer_120sec_start))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: timer_60sec_expire<br/>p1: timer_120sec_start",
+        "R2U2Code": "((((! timer_60sec_expire) && (F[1,1] timer_60sec_expire)) -> (F[1,1] timer_120sec_start)) && (((TAU == 0) && timer_60sec_expire) -> timer_120sec_start))",
+        "component": "liquid_mixer"
+      },
+      "_id": "072itx8muobhbjt6rhq5vr"
+    },
+    {
+      "reqid": "LM-008",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when timer_60sec_expire, the liquid_mixer shall until (timer_120sec_expire | emergency_button) satisfy valve_2",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "until",
+        "response": "satisfaction",
+        "variables": [
+          "timer_60sec_expire",
+          "timer_120sec_expire",
+          "emergency_button",
+          "valve_2"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(timer_60sec_expire)",
+        "regular_condition": "(timer_60sec_expire)",
+        "conditionTextRange": [
+          0,
+          23
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          25,
+          40
+        ],
+        "stop_condition": "(( timer_120sec_expire | emergency_button ))",
+        "timingTextRange": [
+          48,
+          93
+        ],
+        "post_condition": "(valve_2)",
+        "responseTextRange": [
+          95,
+          109
+        ],
+        "diagramVariables": "TC = <b><i>(timer_60sec_expire)</i></b>, SC = <b><i>(( timer_120sec_expire | emergency_button ))</i></b>, Response = <b><i>(valve_2)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(timer_60sec_expire)</i></b> is true and any point in the interval where <b><i>(timer_60sec_expire)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(valve_2)</i></b> must remain true until (but not necessarily including) the point where the stop condition holds, or to the end of the interval. If the stop condition never occurs, <b><i>(valve_2)</i></b> must hold until the end of the scope, or forever.  If the stop condition holds at the trigger, the requirement is satisfied.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(timer_60sec_expire)</i></b> is true and any point in the interval where <b><i>(timer_60sec_expire)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(valve_2)</i></b> must remain true until (but not necessarily including) the point where the stop condition holds, or to the end of the interval. If the stop condition never occurs, <b><i>(valve_2)</i></b> must hold until the end of the scope, or forever.  If the stop condition holds at the trigger, the requirement is satisfied.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_until_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "timer_60sec_expire",
+        "regular_condition_unexp_ft": "timer_60sec_expire",
+        "regular_condition_unexp_pctl": "timer_60sec_expire",
+        "regular_condition_SMV_pt": "timer_60sec_expire",
+        "regular_condition_SMV_ft": "timer_60sec_expire",
+        "regular_condition_MLTL_ft": "timer_60sec_expire",
+        "regular_condition_PRISM_pctl": "timer_60sec_expire",
+        "post_condition_unexp_pt": "valve_2",
+        "post_condition_unexp_ft": "valve_2",
+        "post_condition_unexp_pctl": "valve_2",
+        "post_condition_SMV_pt": "valve_2",
+        "post_condition_SMV_ft": "valve_2",
+        "post_condition_MLTL_ft": "valve_2",
+        "post_condition_PRISM_pctl": "valve_2",
+        "stop_condition_unexp_pt": "(timer_120sec_expire | emergency_button)",
+        "stop_condition_unexp_ft": "(timer_120sec_expire | emergency_button)",
+        "stop_condition_PRISM_pctl": "(timer_120sec_expire | emergency_button)",
+        "stop_condition_SMV_pt": "(timer_120sec_expire | emergency_button)",
+        "stop_condition_SMV_ft": "(timer_120sec_expire | emergency_button)",
+        "stop_condition_MLTL_ft": "(timer_120sec_expire | emergency_button)",
+        "ft": "((LAST V (((! timer_60sec_expire) & ((! LAST) & (X timer_60sec_expire))) -> (X (((timer_120sec_expire | emergency_button) V (valve_2 | (timer_120sec_expire | emergency_button))) | (LAST V valve_2))))) & (timer_60sec_expire -> (((timer_120sec_expire | emergency_button) V (valve_2 | (timer_120sec_expire | emergency_button))) | (LAST V valve_2))))",
+        "pt": "(H ((H (! timer_60sec_expire)) | (((! (timer_120sec_expire | emergency_button)) S ((! (timer_120sec_expire | emergency_button)) & (timer_60sec_expire & (Z (! timer_60sec_expire))))) -> valve_2)))",
+        "pctl": "P>=1[((G (((! timer_60sec_expire) & (X timer_60sec_expire)) => (X (P>=1[((undefined R (valve_2 | undefined)) | (LAST R valve_2))])))) & (timer_60sec_expire => (P>=1[((undefined R (valve_2 | undefined)) | (LAST R valve_2))])))]",
+        "ptExpanded": "(H ((H (! timer_60sec_expire)) | (((! (timer_120sec_expire | emergency_button)) S ((! (timer_120sec_expire | emergency_button)) & (timer_60sec_expire & (Z (! timer_60sec_expire))))) -> valve_2)))",
+        "CoCoSpecCode": "H((H(not (timer_60sec_expire)) or (SI((timer_60sec_expire and ZtoPre(not (timer_60sec_expire))),not ((timer_120sec_expire or emergency_button))) => valve_2)))",
+        "ftExpanded": "((LAST V (((! timer_60sec_expire) & ((! LAST) & (X timer_60sec_expire))) -> (X (((timer_120sec_expire | emergency_button) V (valve_2 | (timer_120sec_expire | emergency_button))) | (LAST V valve_2))))) & (timer_60sec_expire -> (((timer_120sec_expire | emergency_button) V (valve_2 | (timer_120sec_expire | emergency_button))) | (LAST V valve_2))))",
+        "pctlExpanded": "P>=1[((G (((! timer_60sec_expire) & (X timer_60sec_expire)) => (X (P>=1[(((timer_120sec_expire | emergency_button) R (valve_2 | (timer_120sec_expire | emergency_button))) | (false R valve_2))])))) & (timer_60sec_expire => (P>=1[(((timer_120sec_expire | emergency_button) R (valve_2 | (timer_120sec_expire | emergency_button))) | (false R valve_2))])))]",
+        "ftInfAUExpanded": "((G (((! timer_60sec_expire) & (X timer_60sec_expire)) -> (X ((timer_120sec_expire | emergency_button) V (valve_2 | (timer_120sec_expire | emergency_button)))))) & (timer_60sec_expire -> ((timer_120sec_expire | emergency_button) V (valve_2 | (timer_120sec_expire | emergency_button)))))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (p1 R[1,M] (p2 | p1)))) & (p0 -> (p1 R[0,M] (p2 | p1))))",
+        "WESTMapping": "p0: timer_60sec_expire<br/>p1: (timer_120sec_expire | emergency_button)<br/>p2: valve_2",
+        "R2U2Code": "((((! timer_60sec_expire) && (F[1,1] timer_60sec_expire)) -> ((timer_120sec_expire || emergency_button) R[1,M] (valve_2 || (timer_120sec_expire || emergency_button)))) && (((TAU == 0) && timer_60sec_expire) -> ((timer_120sec_expire || emergency_button) R[0,M] (valve_2 || (timer_120sec_expire || emergency_button)))))",
+        "component": "liquid_mixer"
+      },
+      "_id": "bhn3mtt9xo4i8k27k951uf"
+    },
+    {
+      "reqid": "LM-009",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when emergency_button, the liquid_mixer shall immediately satisfy ! valve_0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "emergency_button",
+          "valve_0"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(emergency_button)",
+        "regular_condition": "(emergency_button)",
+        "conditionTextRange": [
+          0,
+          21
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          23,
+          38
+        ],
+        "timingTextRange": [
+          46,
+          56
+        ],
+        "post_condition": "(! valve_0)",
+        "responseTextRange": [
+          58,
+          74
+        ],
+        "diagramVariables": "TC = <b><i>(emergency_button)</i></b>, Response = <b><i>(! valve_0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! valve_0)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! valve_0)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "emergency_button",
+        "regular_condition_unexp_ft": "emergency_button",
+        "regular_condition_unexp_pctl": "emergency_button",
+        "regular_condition_SMV_pt": "emergency_button",
+        "regular_condition_SMV_ft": "emergency_button",
+        "regular_condition_MLTL_ft": "emergency_button",
+        "regular_condition_PRISM_pctl": "emergency_button",
+        "post_condition_unexp_pt": "(! valve_0)",
+        "post_condition_unexp_ft": "(! valve_0)",
+        "post_condition_unexp_pctl": "(! valve_0)",
+        "post_condition_SMV_pt": "(! valve_0)",
+        "post_condition_SMV_ft": "(! valve_0)",
+        "post_condition_MLTL_ft": "(! valve_0)",
+        "post_condition_PRISM_pctl": "(! valve_0)",
+        "ft": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! valve_0)))) & (emergency_button -> (! valve_0)))",
+        "pt": "(H ((emergency_button & (Z (! emergency_button))) -> (! valve_0)))",
+        "pctl": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! valve_0)])))) & (emergency_button => (P>=1[(! valve_0)])))]",
+        "ptExpanded": "(H ((emergency_button & (Z (! emergency_button))) -> (! valve_0)))",
+        "CoCoSpecCode": "H(((emergency_button and ZtoPre(not (emergency_button))) => not (valve_0)))",
+        "ftExpanded": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! valve_0)))) & (emergency_button -> (! valve_0)))",
+        "pctlExpanded": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! valve_0)])))) & (emergency_button => (P>=1[(! valve_0)])))]",
+        "ftInfAUExpanded": "((G (((! emergency_button) & (X emergency_button)) -> (X (! valve_0)))) & (emergency_button -> (! valve_0)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: emergency_button<br/>p1: (! valve_0)",
+        "R2U2Code": "((((! emergency_button) && (F[1,1] emergency_button)) -> (F[1,1] (! valve_0))) && (((TAU == 0) && emergency_button) -> (! valve_0)))",
+        "component": "liquid_mixer"
+      },
+      "_id": "ed2iraoyjjw2wi5nsp7dq"
+    },
+    {
+      "reqid": "LM-010",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when emergency_button the liquid_mixer shall immediately satisfy ! valve_1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "emergency_button",
+          "valve_1"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(emergency_button)",
+        "regular_condition": "(emergency_button)",
+        "conditionTextRange": [
+          0,
+          20
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          22,
+          37
+        ],
+        "timingTextRange": [
+          45,
+          55
+        ],
+        "post_condition": "(! valve_1)",
+        "responseTextRange": [
+          57,
+          73
+        ],
+        "diagramVariables": "TC = <b><i>(emergency_button)</i></b>, Response = <b><i>(! valve_1)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! valve_1)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! valve_1)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "emergency_button",
+        "regular_condition_unexp_ft": "emergency_button",
+        "regular_condition_unexp_pctl": "emergency_button",
+        "regular_condition_SMV_pt": "emergency_button",
+        "regular_condition_SMV_ft": "emergency_button",
+        "regular_condition_MLTL_ft": "emergency_button",
+        "regular_condition_PRISM_pctl": "emergency_button",
+        "post_condition_unexp_pt": "(! valve_1)",
+        "post_condition_unexp_ft": "(! valve_1)",
+        "post_condition_unexp_pctl": "(! valve_1)",
+        "post_condition_SMV_pt": "(! valve_1)",
+        "post_condition_SMV_ft": "(! valve_1)",
+        "post_condition_MLTL_ft": "(! valve_1)",
+        "post_condition_PRISM_pctl": "(! valve_1)",
+        "ft": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! valve_1)))) & (emergency_button -> (! valve_1)))",
+        "pt": "(H ((emergency_button & (Z (! emergency_button))) -> (! valve_1)))",
+        "pctl": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! valve_1)])))) & (emergency_button => (P>=1[(! valve_1)])))]",
+        "ptExpanded": "(H ((emergency_button & (Z (! emergency_button))) -> (! valve_1)))",
+        "CoCoSpecCode": "H(((emergency_button and ZtoPre(not (emergency_button))) => not (valve_1)))",
+        "ftExpanded": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! valve_1)))) & (emergency_button -> (! valve_1)))",
+        "pctlExpanded": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! valve_1)])))) & (emergency_button => (P>=1[(! valve_1)])))]",
+        "ftInfAUExpanded": "((G (((! emergency_button) & (X emergency_button)) -> (X (! valve_1)))) & (emergency_button -> (! valve_1)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: emergency_button<br/>p1: (! valve_1)",
+        "R2U2Code": "((((! emergency_button) && (F[1,1] emergency_button)) -> (F[1,1] (! valve_1))) && (((TAU == 0) && emergency_button) -> (! valve_1)))",
+        "component": "liquid_mixer"
+      },
+      "_id": "g03gaawo1nfyno66ie2pr"
+    },
+    {
+      "reqid": "LM-011",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when emergency_button the liquid_mixer shall immediately satisfy ! valve_2",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "emergency_button",
+          "valve_2"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(emergency_button)",
+        "regular_condition": "(emergency_button)",
+        "conditionTextRange": [
+          0,
+          20
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          22,
+          37
+        ],
+        "timingTextRange": [
+          45,
+          55
+        ],
+        "post_condition": "(! valve_2)",
+        "responseTextRange": [
+          57,
+          73
+        ],
+        "diagramVariables": "TC = <b><i>(emergency_button)</i></b>, Response = <b><i>(! valve_2)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! valve_2)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! valve_2)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "emergency_button",
+        "regular_condition_unexp_ft": "emergency_button",
+        "regular_condition_unexp_pctl": "emergency_button",
+        "regular_condition_SMV_pt": "emergency_button",
+        "regular_condition_SMV_ft": "emergency_button",
+        "regular_condition_MLTL_ft": "emergency_button",
+        "regular_condition_PRISM_pctl": "emergency_button",
+        "post_condition_unexp_pt": "(! valve_2)",
+        "post_condition_unexp_ft": "(! valve_2)",
+        "post_condition_unexp_pctl": "(! valve_2)",
+        "post_condition_SMV_pt": "(! valve_2)",
+        "post_condition_SMV_ft": "(! valve_2)",
+        "post_condition_MLTL_ft": "(! valve_2)",
+        "post_condition_PRISM_pctl": "(! valve_2)",
+        "ft": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! valve_2)))) & (emergency_button -> (! valve_2)))",
+        "pt": "(H ((emergency_button & (Z (! emergency_button))) -> (! valve_2)))",
+        "pctl": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! valve_2)])))) & (emergency_button => (P>=1[(! valve_2)])))]",
+        "ptExpanded": "(H ((emergency_button & (Z (! emergency_button))) -> (! valve_2)))",
+        "CoCoSpecCode": "H(((emergency_button and ZtoPre(not (emergency_button))) => not (valve_2)))",
+        "ftExpanded": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! valve_2)))) & (emergency_button -> (! valve_2)))",
+        "pctlExpanded": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! valve_2)])))) & (emergency_button => (P>=1[(! valve_2)])))]",
+        "ftInfAUExpanded": "((G (((! emergency_button) & (X emergency_button)) -> (X (! valve_2)))) & (emergency_button -> (! valve_2)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: emergency_button<br/>p1: (! valve_2)",
+        "R2U2Code": "((((! emergency_button) && (F[1,1] emergency_button)) -> (F[1,1] (! valve_2))) && (((TAU == 0) && emergency_button) -> (! valve_2)))",
+        "component": "liquid_mixer"
+      },
+      "_id": "rrtn82vafqs4p3w3uo8zc2"
+    },
+    {
+      "reqid": "LM-012",
+      "parent_reqid": "",
+      "project": "Liquid_mixer",
+      "rationale": "",
+      "fulltext": "when emergency_button the liquid_mixer shall immediately satisfy ! stirring_motor",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "emergency_button",
+          "stirring_motor"
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(emergency_button)",
+        "regular_condition": "(emergency_button)",
+        "conditionTextRange": [
+          0,
+          20
+        ],
+        "component_name": "liquid_mixer",
+        "componentTextRange": [
+          22,
+          37
+        ],
+        "timingTextRange": [
+          45,
+          55
+        ],
+        "post_condition": "(! stirring_motor)",
+        "responseTextRange": [
+          57,
+          80
+        ],
+        "diagramVariables": "TC = <b><i>(emergency_button)</i></b>, Response = <b><i>(! stirring_motor)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(! stirring_motor)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(emergency_button)</i></b> is true and any point in the interval where <b><i>(emergency_button)</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(! stirring_motor)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "emergency_button",
+        "regular_condition_unexp_ft": "emergency_button",
+        "regular_condition_unexp_pctl": "emergency_button",
+        "regular_condition_SMV_pt": "emergency_button",
+        "regular_condition_SMV_ft": "emergency_button",
+        "regular_condition_MLTL_ft": "emergency_button",
+        "regular_condition_PRISM_pctl": "emergency_button",
+        "post_condition_unexp_pt": "(! stirring_motor)",
+        "post_condition_unexp_ft": "(! stirring_motor)",
+        "post_condition_unexp_pctl": "(! stirring_motor)",
+        "post_condition_SMV_pt": "(! stirring_motor)",
+        "post_condition_SMV_ft": "(! stirring_motor)",
+        "post_condition_MLTL_ft": "(! stirring_motor)",
+        "post_condition_PRISM_pctl": "(! stirring_motor)",
+        "ft": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! stirring_motor)))) & (emergency_button -> (! stirring_motor)))",
+        "pt": "(H ((emergency_button & (Z (! emergency_button))) -> (! stirring_motor)))",
+        "pctl": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! stirring_motor)])))) & (emergency_button => (P>=1[(! stirring_motor)])))]",
+        "ptExpanded": "(H ((emergency_button & (Z (! emergency_button))) -> (! stirring_motor)))",
+        "CoCoSpecCode": "H(((emergency_button and ZtoPre(not (emergency_button))) => not (stirring_motor)))",
+        "ftExpanded": "((LAST V (((! emergency_button) & ((! LAST) & (X emergency_button))) -> (X (! stirring_motor)))) & (emergency_button -> (! stirring_motor)))",
+        "pctlExpanded": "P>=1[((G (((! emergency_button) & (X emergency_button)) => (X (P>=1[(! stirring_motor)])))) & (emergency_button => (P>=1[(! stirring_motor)])))]",
+        "ftInfAUExpanded": "((G (((! emergency_button) & (X emergency_button)) -> (X (! stirring_motor)))) & (emergency_button -> (! stirring_motor)))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: emergency_button<br/>p1: (! stirring_motor)",
+        "R2U2Code": "((((! emergency_button) && (F[1,1] emergency_button)) -> (F[1,1] (! stirring_motor))) && (((TAU == 0) && emergency_button) -> (! stirring_motor)))",
+        "component": "liquid_mixer"
+      },
+      "_id": "9whrtnq7fhrirt630p8bs"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "emergency_button",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "m68f7xkxels9mq7ucrmsvn",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "liquid_level_1",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "e011wdp98pmjh3wkd75em",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "liquid_level_2",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "hkte4eandtnc00et5tynj4",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "start_button",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "fumlklm9gbnjk7t1mjjh",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "stirring_motor",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ek62qa9kl1o1v942e6exxa",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "timer_120sec_expire",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "a05i2xm7jwo6y68kxn1ja",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "timer_120sec_start",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "af7g3ikf91h51wa5i25wsg",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "timer_60sec_expire",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "fu1m2jf0ka1kb76i1xofi",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "timer_60sec_start",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "vv4rprmu3djrgdpdl91wgd",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "valve_0",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "m33hd29oncc0zbdhp9t3zx9",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "valve_1",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "byvxsv01ro5g1z2jiuuqy",
+      "completed": true
+    },
+    {
+      "component_name": "liquid_mixer",
+      "variable_name": "valve_2",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "0urnv7nxawhfw0ejnjpzyld",
+      "completed": true
+    }
+  ]
+}

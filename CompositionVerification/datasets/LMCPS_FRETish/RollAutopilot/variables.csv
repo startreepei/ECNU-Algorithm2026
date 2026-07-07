@@ -1,0 +1,15 @@
+component,variable_name,idType,dataType,variableType
+RollAutopilot,Cb,Internal,boolean,data
+RollAutopilot,Cc1,Internal,boolean,data
+RollAutopilot,Cc2,Internal,boolean,data
+RollAutopilot,Cd,Internal,boolean,data
+RollAutopilot,TurnKnob,Input,double,data
+RollAutopilot,aileron_cmd,Output,double,data
+RollAutopilot,autopilot_engaged,Input,boolean,state
+RollAutopilot,hdg_hold,Input,boolean,data
+RollAutopilot,hdg_hold_mode_cmd,Output,double,state
+RollAutopilot,roll_angle,Input,double,data
+RollAutopilot,roll_cmd,Output,double,data
+RollAutopilot,roll_hold,Internal,boolean,data
+RollAutopilot,roll_hold_reference,Output,double,data
+RollAutopilot,sign_roll_angle,Internal,double,data

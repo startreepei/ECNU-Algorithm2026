@@ -1,0 +1,716 @@
+{
+  "requirements": [
+    {
+      "reqid": "REG-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall never satisfy persisted(100,xcvdt_cmd_fcs_fps2 > 32.0)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "never",
+        "response": "satisfaction",
+        "variables": [
+          "xcvdt_cmd_fcs_fps2"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          20
+        ],
+        "post_condition": "(persisted ( 100 , xcvdt_cmd_fcs_fps2 > 32.0 ))",
+        "responseTextRange": [
+          22,
+          69
+        ],
+        "diagramVariables": "Response = <b><i>(persisted ( 100 , xcvdt_cmd_fcs_fps2 > 32.0 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(persisted ( 100 , xcvdt_cmd_fcs_fps2 > 32.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(persisted ( 100 , xcvdt_cmd_fcs_fps2 > 32.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_never_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((H[<=100] (xcvdt_cmd_fcs_fps2 > 32.0)) & (H[<100] (! FTP)))",
+        "post_condition_unexp_ft": "persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_unexp_pctl": "persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_SMV_pt": "((H[<=100] (xcvdt_cmd_fcs_fps2 > 32.0)) & (H[<100] (! (!(Y TRUE)))))",
+        "post_condition_SMV_ft": "persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_MLTL_ft": "persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_PRISM_pctl": "persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))",
+        "ft": "(LAST V (! persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))))",
+        "pt": "(H (! ((H[<=100] (xcvdt_cmd_fcs_fps2 > 32.0)) & (H[<100] (! FTP)))))",
+        "pctl": "(P>=1[(G (! persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))))])",
+        "ptExpanded": "(H (! ((H[0,100] (xcvdt_cmd_fcs_fps2 > 32.0)) & (H[0,99] (Y TRUE)))))",
+        "CoCoSpecCode": "H(not ((HT(100, 0, (xcvdt_cmd_fcs_fps2 > 32.0)) and HT(99, 0, YtoPre(true)))))",
+        "ftExpanded": "(LAST V (! persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))))",
+        "pctlExpanded": "(P>=1[(G (! persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))))])",
+        "ftInfAUExpanded": "(G (! persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))))",
+        "mltlExpanded": "(G[0,M] (! p0))",
+        "WESTMapping": "p0: persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0))",
+        "R2U2Code": "(! persisted(100,(xcvdt_cmd_fcs_fps2 > 32.0)))",
+        "component": "Regulator"
+      },
+      "_id": "qyzbwiweo7otbyhylkzqi"
+    },
+    {
+      "reqid": "REG-001",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall never satisfy persisted(100,lcvdt_cmd_fcs_dps2 > 50.0)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "never",
+        "response": "satisfaction",
+        "variables": [
+          "lcvdt_cmd_fcs_dps2"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          20
+        ],
+        "post_condition": "(persisted ( 100 , lcvdt_cmd_fcs_dps2 > 50.0 ))",
+        "responseTextRange": [
+          22,
+          69
+        ],
+        "diagramVariables": "Response = <b><i>(persisted ( 100 , lcvdt_cmd_fcs_dps2 > 50.0 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(persisted ( 100 , lcvdt_cmd_fcs_dps2 > 50.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(persisted ( 100 , lcvdt_cmd_fcs_dps2 > 50.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_never_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((H[<=100] (lcvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! FTP)))",
+        "post_condition_unexp_ft": "persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_unexp_pctl": "persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_SMV_pt": "((H[<=100] (lcvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! (!(Y TRUE)))))",
+        "post_condition_SMV_ft": "persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_MLTL_ft": "persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_PRISM_pctl": "persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))",
+        "ft": "(LAST V (! persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))))",
+        "pt": "(H (! ((H[<=100] (lcvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! FTP)))))",
+        "pctl": "(P>=1[(G (! persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))))])",
+        "ptExpanded": "(H (! ((H[0,100] (lcvdt_cmd_fcs_dps2 > 50.0)) & (H[0,99] (Y TRUE)))))",
+        "CoCoSpecCode": "H(not ((HT(100, 0, (lcvdt_cmd_fcs_dps2 > 50.0)) and HT(99, 0, YtoPre(true)))))",
+        "ftExpanded": "(LAST V (! persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))))",
+        "pctlExpanded": "(P>=1[(G (! persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))))])",
+        "ftInfAUExpanded": "(G (! persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))))",
+        "mltlExpanded": "(G[0,M] (! p0))",
+        "WESTMapping": "p0: persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0))",
+        "R2U2Code": "(! persisted(100,(lcvdt_cmd_fcs_dps2 > 50.0)))",
+        "component": "Regulator"
+      },
+      "_id": "8s4j4n96g8olsvvwmg375h"
+    },
+    {
+      "reqid": "REG-006",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall always satisfy roll_command_acceleration <= 50.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "roll_command_acceleration"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(roll_command_acceleration <= 50.0)",
+        "responseTextRange": [
+          23,
+          63
+        ],
+        "diagramVariables": "Response = <b><i>(roll_command_acceleration <= 50.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(roll_command_acceleration <= 50.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(roll_command_acceleration <= 50.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(roll_command_acceleration <= 50.0)",
+        "post_condition_unexp_ft": "(roll_command_acceleration <= 50.0)",
+        "post_condition_unexp_pctl": "(roll_command_acceleration <= 50.0)",
+        "post_condition_SMV_pt": "(roll_command_acceleration <= 50.0)",
+        "post_condition_SMV_ft": "(roll_command_acceleration <= 50.0)",
+        "post_condition_MLTL_ft": "(roll_command_acceleration <= 50.0)",
+        "post_condition_PRISM_pctl": "(roll_command_acceleration <= 50.0)",
+        "ft": "(LAST V (roll_command_acceleration <= 50.0))",
+        "pt": "(H (roll_command_acceleration <= 50.0))",
+        "pctl": "(P>=1[(G (roll_command_acceleration <= 50.0))])",
+        "ptExpanded": "(H (roll_command_acceleration <= 50.0))",
+        "CoCoSpecCode": "H((roll_command_acceleration <= 50.0))",
+        "ftExpanded": "(LAST V (roll_command_acceleration <= 50.0))",
+        "pctlExpanded": "(P>=1[(G (roll_command_acceleration <= 50.0))])",
+        "ftInfAUExpanded": "(G (roll_command_acceleration <= 50.0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (roll_command_acceleration <= 50.0)",
+        "R2U2Code": "(roll_command_acceleration <= 50.0)",
+        "component": "Regulator"
+      },
+      "_id": "dvdtbi47d4fvqqbdq07dsm"
+    },
+    {
+      "reqid": "REG-005",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall never satisfy persisted(100,hcvdt_cmd_fcs_fps2 > 32.0)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "never",
+        "response": "satisfaction",
+        "variables": [
+          "hcvdt_cmd_fcs_fps2"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          20
+        ],
+        "post_condition": "(persisted ( 100 , hcvdt_cmd_fcs_fps2 > 32.0 ))",
+        "responseTextRange": [
+          22,
+          69
+        ],
+        "diagramVariables": "Response = <b><i>(persisted ( 100 , hcvdt_cmd_fcs_fps2 > 32.0 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(persisted ( 100 , hcvdt_cmd_fcs_fps2 > 32.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(persisted ( 100 , hcvdt_cmd_fcs_fps2 > 32.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_never_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((H[<=100] (hcvdt_cmd_fcs_fps2 > 32.0)) & (H[<100] (! FTP)))",
+        "post_condition_unexp_ft": "persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_unexp_pctl": "persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_SMV_pt": "((H[<=100] (hcvdt_cmd_fcs_fps2 > 32.0)) & (H[<100] (! (!(Y TRUE)))))",
+        "post_condition_SMV_ft": "persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_MLTL_ft": "persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))",
+        "post_condition_PRISM_pctl": "persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))",
+        "ft": "(LAST V (! persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))))",
+        "pt": "(H (! ((H[<=100] (hcvdt_cmd_fcs_fps2 > 32.0)) & (H[<100] (! FTP)))))",
+        "pctl": "(P>=1[(G (! persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))))])",
+        "ptExpanded": "(H (! ((H[0,100] (hcvdt_cmd_fcs_fps2 > 32.0)) & (H[0,99] (Y TRUE)))))",
+        "CoCoSpecCode": "H(not ((HT(100, 0, (hcvdt_cmd_fcs_fps2 > 32.0)) and HT(99, 0, YtoPre(true)))))",
+        "ftExpanded": "(LAST V (! persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))))",
+        "pctlExpanded": "(P>=1[(G (! persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))))])",
+        "ftInfAUExpanded": "(G (! persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))))",
+        "mltlExpanded": "(G[0,M] (! p0))",
+        "WESTMapping": "p0: persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0))",
+        "R2U2Code": "(! persisted(100,(hcvdt_cmd_fcs_fps2 > 32.0)))",
+        "component": "Regulator"
+      },
+      "_id": "j6uk1iq5xvqosylu4o3ler"
+    },
+    {
+      "reqid": "REG-007",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall always satisfy pitch_command_acceleration <= 50.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "pitch_command_acceleration"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(pitch_command_acceleration <= 50.0)",
+        "responseTextRange": [
+          23,
+          64
+        ],
+        "diagramVariables": "Response = <b><i>(pitch_command_acceleration <= 50.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(pitch_command_acceleration <= 50.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(pitch_command_acceleration <= 50.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(pitch_command_acceleration <= 50.0)",
+        "post_condition_unexp_ft": "(pitch_command_acceleration <= 50.0)",
+        "post_condition_unexp_pctl": "(pitch_command_acceleration <= 50.0)",
+        "post_condition_SMV_pt": "(pitch_command_acceleration <= 50.0)",
+        "post_condition_SMV_ft": "(pitch_command_acceleration <= 50.0)",
+        "post_condition_MLTL_ft": "(pitch_command_acceleration <= 50.0)",
+        "post_condition_PRISM_pctl": "(pitch_command_acceleration <= 50.0)",
+        "ft": "(LAST V (pitch_command_acceleration <= 50.0))",
+        "pt": "(H (pitch_command_acceleration <= 50.0))",
+        "pctl": "(P>=1[(G (pitch_command_acceleration <= 50.0))])",
+        "ptExpanded": "(H (pitch_command_acceleration <= 50.0))",
+        "CoCoSpecCode": "H((pitch_command_acceleration <= 50.0))",
+        "ftExpanded": "(LAST V (pitch_command_acceleration <= 50.0))",
+        "pctlExpanded": "(P>=1[(G (pitch_command_acceleration <= 50.0))])",
+        "ftInfAUExpanded": "(G (pitch_command_acceleration <= 50.0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (pitch_command_acceleration <= 50.0)",
+        "R2U2Code": "(pitch_command_acceleration <= 50.0)",
+        "component": "Regulator"
+      },
+      "_id": "wqfrpwhhavql0yaiohoy9"
+    },
+    {
+      "reqid": "REG-008",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall always satisfy yaw_command_acceleration <= 50.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "yaw_command_acceleration"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(yaw_command_acceleration <= 50.0)",
+        "responseTextRange": [
+          23,
+          62
+        ],
+        "diagramVariables": "Response = <b><i>(yaw_command_acceleration <= 50.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(yaw_command_acceleration <= 50.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(yaw_command_acceleration <= 50.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(yaw_command_acceleration <= 50.0)",
+        "post_condition_unexp_ft": "(yaw_command_acceleration <= 50.0)",
+        "post_condition_unexp_pctl": "(yaw_command_acceleration <= 50.0)",
+        "post_condition_SMV_pt": "(yaw_command_acceleration <= 50.0)",
+        "post_condition_SMV_ft": "(yaw_command_acceleration <= 50.0)",
+        "post_condition_MLTL_ft": "(yaw_command_acceleration <= 50.0)",
+        "post_condition_PRISM_pctl": "(yaw_command_acceleration <= 50.0)",
+        "ft": "(LAST V (yaw_command_acceleration <= 50.0))",
+        "pt": "(H (yaw_command_acceleration <= 50.0))",
+        "pctl": "(P>=1[(G (yaw_command_acceleration <= 50.0))])",
+        "ptExpanded": "(H (yaw_command_acceleration <= 50.0))",
+        "CoCoSpecCode": "H((yaw_command_acceleration <= 50.0))",
+        "ftExpanded": "(LAST V (yaw_command_acceleration <= 50.0))",
+        "pctlExpanded": "(P>=1[(G (yaw_command_acceleration <= 50.0))])",
+        "ftInfAUExpanded": "(G (yaw_command_acceleration <= 50.0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (yaw_command_acceleration <= 50.0)",
+        "R2U2Code": "(yaw_command_acceleration <= 50.0)",
+        "component": "Regulator"
+      },
+      "_id": "qdwnhq2c2induvoyaguog"
+    },
+    {
+      "reqid": "REG-009",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall always satisfy airspeed_command_acceleration <= 32.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "airspeed_command_acceleration"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(airspeed_command_acceleration <= 32.0)",
+        "responseTextRange": [
+          23,
+          67
+        ],
+        "diagramVariables": "Response = <b><i>(airspeed_command_acceleration <= 32.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(airspeed_command_acceleration <= 32.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(airspeed_command_acceleration <= 32.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(airspeed_command_acceleration <= 32.0)",
+        "post_condition_unexp_ft": "(airspeed_command_acceleration <= 32.0)",
+        "post_condition_unexp_pctl": "(airspeed_command_acceleration <= 32.0)",
+        "post_condition_SMV_pt": "(airspeed_command_acceleration <= 32.0)",
+        "post_condition_SMV_ft": "(airspeed_command_acceleration <= 32.0)",
+        "post_condition_MLTL_ft": "(airspeed_command_acceleration <= 32.0)",
+        "post_condition_PRISM_pctl": "(airspeed_command_acceleration <= 32.0)",
+        "ft": "(LAST V (airspeed_command_acceleration <= 32.0))",
+        "pt": "(H (airspeed_command_acceleration <= 32.0))",
+        "pctl": "(P>=1[(G (airspeed_command_acceleration <= 32.0))])",
+        "ptExpanded": "(H (airspeed_command_acceleration <= 32.0))",
+        "CoCoSpecCode": "H((airspeed_command_acceleration <= 32.0))",
+        "ftExpanded": "(LAST V (airspeed_command_acceleration <= 32.0))",
+        "pctlExpanded": "(P>=1[(G (airspeed_command_acceleration <= 32.0))])",
+        "ftInfAUExpanded": "(G (airspeed_command_acceleration <= 32.0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (airspeed_command_acceleration <= 32.0)",
+        "R2U2Code": "(airspeed_command_acceleration <= 32.0)",
+        "component": "Regulator"
+      },
+      "_id": "73rk3heb7p4u7dub8ugd98"
+    },
+    {
+      "reqid": "REG-010",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall always satisfy height_command_acceleration <= 32.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "height_command_acceleration"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(height_command_acceleration <= 32.0)",
+        "responseTextRange": [
+          23,
+          65
+        ],
+        "diagramVariables": "Response = <b><i>(height_command_acceleration <= 32.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(height_command_acceleration <= 32.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(height_command_acceleration <= 32.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(height_command_acceleration <= 32.0)",
+        "post_condition_unexp_ft": "(height_command_acceleration <= 32.0)",
+        "post_condition_unexp_pctl": "(height_command_acceleration <= 32.0)",
+        "post_condition_SMV_pt": "(height_command_acceleration <= 32.0)",
+        "post_condition_SMV_ft": "(height_command_acceleration <= 32.0)",
+        "post_condition_MLTL_ft": "(height_command_acceleration <= 32.0)",
+        "post_condition_PRISM_pctl": "(height_command_acceleration <= 32.0)",
+        "ft": "(LAST V (height_command_acceleration <= 32.0))",
+        "pt": "(H (height_command_acceleration <= 32.0))",
+        "pctl": "(P>=1[(G (height_command_acceleration <= 32.0))])",
+        "ptExpanded": "(H (height_command_acceleration <= 32.0))",
+        "CoCoSpecCode": "H((height_command_acceleration <= 32.0))",
+        "ftExpanded": "(LAST V (height_command_acceleration <= 32.0))",
+        "pctlExpanded": "(P>=1[(G (height_command_acceleration <= 32.0))])",
+        "ftInfAUExpanded": "(G (height_command_acceleration <= 32.0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (height_command_acceleration <= 32.0)",
+        "R2U2Code": "(height_command_acceleration <= 32.0)",
+        "component": "Regulator"
+      },
+      "_id": "djhtadggvia5gtrmbspt3o"
+    },
+    {
+      "reqid": "REG-002",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall never satisfy persisted(100,mcvdt_cmd_fcs_dps2 > 50.0)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "never",
+        "response": "satisfaction",
+        "variables": [
+          "mcvdt_cmd_fcs_dps2"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          20
+        ],
+        "post_condition": "(persisted ( 100 , mcvdt_cmd_fcs_dps2 > 50.0 ))",
+        "responseTextRange": [
+          22,
+          69
+        ],
+        "diagramVariables": "Response = <b><i>(persisted ( 100 , mcvdt_cmd_fcs_dps2 > 50.0 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(persisted ( 100 , mcvdt_cmd_fcs_dps2 > 50.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(persisted ( 100 , mcvdt_cmd_fcs_dps2 > 50.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_never_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((H[<=100] (mcvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! FTP)))",
+        "post_condition_unexp_ft": "persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_unexp_pctl": "persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_SMV_pt": "((H[<=100] (mcvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! (!(Y TRUE)))))",
+        "post_condition_SMV_ft": "persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_MLTL_ft": "persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_PRISM_pctl": "persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))",
+        "ft": "(LAST V (! persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))))",
+        "pt": "(H (! ((H[<=100] (mcvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! FTP)))))",
+        "pctl": "(P>=1[(G (! persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))))])",
+        "ptExpanded": "(H (! ((H[0,100] (mcvdt_cmd_fcs_dps2 > 50.0)) & (H[0,99] (Y TRUE)))))",
+        "CoCoSpecCode": "H(not ((HT(100, 0, (mcvdt_cmd_fcs_dps2 > 50.0)) and HT(99, 0, YtoPre(true)))))",
+        "ftExpanded": "(LAST V (! persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))))",
+        "pctlExpanded": "(P>=1[(G (! persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))))])",
+        "ftInfAUExpanded": "(G (! persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))))",
+        "mltlExpanded": "(G[0,M] (! p0))",
+        "WESTMapping": "p0: persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0))",
+        "R2U2Code": "(! persisted(100,(mcvdt_cmd_fcs_dps2 > 50.0)))",
+        "component": "Regulator"
+      },
+      "_id": "kbb7y37qk2zmpb0t7dg4"
+    },
+    {
+      "reqid": "REG-003",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Regulator shall never satisfy persisted(100,ncvdt_cmd_fcs_dps2 > 50.0)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "never",
+        "response": "satisfaction",
+        "variables": [
+          "ncvdt_cmd_fcs_dps2"
+        ],
+        "component_name": "Regulator",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          20
+        ],
+        "post_condition": "(persisted ( 100 , ncvdt_cmd_fcs_dps2 > 50.0 ))",
+        "responseTextRange": [
+          22,
+          69
+        ],
+        "diagramVariables": "Response = <b><i>(persisted ( 100 , ncvdt_cmd_fcs_dps2 > 50.0 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(persisted ( 100 , ncvdt_cmd_fcs_dps2 > 50.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(persisted ( 100 , ncvdt_cmd_fcs_dps2 > 50.0 ))</i></b> must be false at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_never_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((H[<=100] (ncvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! FTP)))",
+        "post_condition_unexp_ft": "persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_unexp_pctl": "persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_SMV_pt": "((H[<=100] (ncvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! (!(Y TRUE)))))",
+        "post_condition_SMV_ft": "persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_MLTL_ft": "persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))",
+        "post_condition_PRISM_pctl": "persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))",
+        "ft": "(LAST V (! persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))))",
+        "pt": "(H (! ((H[<=100] (ncvdt_cmd_fcs_dps2 > 50.0)) & (H[<100] (! FTP)))))",
+        "pctl": "(P>=1[(G (! persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))))])",
+        "ptExpanded": "(H (! ((H[0,100] (ncvdt_cmd_fcs_dps2 > 50.0)) & (H[0,99] (Y TRUE)))))",
+        "CoCoSpecCode": "H(not ((HT(100, 0, (ncvdt_cmd_fcs_dps2 > 50.0)) and HT(99, 0, YtoPre(true)))))",
+        "ftExpanded": "(LAST V (! persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))))",
+        "pctlExpanded": "(P>=1[(G (! persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))))])",
+        "ftInfAUExpanded": "(G (! persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))))",
+        "mltlExpanded": "(G[0,M] (! p0))",
+        "WESTMapping": "p0: persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0))",
+        "R2U2Code": "(! persisted(100,(ncvdt_cmd_fcs_dps2 > 50.0)))",
+        "component": "Regulator"
+      },
+      "_id": "vqqlvtp29wa1vne3kvcyyj"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "Regulator",
+      "variable_name": "airspeed_command_acceleration",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "1jub7g8d8sbc54v8h5l2nr",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "hcvdt_cmd_fcs_fps2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "aiqp1a842nr84yzoab8kdp",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "height_command_acceleration",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "0fawuu3dmd8ue41upge0swk",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "lcvdt_cmd_fcs_dps2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ausno5dykewb9z8bpmf1k6",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "mcvdt_cmd_fcs_dps2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "1exua0xtq3zi5ejd23zptun",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "ncvdt_cmd_fcs_dps2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "wmkguqbej26jl5ti8nkf",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "pitch_command_acceleration",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "n3tzytokhvk1qf2rq7h5xp",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "roll_command_acceleration",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6ogmzv596zt4xxfvteq75v",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "xcvdt_cmd_fcs_fps2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "m2d4uwwfx1jyzqd8pxcsol",
+      "completed": true
+    },
+    {
+      "component_name": "Regulator",
+      "variable_name": "yaw_command_acceleration",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "51d4ynd4xnu7ugsoa1dd9w",
+      "completed": true
+    }
+  ]
+}

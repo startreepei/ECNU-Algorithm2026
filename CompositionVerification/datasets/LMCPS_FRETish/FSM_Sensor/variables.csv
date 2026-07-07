@@ -1,0 +1,9 @@
+component,variable_name,idType,dataType,variableType
+FSM_Sensor,SENSTATE,Output,double,state
+FSM_Sensor,activeMode,Input,boolean,state
+FSM_Sensor,limits,Input,boolean,data
+FSM_Sensor,request,Input,boolean,data
+FSM_Sensor,sen_fault_state,Internal,double,state_value
+FSM_Sensor,sen_nominal_state,Internal,double,state_value
+FSM_Sensor,sen_transition_state,Internal,double,state_value
+FSM_Sensor,senstate,Input,double,state

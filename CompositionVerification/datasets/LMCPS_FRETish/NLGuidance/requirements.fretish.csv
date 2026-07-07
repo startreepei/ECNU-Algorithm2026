@@ -1,0 +1,8 @@
+reqid,component,project,fulltext
+NLG-001,NLGuidance,LM_requirements,NLGuidance shall always satisfy Vv * yout > 0
+NLG-002&3,NLGuidance,LM_requirements,"NLGuidance shall always satisfy mag(yout - Xtarg) >= r & dot((yout - Xtarg),(yout - Xv)) = 0"
+NLG-005a,NLGuidance,LM_requirements,if mag(Xr) < r & mag(r1) < mag(r2) NLGuidance shall always satisfy yout = Xap1
+NLG-005b,NLGuidance,LM_requirements,if mag(Xr) < r & mag(r1) >= mag(r2) NLGuidance shall always satisfy yout = Xap2
+NLG-006,NLGuidance,LM_requirements,NLGuidance shall always satisfy mag(yout - pre_yout) <= T_param * mag(Vt + Vv)
+NLG-004,NLGuidance,LM_requirements,NLGuidance shall always satisfy yout * Xr > 0
+NLG-007,NLGuidance,LM_requirements,NLGuidance shall always satisfy yout(3) - Xtarg(3) = 0

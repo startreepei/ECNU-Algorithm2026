@@ -1,0 +1,399 @@
+{
+  "requirements": [
+    {
+      "reqid": "NN-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NN shall for 200 secs satisfy ( x = xt & y = yt  => absReal(zt - z) <= 0.01)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "for",
+        "response": "satisfaction",
+        "variables": [
+          "x",
+          "xt",
+          "y",
+          "yt",
+          "zt",
+          "z"
+        ],
+        "component_name": "NN",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "duration": "200",
+        "timingTextRange": [
+          9,
+          20
+        ],
+        "post_condition": "(( x = xt & y = yt => absReal ( zt - z ) <= 0.01 ))",
+        "responseTextRange": [
+          22,
+          75
+        ],
+        "diagramVariables": " n = <b><i>200</i></b>, Response = <b><i>(( x = xt & y = yt => absReal ( zt - z ) <= 0.01 ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( x = xt & y = yt => absReal ( zt - z ) <= 0.01 ))</i></b> must hold at the trigger and remain true for <b><i>200</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>200</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>200</i></b>.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( x = xt & y = yt => absReal ( zt - z ) <= 0.01 ))</i></b> must hold at the trigger and remain true for <b><i>200</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>200</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>200</i></b>.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_for_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "post_condition_unexp_ft": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "post_condition_unexp_pctl": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "post_condition_SMV_pt": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "post_condition_SMV_ft": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "post_condition_MLTL_ft": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "post_condition_PRISM_pctl": "(((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "ft": "((G[<=200] (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))) | (LAST V (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))))",
+        "pt": "(H ((O[<=200] (Z FALSE)) -> (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))))",
+        "pctl": "(P>=1[(G<=200 (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01)))])",
+        "ptExpanded": "(H ((O[0,200] (Z FALSE)) -> (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))))",
+        "CoCoSpecCode": "H((OT(200, 0, ZtoPre(false)) => (((x = xt) and (y = yt)) => (absReal((zt - z)) <= 0.01))))",
+        "ftExpanded": "((G[0,200] (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))) | (LAST V (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))))",
+        "pctlExpanded": "(P>=1[(G<=200 (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01)))])",
+        "ftInfAUExpanded": "((G[0,200] (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))) | (G (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))))",
+        "mltlExpanded": "(G[0,200] p0)",
+        "WESTMapping": "p0: (((x = xt) & (y = yt)) -> (absReal((zt - z)) <= 0.01))",
+        "R2U2Code": "((TAU == 0) -> (G[0,200] (((x == xt) && (y == yt)) -> (abs((zt - z)) <= 0.01))))",
+        "component": "NN"
+      },
+      "_id": "930fea4uq8g3d04h70nqwr"
+    },
+    {
+      "reqid": "NN-003B",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NN shall for 200 secs satisfy DeltaZDividedByYt <= 10.0 & DeltaZDividedByYt >= -35.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "for",
+        "response": "satisfaction",
+        "variables": [
+          "DeltaZDividedByYt"
+        ],
+        "component_name": "NN",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "duration": "200",
+        "timingTextRange": [
+          9,
+          20
+        ],
+        "post_condition": "(DeltaZDividedByYt <= 10.0 & DeltaZDividedByYt >= -35.0)",
+        "responseTextRange": [
+          22,
+          83
+        ],
+        "diagramVariables": " n = <b><i>200</i></b>, Response = <b><i>(DeltaZDividedByYt <= 10.0 & DeltaZDividedByYt >= -35.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DeltaZDividedByYt <= 10.0 & DeltaZDividedByYt >= -35.0)</i></b> must hold at the trigger and remain true for <b><i>200</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>200</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>200</i></b>.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DeltaZDividedByYt <= 10.0 & DeltaZDividedByYt >= -35.0)</i></b> must hold at the trigger and remain true for <b><i>200</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>200</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>200</i></b>.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_for_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "post_condition_unexp_ft": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "post_condition_unexp_pctl": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "post_condition_SMV_pt": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "post_condition_SMV_ft": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "post_condition_MLTL_ft": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "post_condition_PRISM_pctl": "((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "ft": "((G[<=200] ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))) | (LAST V ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))))",
+        "pt": "(H ((O[<=200] (Z FALSE)) -> ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))))",
+        "pctl": "(P>=1[(G<=200 ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0)))])",
+        "ptExpanded": "(H ((O[0,200] (Z FALSE)) -> ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))))",
+        "CoCoSpecCode": "H((OT(200, 0, ZtoPre(false)) => ((DeltaZDividedByYt <= 10.0) and (DeltaZDividedByYt >= -35.0))))",
+        "ftExpanded": "((G[0,200] ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))) | (LAST V ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))))",
+        "pctlExpanded": "(P>=1[(G<=200 ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0)))])",
+        "ftInfAUExpanded": "((G[0,200] ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))) | (G ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))))",
+        "mltlExpanded": "(G[0,200] p0)",
+        "WESTMapping": "p0: ((DeltaZDividedByYt <= 10.0) & (DeltaZDividedByYt >= -35.0))",
+        "R2U2Code": "((TAU == 0) -> (G[0,200] ((DeltaZDividedByYt <= 10.0) && (DeltaZDividedByYt >= -35.0))))",
+        "component": "NN"
+      },
+      "_id": "u1q3afuc3lbr02mltwa1l"
+    },
+    {
+      "reqid": "NN-003A",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NN shall for 200 secs satisfy DeltaZDividedByXt<= 10.0 & DeltaZDividedByXt >= -35.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "for",
+        "response": "satisfaction",
+        "variables": [
+          "DeltaZDividedByXt"
+        ],
+        "component_name": "NN",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "duration": "200",
+        "timingTextRange": [
+          9,
+          20
+        ],
+        "post_condition": "(DeltaZDividedByXt <= 10.0 & DeltaZDividedByXt >= -35.0)",
+        "responseTextRange": [
+          22,
+          82
+        ],
+        "diagramVariables": " n = <b><i>200</i></b>, Response = <b><i>(DeltaZDividedByXt <= 10.0 & DeltaZDividedByXt >= -35.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(DeltaZDividedByXt <= 10.0 & DeltaZDividedByXt >= -35.0)</i></b> must hold at the trigger and remain true for <b><i>200</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>200</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>200</i></b>.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(DeltaZDividedByXt <= 10.0 & DeltaZDividedByXt >= -35.0)</i></b> must hold at the trigger and remain true for <b><i>200</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>200</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>200</i></b>.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_for_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "post_condition_unexp_ft": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "post_condition_unexp_pctl": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "post_condition_SMV_pt": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "post_condition_SMV_ft": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "post_condition_MLTL_ft": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "post_condition_PRISM_pctl": "((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "ft": "((G[<=200] ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))) | (LAST V ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))))",
+        "pt": "(H ((O[<=200] (Z FALSE)) -> ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))))",
+        "pctl": "(P>=1[(G<=200 ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0)))])",
+        "ptExpanded": "(H ((O[0,200] (Z FALSE)) -> ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))))",
+        "CoCoSpecCode": "H((OT(200, 0, ZtoPre(false)) => ((DeltaZDividedByXt <= 10.0) and (DeltaZDividedByXt >= -35.0))))",
+        "ftExpanded": "((G[0,200] ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))) | (LAST V ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))))",
+        "pctlExpanded": "(P>=1[(G<=200 ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0)))])",
+        "ftInfAUExpanded": "((G[0,200] ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))) | (G ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))))",
+        "mltlExpanded": "(G[0,200] p0)",
+        "WESTMapping": "p0: ((DeltaZDividedByXt <= 10.0) & (DeltaZDividedByXt >= -35.0))",
+        "R2U2Code": "((TAU == 0) -> (G[0,200] ((DeltaZDividedByXt <= 10.0) && (DeltaZDividedByXt >= -35.0))))",
+        "component": "NN"
+      },
+      "_id": "evgj2zybvl7yjatj31nzv"
+    },
+    {
+      "reqid": "NN-002",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NN shall always satisfy z >= -0.2",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "z"
+        ],
+        "component_name": "NN",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "timingTextRange": [
+          9,
+          14
+        ],
+        "post_condition": "(z >= -0.2)",
+        "responseTextRange": [
+          16,
+          32
+        ],
+        "diagramVariables": "Response = <b><i>(z >= -0.2)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(z >= -0.2)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(z >= -0.2)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(z >= -0.2)",
+        "post_condition_unexp_ft": "(z >= -0.2)",
+        "post_condition_unexp_pctl": "(z >= -0.2)",
+        "post_condition_SMV_pt": "(z >= -0.2)",
+        "post_condition_SMV_ft": "(z >= -0.2)",
+        "post_condition_MLTL_ft": "(z >= -0.2)",
+        "post_condition_PRISM_pctl": "(z >= -0.2)",
+        "ft": "(LAST V (z >= -0.2))",
+        "pt": "(H (z >= -0.2))",
+        "pctl": "(P>=1[(G (z >= -0.2))])",
+        "ptExpanded": "(H (z >= -0.2))",
+        "CoCoSpecCode": "H((z >= -0.2))",
+        "ftExpanded": "(LAST V (z >= -0.2))",
+        "pctlExpanded": "(P>=1[(G (z >= -0.2))])",
+        "ftInfAUExpanded": "(G (z >= -0.2))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (z >= -0.2)",
+        "R2U2Code": "(z >= -0.2)",
+        "component": "NN"
+      },
+      "_id": "yvp15wgwsnhgqmj9tc44"
+    },
+    {
+      "reqid": "NN-001",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NN shall always satisfy z <=1.1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "z"
+        ],
+        "component_name": "NN",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "timingTextRange": [
+          9,
+          14
+        ],
+        "post_condition": "(z <= 1.1)",
+        "responseTextRange": [
+          16,
+          30
+        ],
+        "diagramVariables": "Response = <b><i>(z <= 1.1)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(z <= 1.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(z <= 1.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(z <= 1.1)",
+        "post_condition_unexp_ft": "(z <= 1.1)",
+        "post_condition_unexp_pctl": "(z <= 1.1)",
+        "post_condition_SMV_pt": "(z <= 1.1)",
+        "post_condition_SMV_ft": "(z <= 1.1)",
+        "post_condition_MLTL_ft": "(z <= 1.1)",
+        "post_condition_PRISM_pctl": "(z <= 1.1)",
+        "ft": "(LAST V (z <= 1.1))",
+        "pt": "(H (z <= 1.1))",
+        "pctl": "(P>=1[(G (z <= 1.1))])",
+        "ptExpanded": "(H (z <= 1.1))",
+        "CoCoSpecCode": "H((z <= 1.1))",
+        "ftExpanded": "(LAST V (z <= 1.1))",
+        "pctlExpanded": "(P>=1[(G (z <= 1.1))])",
+        "ftInfAUExpanded": "(G (z <= 1.1))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (z <= 1.1)",
+        "R2U2Code": "(z <= 1.1)",
+        "component": "NN"
+      },
+      "_id": "ydwc5q8j3ja8a4odw5lx"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "NN",
+      "variable_name": "DeltaZDividedByXt",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "57gpxwmoe1umbvnn5xvda",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "DeltaZDividedByYt",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "qkpuo1ac8e9k5pjjgk5pp",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "x",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "hit2klgbv5bl9bj7zqwpx",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "xt",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "y4rvr5dxb7pxgf169nrxh",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "y",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "7s9okpf1v1gdz1hal8tvfg",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "yt",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "lrdog7jts4hm0m13vq7",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "z",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "gocjqj56hw9pdtwy25cu69",
+      "completed": true
+    },
+    {
+      "component_name": "NN",
+      "variable_name": "zt",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6txgvdxg1mg2yqzr395ya9",
+      "completed": true
+    }
+  ]
+}

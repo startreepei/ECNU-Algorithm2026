@@ -1,0 +1,13 @@
+component,variable_name,idType,dataType,variableType
+liquid_mixer,emergency_button,Input,boolean,data
+liquid_mixer,liquid_level_1,Input,boolean,data
+liquid_mixer,liquid_level_2,Input,boolean,data
+liquid_mixer,start_button,Input,boolean,data
+liquid_mixer,stirring_motor,Output,boolean,data
+liquid_mixer,timer_120sec_expire,Input,boolean,data
+liquid_mixer,timer_120sec_start,Output,boolean,data
+liquid_mixer,timer_60sec_expire,Input,boolean,data
+liquid_mixer,timer_60sec_start,Output,boolean,data
+liquid_mixer,valve_0,Output,boolean,data
+liquid_mixer,valve_1,Output,boolean,data
+liquid_mixer,valve_2,Output,boolean,data

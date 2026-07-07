@@ -1,0 +1,11 @@
+component,variable_name,idType,dataType,variableType
+FSM_Autopilot,STATE,Output,double,state
+FSM_Autopilot,ap_maneuver_state,Internal,double,state_value
+FSM_Autopilot,ap_nominal_state,Internal,double,state_value
+FSM_Autopilot,ap_standby_state,Internal,double,state_value
+FSM_Autopilot,ap_transition_state,Internal,double,state_value
+FSM_Autopilot,apfail,Input,boolean,data
+FSM_Autopilot,good,Input,boolean,data
+FSM_Autopilot,standby,Input,boolean,state
+FSM_Autopilot,state,Input,double,state
+FSM_Autopilot,supported,Input,boolean,data

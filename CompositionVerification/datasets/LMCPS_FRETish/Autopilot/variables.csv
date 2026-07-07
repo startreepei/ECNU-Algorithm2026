@@ -1,0 +1,14 @@
+component,variable_name,idType,dataType,variableType
+Autopilot,HDGmodeCmd,Output,double,state
+Autopilot,Psi,Output,double,data
+Autopilot,altitude,Output,double,data
+Autopilot,altitude_IC,Internal,double,data
+Autopilot,altitude_hold,Input,boolean,data
+Autopilot,autopilot_engaged,Input,boolean,state
+Autopilot,epsilon,Internal,double,data
+Autopilot,hdg,Input,boolean,data
+Autopilot,psiAtZero,Internal,double,data
+Autopilot,rollAtZero,Internal,double,data
+Autopilot,roll_angle,Output,double,data
+Autopilot,roll_cmd,Output,double,data
+Autopilot,roll_rate,Output,double,data

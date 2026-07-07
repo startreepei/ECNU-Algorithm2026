@@ -1,0 +1,9 @@
+reqid,component,project,fulltext
+AP-003D,RollAutopilot,LM_requirements,RollAutopilot shall always satisfy (TurnKnob >= 3.0 | TurnKnob <= -3.0) & (TurnKnob <= 30.0 | TurnKnob >= -30.0) => roll_hold_reference = TurnKnob
+AP-002,RollAutopilot,LM_requirements,in roll_hold mode RollAutopilot shall always satisfy roll_cmd = roll_hold_reference
+AP-003A,RollAutopilot,LM_requirements,in roll_hold mode RollAutopilot shall immediately satisfy !(Cb | Cc1 | Cc2 | Cd)  => roll_hold_reference = roll_angle
+AP-001,RollAutopilot,LM_requirements,RollAutopilot shall always satisfy ! autopilot_engaged => aileron_cmd = 0.0
+AP-003B,RollAutopilot,LM_requirements,in roll_hold mode RollAutopilot shall immediately satisfy (roll_angle < 6.0 & roll_angle > -6.0) => roll_hold_reference =0.0
+AP-007,RollAutopilot,LM_requirements,RollAutopilot shall always satisfy -15.0 <= aileron_cmd & aileron_cmd <= 15.0
+AP-008,RollAutopilot,LM_requirements,in hdg_hold mode RollAutopilot shall always satisfy roll_cmd = hdg_hold_mode_cmd
+AP-003C,RollAutopilot,LM_requirements,in roll_hold  mode RollAutopilot shall immediately satisfy (-30.0 >= roll_angle | roll_angle >= 30.0) => roll_hold_reference = 30.0 * sign_roll_angle

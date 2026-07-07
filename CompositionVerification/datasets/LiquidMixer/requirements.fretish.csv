@@ -1,0 +1,13 @@
+reqid,component,project,fulltext
+LM-001,liquid_mixer,Liquid_mixer,when start_button liquid_mixer shall immediately satisfy if ! liquid_level_1 then valve_0
+LM-002,liquid_mixer,Liquid_mixer,when liquid_level_1 liquid_mixer shall immediately satisfy ! valve_0
+LM-003,liquid_mixer,Liquid_mixer,when liquid_level_1 the liquid_mixer shall until emergency_button satisfy if ! liquid_level_2 then valve_1
+LM-004,liquid_mixer,Liquid_mixer,when liquid_level_2 the liquid_mixer shall immediately satisfy !valve_1
+LM-005,liquid_mixer,Liquid_mixer,when liquid_level_2 the liquid_mixer shall immediately satisfy timer_60sec_start
+LM-006,liquid_mixer,Liquid_mixer,"when liquid_level_2, the liquid_mixer shall until (timer_60sec_expire | emergency_button) satisfy stirring_motor"
+LM-007,liquid_mixer,Liquid_mixer,when timer_60sec_expire the liquid_mixer shall immediately satisfy timer_120sec_start
+LM-008,liquid_mixer,Liquid_mixer,"when timer_60sec_expire, the liquid_mixer shall until (timer_120sec_expire | emergency_button) satisfy valve_2"
+LM-009,liquid_mixer,Liquid_mixer,"when emergency_button, the liquid_mixer shall immediately satisfy ! valve_0"
+LM-010,liquid_mixer,Liquid_mixer,when emergency_button the liquid_mixer shall immediately satisfy ! valve_1
+LM-011,liquid_mixer,Liquid_mixer,when emergency_button the liquid_mixer shall immediately satisfy ! valve_2
+LM-012,liquid_mixer,Liquid_mixer,when emergency_button the liquid_mixer shall immediately satisfy ! stirring_motor

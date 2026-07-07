@@ -1,0 +1,554 @@
+{
+  "requirements": [
+    {
+      "reqid": "EB-001",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "EB  shall  always  satisfy  (det_3x3(B_11*B_11 + B_12*B_12 + B_13*B_13 + B_14*B_14 + B_15*B_15 , B_11*B_21 + B_12*B_22 + B_13*B_23 + B_14*B_24 + B_15*B_25 , B_11*B_31 + B_12*B_32 + B_13*B_33 + B_14*B_34 + B_15*B_35 ,B_11*B_21 + B_12*B_22 + B_13*B_23 + B_14*B_24 + B_15*B_25 , B_21*B_21 + B_22*B_22 + B_23*B_23 + B_24*B_24 + B_25*B_25 , B_21*B_31 + B_22*B_32 + B_23*B_33 + B_24*B_34 + B_25*B_35 , B_11*B_31 + B_12*B_32 + B_13*B_33 + B_14*B_34 + B_15*B_35 , B_21*B_31 + B_22*B_32 + B_23*B_33 + B_24*B_34 + B_25*B_35 ,B_31*B_31 + B_32*B_32 + B_33*B_33 + B_34*B_34 + B_35*B_35) <= eps12) => (ridge_on) &  absReal(check_11  - 1.0)<eps6  &  absReal(check_12)<eps6  &  absReal(check_13)<eps6  & absReal(check_21)<eps6  &  absReal(check_22  -  1.0)<eps6  &  absReal(check_23)<eps6  & absReal(check_31)<eps6 & absReal(check_32)< eps6 & absReal(check_33 - 1.0)<eps6",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "det_3x3",
+          "B_11",
+          "B_12",
+          "B_13",
+          "B_14",
+          "B_15",
+          "B_21",
+          "B_22",
+          "B_23",
+          "B_24",
+          "B_25",
+          "B_31",
+          "B_32",
+          "B_33",
+          "B_34",
+          "B_35",
+          "eps12",
+          "ridge_on",
+          "check_11",
+          "eps6",
+          "check_12",
+          "check_13",
+          "check_21",
+          "check_22",
+          "check_23",
+          "check_31",
+          "check_32",
+          "check_33"
+        ],
+        "component_name": "EB",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "timingTextRange": [
+          11,
+          16
+        ],
+        "post_condition": "(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps6 & absReal ( check_12 ) < eps6 & absReal ( check_13 ) < eps6 & absReal ( check_21 ) < eps6 & absReal ( check_22 - 1.0 ) < eps6 & absReal ( check_23 ) < eps6 & absReal ( check_31 ) < eps6 & absReal ( check_32 ) < eps6 & absReal ( check_33 - 1.0 ) < eps6)",
+        "responseTextRange": [
+          19,
+          854
+        ],
+        "diagramVariables": "Response = <b><i>(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps6 & absReal ( check_12 ) < eps6 & absReal ( check_13 ) < eps6 & absReal ( check_21 ) < eps6 & absReal ( check_22 - 1.0 ) < eps6 & absReal ( check_23 ) < eps6 & absReal ( check_31 ) < eps6 & absReal ( check_32 ) < eps6 & absReal ( check_33 - 1.0 ) < eps6)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps6 & absReal ( check_12 ) < eps6 & absReal ( check_13 ) < eps6 & absReal ( check_21 ) < eps6 & absReal ( check_22 - 1.0 ) < eps6 & absReal ( check_23 ) < eps6 & absReal ( check_31 ) < eps6 & absReal ( check_32 ) < eps6 & absReal ( check_33 - 1.0 ) < eps6)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps6 & absReal ( check_12 ) < eps6 & absReal ( check_13 ) < eps6 & absReal ( check_21 ) < eps6 & absReal ( check_22 - 1.0 ) < eps6 & absReal ( check_23 ) < eps6 & absReal ( check_31 ) < eps6 & absReal ( check_32 ) < eps6 & absReal ( check_33 - 1.0 ) < eps6)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "post_condition_unexp_ft": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "post_condition_unexp_pctl": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "post_condition_SMV_pt": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "post_condition_SMV_ft": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "post_condition_MLTL_ft": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "post_condition_PRISM_pctl": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "ft": "(LAST V ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))",
+        "pt": "(H ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))",
+        "pctl": "(P>=1[(G ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))])",
+        "ptExpanded": "(H ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))",
+        "CoCoSpecCode": "H(((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) => (((((((((ridge_on and (absReal((check_11 - 1.0)) < eps6)) and (absReal(check_12) < eps6)) and (absReal(check_13) < eps6)) and (absReal(check_21) < eps6)) and (absReal((check_22 - 1.0)) < eps6)) and (absReal(check_23) < eps6)) and (absReal(check_31) < eps6)) and (absReal(check_32) < eps6)) and (absReal((check_33 - 1.0)) < eps6))))",
+        "ftExpanded": "(LAST V ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))",
+        "pctlExpanded": "(P>=1[(G ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))])",
+        "ftInfAUExpanded": "(G ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps6)) & (absReal(check_12) < eps6)) & (absReal(check_13) < eps6)) & (absReal(check_21) < eps6)) & (absReal((check_22 - 1.0)) < eps6)) & (absReal(check_23) < eps6)) & (absReal(check_31) < eps6)) & (absReal(check_32) < eps6)) & (absReal((check_33 - 1.0)) < eps6)))",
+        "R2U2Code": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on && (abs((check_11 - 1.0)) < eps6)) && (abs(check_12) < eps6)) && (abs(check_13) < eps6)) && (abs(check_21) < eps6)) && (abs((check_22 - 1.0)) < eps6)) && (abs(check_23) < eps6)) && (abs(check_31) < eps6)) && (abs(check_32) < eps6)) && (abs((check_33 - 1.0)) < eps6)))",
+        "component": "EB"
+      },
+      "_id": "yh5l03lua0d37kk6xu7nli"
+    },
+    {
+      "reqid": "EB-002",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "EB  shall  always  satisfy  (det_3x3(B_11*B_11 + B_12*B_12 + B_13*B_13 + B_14*B_14 + B_15*B_15 , B_11*B_21 + B_12*B_22 + B_13*B_23 + B_14*B_24 + B_15*B_25 , B_11*B_31 + B_12*B_32 + B_13*B_33 + B_14*B_34 + B_15*B_35 ,B_11*B_21 + B_12*B_22 + B_13*B_23 + B_14*B_24 + B_15*B_25 , B_21*B_21 + B_22*B_22 + B_23*B_23 + B_24*B_24 + B_25*B_25 , B_21*B_31 + B_22*B_32 + B_23*B_33 + B_24*B_34 + B_25*B_35 , B_11*B_31 + B_12*B_32 + B_13*B_33 + B_14*B_34 + B_15*B_35 , B_21*B_31 + B_22*B_32 + B_23*B_33 + B_24*B_34 + B_25*B_35 ,B_31*B_31 + B_32*B_32 + B_33*B_33 + B_34*B_34 + B_35*B_35)  <= eps12) => (ridge_on) &  absReal(check_11  - 1.0)<eps12  &  absReal(check_12)<eps12  &  absReal(check_13)<eps12  & absReal(check_21)<eps12  &  absReal(check_22  -  1.0)<eps12  &  absReal(check_23)<eps12  & absReal(check_31)<eps12 & absReal(check_32)< eps12 & absReal(check_33 - 1.0)<eps12",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "det_3x3",
+          "B_11",
+          "B_12",
+          "B_13",
+          "B_14",
+          "B_15",
+          "B_21",
+          "B_22",
+          "B_23",
+          "B_24",
+          "B_25",
+          "B_31",
+          "B_32",
+          "B_33",
+          "B_34",
+          "B_35",
+          "eps12",
+          "ridge_on",
+          "check_11",
+          "check_12",
+          "check_13",
+          "check_21",
+          "check_22",
+          "check_23",
+          "check_31",
+          "check_32",
+          "check_33"
+        ],
+        "component_name": "EB",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "timingTextRange": [
+          11,
+          16
+        ],
+        "post_condition": "(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps12 & absReal ( check_12 ) < eps12 & absReal ( check_13 ) < eps12 & absReal ( check_21 ) < eps12 & absReal ( check_22 - 1.0 ) < eps12 & absReal ( check_23 ) < eps12 & absReal ( check_31 ) < eps12 & absReal ( check_32 ) < eps12 & absReal ( check_33 - 1.0 ) < eps12)",
+        "responseTextRange": [
+          19,
+          864
+        ],
+        "diagramVariables": "Response = <b><i>(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps12 & absReal ( check_12 ) < eps12 & absReal ( check_13 ) < eps12 & absReal ( check_21 ) < eps12 & absReal ( check_22 - 1.0 ) < eps12 & absReal ( check_23 ) < eps12 & absReal ( check_31 ) < eps12 & absReal ( check_32 ) < eps12 & absReal ( check_33 - 1.0 ) < eps12)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps12 & absReal ( check_12 ) < eps12 & absReal ( check_13 ) < eps12 & absReal ( check_21 ) < eps12 & absReal ( check_22 - 1.0 ) < eps12 & absReal ( check_23 ) < eps12 & absReal ( check_31 ) < eps12 & absReal ( check_32 ) < eps12 & absReal ( check_33 - 1.0 ) < eps12)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( det_3x3 ( B_11 * B_11 + B_12 * B_12 + B_13 * B_13 + B_14 * B_14 + B_15 * B_15 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_11 * B_21 + B_12 * B_22 + B_13 * B_23 + B_14 * B_24 + B_15 * B_25 , B_21 * B_21 + B_22 * B_22 + B_23 * B_23 + B_24 * B_24 + B_25 * B_25 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_11 * B_31 + B_12 * B_32 + B_13 * B_33 + B_14 * B_34 + B_15 * B_35 , B_21 * B_31 + B_22 * B_32 + B_23 * B_33 + B_24 * B_34 + B_25 * B_35 , B_31 * B_31 + B_32 * B_32 + B_33 * B_33 + B_34 * B_34 + B_35 * B_35 ) <= eps12 ) => ( ridge_on ) & absReal ( check_11 - 1.0 ) < eps12 & absReal ( check_12 ) < eps12 & absReal ( check_13 ) < eps12 & absReal ( check_21 ) < eps12 & absReal ( check_22 - 1.0 ) < eps12 & absReal ( check_23 ) < eps12 & absReal ( check_31 ) < eps12 & absReal ( check_32 ) < eps12 & absReal ( check_33 - 1.0 ) < eps12)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "post_condition_unexp_ft": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "post_condition_unexp_pctl": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "post_condition_SMV_pt": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "post_condition_SMV_ft": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "post_condition_MLTL_ft": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "post_condition_PRISM_pctl": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "ft": "(LAST V ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))",
+        "pt": "(H ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))",
+        "pctl": "(P>=1[(G ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))])",
+        "ptExpanded": "(H ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))",
+        "CoCoSpecCode": "H(((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) => (((((((((ridge_on and (absReal((check_11 - 1.0)) < eps12)) and (absReal(check_12) < eps12)) and (absReal(check_13) < eps12)) and (absReal(check_21) < eps12)) and (absReal((check_22 - 1.0)) < eps12)) and (absReal(check_23) < eps12)) and (absReal(check_31) < eps12)) and (absReal(check_32) < eps12)) and (absReal((check_33 - 1.0)) < eps12))))",
+        "ftExpanded": "(LAST V ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))",
+        "pctlExpanded": "(P>=1[(G ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))])",
+        "ftInfAUExpanded": "(G ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on & (absReal((check_11 - 1.0)) < eps12)) & (absReal(check_12) < eps12)) & (absReal(check_13) < eps12)) & (absReal(check_21) < eps12)) & (absReal((check_22 - 1.0)) < eps12)) & (absReal(check_23) < eps12)) & (absReal(check_31) < eps12)) & (absReal(check_32) < eps12)) & (absReal((check_33 - 1.0)) < eps12)))",
+        "R2U2Code": "((det_3x3((((((B_11 * B_11) + (B_12 * B_12)) + (B_13 * B_13)) + (B_14 * B_14)) + (B_15 * B_15)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_11 * B_21) + (B_12 * B_22)) + (B_13 * B_23)) + (B_14 * B_24)) + (B_15 * B_25)),(((((B_21 * B_21) + (B_22 * B_22)) + (B_23 * B_23)) + (B_24 * B_24)) + (B_25 * B_25)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_11 * B_31) + (B_12 * B_32)) + (B_13 * B_33)) + (B_14 * B_34)) + (B_15 * B_35)),(((((B_21 * B_31) + (B_22 * B_32)) + (B_23 * B_33)) + (B_24 * B_34)) + (B_25 * B_35)),(((((B_31 * B_31) + (B_32 * B_32)) + (B_33 * B_33)) + (B_34 * B_34)) + (B_35 * B_35))) <= eps12) -> (((((((((ridge_on && (abs((check_11 - 1.0)) < eps12)) && (abs(check_12) < eps12)) && (abs(check_13) < eps12)) && (abs(check_21) < eps12)) && (abs((check_22 - 1.0)) < eps12)) && (abs(check_23) < eps12)) && (abs(check_31) < eps12)) && (abs(check_32) < eps12)) && (abs((check_33 - 1.0)) < eps12)))",
+        "component": "EB"
+      },
+      "_id": "maqh2ujiumjpmh2xisqld"
+    },
+    {
+      "reqid": "EB-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "EB shall always satisfy (Buminusd_1 * Buminusd_1 + Buminusd_2 * Buminusd_2 + Buminusd_3 * Buminusd_3) < 0.0001",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "Buminusd_1",
+          "Buminusd_2",
+          "Buminusd_3"
+        ],
+        "component_name": "EB",
+        "componentTextRange": [
+          0,
+          1
+        ],
+        "timingTextRange": [
+          9,
+          14
+        ],
+        "post_condition": "(( Buminusd_1 * Buminusd_1 + Buminusd_2 * Buminusd_2 + Buminusd_3 * Buminusd_3 ) < 0.0001)",
+        "responseTextRange": [
+          16,
+          109
+        ],
+        "diagramVariables": "Response = <b><i>(( Buminusd_1 * Buminusd_1 + Buminusd_2 * Buminusd_2 + Buminusd_3 * Buminusd_3 ) < 0.0001)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( Buminusd_1 * Buminusd_1 + Buminusd_2 * Buminusd_2 + Buminusd_3 * Buminusd_3 ) < 0.0001)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( Buminusd_1 * Buminusd_1 + Buminusd_2 * Buminusd_2 + Buminusd_3 * Buminusd_3 ) < 0.0001)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "post_condition_unexp_ft": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "post_condition_unexp_pctl": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "post_condition_SMV_pt": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "post_condition_SMV_ft": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "post_condition_MLTL_ft": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "post_condition_PRISM_pctl": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "ft": "(LAST V ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))",
+        "pt": "(H ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))",
+        "pctl": "(P>=1[(G ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))])",
+        "ptExpanded": "(H ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))",
+        "CoCoSpecCode": "H(((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))",
+        "ftExpanded": "(LAST V ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))",
+        "pctlExpanded": "(P>=1[(G ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))])",
+        "ftInfAUExpanded": "(G ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "R2U2Code": "((((Buminusd_1 * Buminusd_1) + (Buminusd_2 * Buminusd_2)) + (Buminusd_3 * Buminusd_3)) < 0.0001)",
+        "component": "EB"
+      },
+      "_id": "hfw9p7t4kajvehtlt930m"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "EB",
+      "variable_name": "B_11",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "hx9ci6zm8xwiyvnl3mow",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_12",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "s3e99el50yvsp5e228skm",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_13",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "pquxqbrb958zogqgxuiiqi",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_14",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "pmnqvihez59c2arun3t19n",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_15",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "2jjx0j42olpr0joi6pwlne",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_21",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "h0nxhe1ayy7nc9kv2y8jka",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_22",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "q6038cxm36mstzs7bb3b",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_23",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "5ugkh2xs4nmymgcvj2pk5",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_24",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "8s4ta0cfmbcud6o5xk3lc",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_25",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "rgcxjnrbncnus4gjc71e5q",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_31",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "efigvwr04ldryrxv3v82n",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_32",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "j7t1y2hrb92vk5rvlav65",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_33",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "2umwbz8qdk8t4mudpcsq1e",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_34",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "2g7si86qsn8jb8zg74eoi",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "B_35",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "a1k3s7lz42li7tvfnn07i",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "Buminusd_1",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "4un3odn2mgqkgmb66f7n3",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "Buminusd_2",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "aozzkc412ab7tg6ptjy6",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "Buminusd_3",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "c1vbo1i8k3f2ru6cdveilp",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_11",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "13ni7ofcho7qshdbl4bdc2i",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_12",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "l67mf2376ci9wkufxagr6u",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_13",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "qwv43q6nklqr4tiova590g",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_21",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "muqplj1pkuenu2k5jgkya",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_22",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "4o66eln836gj4r4x72v14",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_23",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "u7tnehohcdmtei2cjszd",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_31",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "7u1fx27taxdq6p97ld9jg7",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_32",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "doe94tsactjkyul1o1iksn",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "check_33",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "xurdat7955p2410e8qu4",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "det_3x3",
+      "idType": "Function",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "n7yvc8qtn1of6pems8d14t",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "eps12",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ls7frgohzd98j9ne2huodo",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "eps6",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "qacdoyw9oxgtbw4hudbree",
+      "completed": true
+    },
+    {
+      "component_name": "EB",
+      "variable_name": "ridge_on",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "p9papi4rhfok7s1lgms7a",
+      "completed": true
+    }
+  ]
+}

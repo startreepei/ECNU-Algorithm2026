@@ -1,0 +1,311 @@
+{
+  "requirements": [
+    {
+      "reqid": "SWIM-002",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "SWIM shall always satisfy ((lowSpeedWarningAllowed = 1.0  & vehAirPress < warningTrigForMinPress) => swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "lowSpeedWarningAllowed",
+          "vehAirPress",
+          "warningTrigForMinPress",
+          "swimGet_AgcasLowSpeedWarn",
+          "E_SWIM_WARNING_ON"
+        ],
+        "component_name": "SWIM",
+        "componentTextRange": [
+          0,
+          3
+        ],
+        "timingTextRange": [
+          11,
+          16
+        ],
+        "post_condition": "(( ( lowSpeedWarningAllowed = 1.0 & vehAirPress < warningTrigForMinPress ) => swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON ))",
+        "responseTextRange": [
+          18,
+          146
+        ],
+        "diagramVariables": "Response = <b><i>(( ( lowSpeedWarningAllowed = 1.0 & vehAirPress < warningTrigForMinPress ) => swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( ( lowSpeedWarningAllowed = 1.0 & vehAirPress < warningTrigForMinPress ) => swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( ( lowSpeedWarningAllowed = 1.0 & vehAirPress < warningTrigForMinPress ) => swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "post_condition_unexp_ft": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "post_condition_unexp_pctl": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "post_condition_SMV_pt": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "post_condition_SMV_ft": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "post_condition_MLTL_ft": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "post_condition_PRISM_pctl": "(((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "ft": "(LAST V (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))",
+        "pt": "(H (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))",
+        "pctl": "(P>=1[(G (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))])",
+        "ptExpanded": "(H (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))",
+        "CoCoSpecCode": "H((((lowSpeedWarningAllowed = 1.0) and (vehAirPress < warningTrigForMinPress)) => (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))",
+        "ftExpanded": "(LAST V (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))",
+        "pctlExpanded": "(P>=1[(G (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))])",
+        "ftInfAUExpanded": "(G (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((lowSpeedWarningAllowed = 1.0) & (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON))",
+        "R2U2Code": "(((lowSpeedWarningAllowed == 1.0) && (vehAirPress < warningTrigForMinPress)) -> (swimGet_AgcasLowSpeedWarn == E_SWIM_WARNING_ON))",
+        "component": "SWIM"
+      },
+      "_id": "15csryp6rtfbdvr0twzmnt"
+    },
+    {
+      "reqid": "SWIM-001a",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "SWIM shall always satisfy ((storeCat = CAT1) =>  (CalAirspeedMin = 1.25921 * sqrt(weight) + 10.0))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "storeCat",
+          "CAT1",
+          "CalAirspeedMin",
+          "sqrt",
+          "weight"
+        ],
+        "component_name": "SWIM",
+        "componentTextRange": [
+          0,
+          3
+        ],
+        "timingTextRange": [
+          11,
+          16
+        ],
+        "post_condition": "(( ( storeCat = CAT1 ) => ( CalAirspeedMin = 1.25921 * sqrt ( weight ) + 10.0 ) ))",
+        "responseTextRange": [
+          18,
+          97
+        ],
+        "diagramVariables": "Response = <b><i>(( ( storeCat = CAT1 ) => ( CalAirspeedMin = 1.25921 * sqrt ( weight ) + 10.0 ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( ( storeCat = CAT1 ) => ( CalAirspeedMin = 1.25921 * sqrt ( weight ) + 10.0 ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( ( storeCat = CAT1 ) => ( CalAirspeedMin = 1.25921 * sqrt ( weight ) + 10.0 ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "post_condition_unexp_ft": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "post_condition_unexp_pctl": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "post_condition_SMV_pt": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "post_condition_SMV_ft": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "post_condition_MLTL_ft": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "post_condition_PRISM_pctl": "((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "ft": "(LAST V ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))",
+        "pt": "(H ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))",
+        "pctl": "(P>=1[(G ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))])",
+        "ptExpanded": "(H ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))",
+        "CoCoSpecCode": "H(((storeCat = CAT1) => (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))",
+        "ftExpanded": "(LAST V ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))",
+        "pctlExpanded": "(P>=1[(G ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))])",
+        "ftInfAUExpanded": "(G ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((storeCat = CAT1) -> (CalAirspeedMin = ((1.25921 * sqrt(weight)) + 10.0)))",
+        "R2U2Code": "((storeCat == CAT1) -> (CalAirspeedMin == ((1.25921 * sqrt(weight)) + 10.0)))",
+        "component": "SWIM"
+      },
+      "_id": "aij24d8uqyp5rveoy8on5y"
+    },
+    {
+      "reqid": "SWIM-001b",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "SWIM shall always satisfy ((storeCat = CAT3) => (CalAirspeedMin = 1.33694 * sqrt(weight) + 10.0))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "storeCat",
+          "CAT3",
+          "CalAirspeedMin",
+          "sqrt",
+          "weight"
+        ],
+        "component_name": "SWIM",
+        "componentTextRange": [
+          0,
+          3
+        ],
+        "timingTextRange": [
+          11,
+          16
+        ],
+        "post_condition": "(( ( storeCat = CAT3 ) => ( CalAirspeedMin = 1.33694 * sqrt ( weight ) + 10.0 ) ))",
+        "responseTextRange": [
+          18,
+          96
+        ],
+        "diagramVariables": "Response = <b><i>(( ( storeCat = CAT3 ) => ( CalAirspeedMin = 1.33694 * sqrt ( weight ) + 10.0 ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( ( storeCat = CAT3 ) => ( CalAirspeedMin = 1.33694 * sqrt ( weight ) + 10.0 ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( ( storeCat = CAT3 ) => ( CalAirspeedMin = 1.33694 * sqrt ( weight ) + 10.0 ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "post_condition_unexp_ft": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "post_condition_unexp_pctl": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "post_condition_SMV_pt": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "post_condition_SMV_ft": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "post_condition_MLTL_ft": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "post_condition_PRISM_pctl": "((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "ft": "(LAST V ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))",
+        "pt": "(H ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))",
+        "pctl": "(P>=1[(G ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))])",
+        "ptExpanded": "(H ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))",
+        "CoCoSpecCode": "H(((storeCat = CAT3) => (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))",
+        "ftExpanded": "(LAST V ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))",
+        "pctlExpanded": "(P>=1[(G ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))])",
+        "ftInfAUExpanded": "(G ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((storeCat = CAT3) -> (CalAirspeedMin = ((1.33694 * sqrt(weight)) + 10.0)))",
+        "R2U2Code": "((storeCat == CAT3) -> (CalAirspeedMin == ((1.33694 * sqrt(weight)) + 10.0)))",
+        "component": "SWIM"
+      },
+      "_id": "yq89m2558mdgyqzjzxrit"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "SWIM",
+      "variable_name": "CAT1",
+      "idType": "Internal",
+      "dataType": "integer",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "yw1nglvisbg2qwc60wtpc",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "CAT3",
+      "idType": "Internal",
+      "dataType": "integer",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "4oo12vcipvqh3jcvmqad",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "CalAirspeedMin",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "2hpona0pl3u7emr9hlmten",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "E_SWIM_WARNING_ON",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "zwje3zu9dygm8jjfyda15",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "lowSpeedWarningAllowed",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "l6nh6mcw3cbc53qln5rtab",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "sqrt",
+      "idType": "Function",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "pdkzau12uuf0l6cqf9q7zrf",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "storeCat",
+      "idType": "Input",
+      "dataType": "int32",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "57sx181eiyjtcf0l0et2os",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "swimGet_AgcasLowSpeedWarn",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "gqmvsi4ynou4qcipg378nb",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "vehAirPress",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "jrwe6acwjravbu6wn3x76",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "warningTrigForMinPress",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "1mftkwnbp8oix8bxbk22h",
+      "completed": true
+    },
+    {
+      "component_name": "SWIM",
+      "variable_name": "weight",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "3dom6nwafw3adak0rq3shh",
+      "completed": true
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "requirements": [
+    {
+      "reqid": "TSM-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "TriplexSignalMonitor shall always satisfy (single_fail_reported & (((!(absReal(ia - ib) > Tlevel) & (absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & !(absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & (absReal(ib - ic) > Tlevel) & !(absReal(ia - ic) > Tlevel))) & preInt(0,PC) <= PCLimit & PC > 0) => set_val = preReal(0.0,set_val))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "single_fail_reported",
+          "ia",
+          "ib",
+          "Tlevel",
+          "ic",
+          "PC",
+          "PCLimit",
+          "set_val"
+        ],
+        "component_name": "TriplexSignalMonitor",
+        "componentTextRange": [
+          0,
+          19
+        ],
+        "timingTextRange": [
+          27,
+          32
+        ],
+        "post_condition": "(( single_fail_reported & ( ( ( ! ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) <= PCLimit & PC > 0 ) => set_val = preReal ( 0.0 , set_val ) ))",
+        "responseTextRange": [
+          34,
+          415
+        ],
+        "diagramVariables": "Response = <b><i>(( single_fail_reported & ( ( ( ! ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) <= PCLimit & PC > 0 ) => set_val = preReal ( 0.0 , set_val ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( single_fail_reported & ( ( ( ! ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) <= PCLimit & PC > 0 ) => set_val = preReal ( 0.0 , set_val ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( single_fail_reported & ( ( ( ! ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) <= PCLimit & PC > 0 ) => set_val = preReal ( 0.0 , set_val ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "post_condition_unexp_ft": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "post_condition_unexp_pctl": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "post_condition_SMV_pt": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "post_condition_SMV_ft": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "post_condition_MLTL_ft": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "post_condition_PRISM_pctl": "((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "ft": "(LAST V ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))",
+        "pt": "(H ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))",
+        "pctl": "(P>=1[(G ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))])",
+        "ptExpanded": "(H ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))",
+        "CoCoSpecCode": "H(((single_fail_reported and ((((((not ((absReal((ia - ib)) > Tlevel)) and (absReal((ib - ic)) > Tlevel)) and (absReal((ia - ic)) > Tlevel)) or (((absReal((ia - ib)) > Tlevel) and not ((absReal((ib - ic)) > Tlevel))) and (absReal((ia - ic)) > Tlevel))) or (((absReal((ia - ib)) > Tlevel) and (absReal((ib - ic)) > Tlevel)) and not ((absReal((ia - ic)) > Tlevel)))) and (preInt(0,PC) <= PCLimit)) and (PC > 0))) => (set_val = preReal(0.0,set_val))))",
+        "ftExpanded": "(LAST V ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))",
+        "pctlExpanded": "(P>=1[(G ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))])",
+        "ftInfAUExpanded": "(G ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((single_fail_reported & (((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) <= PCLimit)) & (PC > 0))) -> (set_val = preReal(0.0,set_val)))",
+        "R2U2Code": "((single_fail_reported && (((((((! (abs((ia - ib)) > Tlevel)) && (abs((ib - ic)) > Tlevel)) && (abs((ia - ic)) > Tlevel)) || (((abs((ia - ib)) > Tlevel) && (! (abs((ib - ic)) > Tlevel))) && (abs((ia - ic)) > Tlevel))) || (((abs((ia - ib)) > Tlevel) && (abs((ib - ic)) > Tlevel)) && (! (abs((ia - ic)) > Tlevel)))) && (prev(0,PC) <= PCLimit)) && (PC > 0))) -> (set_val == prev(0.0,set_val)))",
+        "component": "TriplexSignalMonitor"
+      },
+      "_id": "pkfur0s8cfq1wycpn9xqe1"
+    },
+    {
+      "reqid": "TSM-001",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "TriplexSignalMonitor shall always satisfy ((preBool(true, no_fail) & (((!((absReal(ia - ib) > Tlevel)) & (absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & !(absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & (absReal(ib - ic) > Tlevel) & !(absReal(ia - ic) > Tlevel))) & preInt(0, PC) > PCLimit)) => single_fail_reported)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "no_fail",
+          "ia",
+          "ib",
+          "Tlevel",
+          "ic",
+          "PC",
+          "PCLimit",
+          "single_fail_reported"
+        ],
+        "component_name": "TriplexSignalMonitor",
+        "componentTextRange": [
+          0,
+          19
+        ],
+        "timingTextRange": [
+          27,
+          32
+        ],
+        "post_condition": "(( ( preBool ( true , no_fail ) & ( ( ( ! ( ( absReal ( ia - ib ) > Tlevel ) ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) > PCLimit ) ) => single_fail_reported ))",
+        "responseTextRange": [
+          34,
+          402
+        ],
+        "diagramVariables": "Response = <b><i>(( ( preBool ( true , no_fail ) & ( ( ( ! ( ( absReal ( ia - ib ) > Tlevel ) ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) > PCLimit ) ) => single_fail_reported ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( ( preBool ( true , no_fail ) & ( ( ( ! ( ( absReal ( ia - ib ) > Tlevel ) ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) > PCLimit ) ) => single_fail_reported ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( ( preBool ( true , no_fail ) & ( ( ( ! ( ( absReal ( ia - ib ) > Tlevel ) ) & ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ! ( absReal ( ib - ic ) > Tlevel ) & ( absReal ( ia - ic ) > Tlevel ) ) | ( ( absReal ( ia - ib ) > Tlevel ) & ( absReal ( ib - ic ) > Tlevel ) & ! ( absReal ( ia - ic ) > Tlevel ) ) ) & preInt ( 0 , PC ) > PCLimit ) ) => single_fail_reported ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((((Z FALSE) & TRUE) | ((Y TRUE) & (Y no_fail))) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "post_condition_unexp_ft": "((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "post_condition_unexp_pctl": "((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "post_condition_SMV_pt": "(((((Z FALSE) & TRUE) | ((Y TRUE) & (Y no_fail))) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "post_condition_SMV_ft": "((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "post_condition_MLTL_ft": "((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "post_condition_PRISM_pctl": "((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "ft": "(LAST V ((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))",
+        "pt": "(H (((((Z FALSE) & TRUE) | ((Y TRUE) & (Y no_fail))) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))",
+        "pctl": "(P>=1[(G ((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))])",
+        "ptExpanded": "(H (((Z no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))",
+        "CoCoSpecCode": "H(((ZtoPre(no_fail) and (((((not ((absReal((ia - ib)) > Tlevel)) and (absReal((ib - ic)) > Tlevel)) and (absReal((ia - ic)) > Tlevel)) or (((absReal((ia - ib)) > Tlevel) and not ((absReal((ib - ic)) > Tlevel))) and (absReal((ia - ic)) > Tlevel))) or (((absReal((ia - ib)) > Tlevel) and (absReal((ib - ic)) > Tlevel)) and not ((absReal((ia - ic)) > Tlevel)))) and (preInt(0,PC) > PCLimit))) => single_fail_reported))",
+        "ftExpanded": "(LAST V ((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))",
+        "pctlExpanded": "(P>=1[(G ((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))])",
+        "ftInfAUExpanded": "(G ((preBool(TRUE,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((preBool(true,no_fail) & ((((((! (absReal((ia - ib)) > Tlevel)) & (absReal((ib - ic)) > Tlevel)) & (absReal((ia - ic)) > Tlevel)) | (((absReal((ia - ib)) > Tlevel) & (! (absReal((ib - ic)) > Tlevel))) & (absReal((ia - ic)) > Tlevel))) | (((absReal((ia - ib)) > Tlevel) & (absReal((ib - ic)) > Tlevel)) & (! (absReal((ia - ic)) > Tlevel)))) & (preInt(0,PC) > PCLimit))) -> single_fail_reported)",
+        "R2U2Code": "((prev(true,no_fail) && ((((((! (abs((ia - ib)) > Tlevel)) && (abs((ib - ic)) > Tlevel)) && (abs((ia - ic)) > Tlevel)) || (((abs((ia - ib)) > Tlevel) && (! (abs((ib - ic)) > Tlevel))) && (abs((ia - ic)) > Tlevel))) || (((abs((ia - ib)) > Tlevel) && (abs((ib - ic)) > Tlevel)) && (! (abs((ia - ic)) > Tlevel)))) && (prev(0,PC) > PCLimit))) -> single_fail_reported)",
+        "component": "TriplexSignalMonitor"
+      },
+      "_id": "ylrk8cx59dvz7rdtm72la"
+    },
+    {
+      "reqid": "TSM-003b",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "TriplexSignalMonitor shall always satisfy FC =2 =>  set_val = 0.5 * (ia +ic)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "FC",
+          "set_val",
+          "ia",
+          "ic"
+        ],
+        "component_name": "TriplexSignalMonitor",
+        "componentTextRange": [
+          0,
+          19
+        ],
+        "timingTextRange": [
+          27,
+          32
+        ],
+        "post_condition": "(FC = 2 => set_val = 0.5 * ( ia + ic ))",
+        "responseTextRange": [
+          34,
+          75
+        ],
+        "diagramVariables": "Response = <b><i>(FC = 2 => set_val = 0.5 * ( ia + ic ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(FC = 2 => set_val = 0.5 * ( ia + ic ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(FC = 2 => set_val = 0.5 * ( ia + ic ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "post_condition_unexp_ft": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "post_condition_unexp_pctl": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "post_condition_SMV_pt": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "post_condition_SMV_ft": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "post_condition_MLTL_ft": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "post_condition_PRISM_pctl": "((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "ft": "(LAST V ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))",
+        "pt": "(H ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))",
+        "pctl": "(P>=1[(G ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))])",
+        "ptExpanded": "(H ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))",
+        "CoCoSpecCode": "H(((FC = 2) => (set_val = (0.5 * (ia + ic)))))",
+        "ftExpanded": "(LAST V ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))",
+        "pctlExpanded": "(P>=1[(G ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))])",
+        "ftInfAUExpanded": "(G ((FC = 2) -> (set_val = (0.5 * (ia + ic)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((FC = 2) -> (set_val = (0.5 * (ia + ic))))",
+        "R2U2Code": "((FC == 2) -> (set_val == (0.5 * (ia + ic))))",
+        "component": "TriplexSignalMonitor"
+      },
+      "_id": "do2y6ijcusmark8x4vok"
+    },
+    {
+      "reqid": "TSM-003c",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "TriplexSignalMonitor shall always satisfy FC =4 => set_val = 0.5 * (ib +ic)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "FC",
+          "set_val",
+          "ib",
+          "ic"
+        ],
+        "component_name": "TriplexSignalMonitor",
+        "componentTextRange": [
+          0,
+          19
+        ],
+        "timingTextRange": [
+          27,
+          32
+        ],
+        "post_condition": "(FC = 4 => set_val = 0.5 * ( ib + ic ))",
+        "responseTextRange": [
+          34,
+          74
+        ],
+        "diagramVariables": "Response = <b><i>(FC = 4 => set_val = 0.5 * ( ib + ic ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(FC = 4 => set_val = 0.5 * ( ib + ic ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(FC = 4 => set_val = 0.5 * ( ib + ic ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "post_condition_unexp_ft": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "post_condition_unexp_pctl": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "post_condition_SMV_pt": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "post_condition_SMV_ft": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "post_condition_MLTL_ft": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "post_condition_PRISM_pctl": "((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "ft": "(LAST V ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))",
+        "pt": "(H ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))",
+        "pctl": "(P>=1[(G ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))])",
+        "ptExpanded": "(H ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))",
+        "CoCoSpecCode": "H(((FC = 4) => (set_val = (0.5 * (ib + ic)))))",
+        "ftExpanded": "(LAST V ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))",
+        "pctlExpanded": "(P>=1[(G ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))])",
+        "ftInfAUExpanded": "(G ((FC = 4) -> (set_val = (0.5 * (ib + ic)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((FC = 4) -> (set_val = (0.5 * (ib + ic))))",
+        "R2U2Code": "((FC == 4) -> (set_val == (0.5 * (ib + ic))))",
+        "component": "TriplexSignalMonitor"
+      },
+      "_id": "xao3qsusf0l2kuvt36b28a"
+    },
+    {
+      "reqid": "TSM-002",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "TriplexSignalMonitor  shall  always  satisfy  (no_fail => (set_val = mid_value))",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "no_fail",
+          "set_val",
+          "mid_value"
+        ],
+        "component_name": "TriplexSignalMonitor",
+        "componentTextRange": [
+          0,
+          19
+        ],
+        "timingTextRange": [
+          29,
+          34
+        ],
+        "post_condition": "(( no_fail => ( set_val = mid_value ) ))",
+        "responseTextRange": [
+          37,
+          79
+        ],
+        "diagramVariables": "Response = <b><i>(( no_fail => ( set_val = mid_value ) ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( no_fail => ( set_val = mid_value ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( no_fail => ( set_val = mid_value ) ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(no_fail -> (set_val = mid_value))",
+        "post_condition_unexp_ft": "(no_fail -> (set_val = mid_value))",
+        "post_condition_unexp_pctl": "(no_fail -> (set_val = mid_value))",
+        "post_condition_SMV_pt": "(no_fail -> (set_val = mid_value))",
+        "post_condition_SMV_ft": "(no_fail -> (set_val = mid_value))",
+        "post_condition_MLTL_ft": "(no_fail -> (set_val = mid_value))",
+        "post_condition_PRISM_pctl": "(no_fail -> (set_val = mid_value))",
+        "ft": "(LAST V (no_fail -> (set_val = mid_value)))",
+        "pt": "(H (no_fail -> (set_val = mid_value)))",
+        "pctl": "(P>=1[(G (no_fail -> (set_val = mid_value)))])",
+        "ptExpanded": "(H (no_fail -> (set_val = mid_value)))",
+        "CoCoSpecCode": "H((no_fail => (set_val = mid_value)))",
+        "ftExpanded": "(LAST V (no_fail -> (set_val = mid_value)))",
+        "pctlExpanded": "(P>=1[(G (no_fail -> (set_val = mid_value)))])",
+        "ftInfAUExpanded": "(G (no_fail -> (set_val = mid_value)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (no_fail -> (set_val = mid_value))",
+        "R2U2Code": "(no_fail -> (set_val == mid_value))",
+        "component": "TriplexSignalMonitor"
+      },
+      "_id": "31nanous57rstco6wg7ye"
+    },
+    {
+      "reqid": "TSM-003a",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "TriplexSignalMonitor shall always satisfy FC =1 => set_val = 0.5 * (ia +ib)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "FC",
+          "set_val",
+          "ia",
+          "ib"
+        ],
+        "component_name": "TriplexSignalMonitor",
+        "componentTextRange": [
+          0,
+          19
+        ],
+        "timingTextRange": [
+          27,
+          32
+        ],
+        "post_condition": "(FC = 1 => set_val = 0.5 * ( ia + ib ))",
+        "responseTextRange": [
+          34,
+          74
+        ],
+        "diagramVariables": "Response = <b><i>(FC = 1 => set_val = 0.5 * ( ia + ib ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(FC = 1 => set_val = 0.5 * ( ia + ib ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(FC = 1 => set_val = 0.5 * ( ia + ib ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "post_condition_unexp_ft": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "post_condition_unexp_pctl": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "post_condition_SMV_pt": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "post_condition_SMV_ft": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "post_condition_MLTL_ft": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "post_condition_PRISM_pctl": "((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "ft": "(LAST V ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))",
+        "pt": "(H ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))",
+        "pctl": "(P>=1[(G ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))])",
+        "ptExpanded": "(H ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))",
+        "CoCoSpecCode": "H(((FC = 1) => (set_val = (0.5 * (ia + ib)))))",
+        "ftExpanded": "(LAST V ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))",
+        "pctlExpanded": "(P>=1[(G ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))])",
+        "ftInfAUExpanded": "(G ((FC = 1) -> (set_val = (0.5 * (ia + ib)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((FC = 1) -> (set_val = (0.5 * (ia + ib))))",
+        "R2U2Code": "((FC == 1) -> (set_val == (0.5 * (ia + ib))))",
+        "component": "TriplexSignalMonitor"
+      },
+      "_id": "lh12tebetlo0aywwqerz3y"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "FC",
+      "idType": "Output",
+      "dataType": "int32",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6mgvbgbabr5fq242qwwr7w",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "PC",
+      "idType": "Output",
+      "dataType": "int32",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "1i4pkzar6ehqk9xdvfwrh",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "PCLimit",
+      "idType": "Input",
+      "dataType": "int32",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "bjq8nssa52qs07udfxvnl",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "Tlevel",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "z2ub7spigz10vd51x7ix1",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "ia",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "yurdiykpiiuh55cu0atk",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "ib",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "53utk17m9pougv7cl5buuo",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "ic",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "jjsn92i5jujgq6fnfn7wl",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "mid_value",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "woun1xc5chiueg3u8q0ir",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "no_fail",
+      "idType": "Internal",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "iajdqrn7r6zc72xk4k19k",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "set_val",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "jqduzbvlsanv8p8qmuzpvm",
+      "completed": true
+    },
+    {
+      "component_name": "TriplexSignalMonitor",
+      "variable_name": "single_fail_reported",
+      "idType": "Internal",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "6scd8nvbpfcr0oo1cxllvg",
+      "completed": true
+    }
+  ]
+}

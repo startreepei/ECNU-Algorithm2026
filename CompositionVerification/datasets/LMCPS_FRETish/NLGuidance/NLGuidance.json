@@ -1,0 +1,636 @@
+{
+  "requirements": [
+    {
+      "reqid": "NLG-001",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NLGuidance shall always satisfy Vv * yout > 0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "Vv",
+          "yout"
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(Vv * yout > 0)",
+        "responseTextRange": [
+          24,
+          44
+        ],
+        "diagramVariables": "Response = <b><i>(Vv * yout > 0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(Vv * yout > 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(Vv * yout > 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((Vv * yout) > 0)",
+        "post_condition_unexp_ft": "((Vv * yout) > 0)",
+        "post_condition_unexp_pctl": "((Vv * yout) > 0)",
+        "post_condition_SMV_pt": "((Vv * yout) > 0)",
+        "post_condition_SMV_ft": "((Vv * yout) > 0)",
+        "post_condition_MLTL_ft": "((Vv * yout) > 0)",
+        "post_condition_PRISM_pctl": "((Vv * yout) > 0)",
+        "ft": "(LAST V ((Vv * yout) > 0))",
+        "pt": "(H ((Vv * yout) > 0))",
+        "pctl": "(P>=1[(G ((Vv * yout) > 0))])",
+        "ptExpanded": "(H ((Vv * yout) > 0))",
+        "CoCoSpecCode": "H(((Vv * yout) > 0))",
+        "ftExpanded": "(LAST V ((Vv * yout) > 0))",
+        "pctlExpanded": "(P>=1[(G ((Vv * yout) > 0))])",
+        "ftInfAUExpanded": "(G ((Vv * yout) > 0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((Vv * yout) > 0)",
+        "R2U2Code": "((Vv * yout) > 0)",
+        "component": "NLGuidance"
+      },
+      "_id": "dhb4rezt81uqw4jpu4jy29"
+    },
+    {
+      "reqid": "NLG-002&3",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NLGuidance shall always satisfy mag(yout - Xtarg) >= r & dot((yout - Xtarg),(yout - Xv)) = 0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "mag",
+          "yout",
+          "Xtarg",
+          "r",
+          "dot",
+          "Xv"
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(mag ( yout - Xtarg ) >= r & dot ( ( yout - Xtarg ) , ( yout - Xv ) ) = 0)",
+        "responseTextRange": [
+          24,
+          91
+        ],
+        "diagramVariables": "Response = <b><i>(mag ( yout - Xtarg ) >= r & dot ( ( yout - Xtarg ) , ( yout - Xv ) ) = 0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(mag ( yout - Xtarg ) >= r & dot ( ( yout - Xtarg ) , ( yout - Xv ) ) = 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(mag ( yout - Xtarg ) >= r & dot ( ( yout - Xtarg ) , ( yout - Xv ) ) = 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "post_condition_unexp_ft": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "post_condition_unexp_pctl": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "post_condition_SMV_pt": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "post_condition_SMV_ft": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "post_condition_MLTL_ft": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "post_condition_PRISM_pctl": "((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "ft": "(LAST V ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0)))",
+        "pt": "(H ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0)))",
+        "pctl": "(P>=1[(G ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0)))])",
+        "ptExpanded": "((H (mag((yout - Xtarg)) >= r)) & (H (dot((yout - Xtarg),(yout - Xv)) = 0)))",
+        "CoCoSpecCode": "(H((mag((yout - Xtarg)) >= r)) and H((dot((yout - Xtarg),(yout - Xv)) = 0)))",
+        "ftExpanded": "(LAST V ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0)))",
+        "pctlExpanded": "(P>=1[(G ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0)))])",
+        "ftInfAUExpanded": "(G ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((mag((yout - Xtarg)) >= r) & (dot((yout - Xtarg),(yout - Xv)) = 0))",
+        "R2U2Code": "((mag((yout - Xtarg)) >= r) && (dot((yout - Xtarg),(yout - Xv)) == 0))",
+        "component": "NLGuidance"
+      },
+      "_id": "ltyn5rdt7elpin4iokf7fo"
+    },
+    {
+      "reqid": "NLG-005a",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "if mag(Xr) < r & mag(r1) < mag(r2) NLGuidance shall always satisfy yout = Xap1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "mag",
+          "Xr",
+          "r",
+          "r1",
+          "r2",
+          "yout",
+          "Xap1"
+        ],
+        "qualifier_word": "if",
+        "pre_condition": "(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))",
+        "regular_condition": "(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))",
+        "conditionTextRange": [
+          0,
+          33
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          35,
+          44
+        ],
+        "timingTextRange": [
+          52,
+          57
+        ],
+        "post_condition": "(yout = Xap1)",
+        "responseTextRange": [
+          59,
+          77
+        ],
+        "diagramVariables": "TC = <b><i>(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))</i></b>, Response = <b><i>(yout = Xap1)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))</i></b> is true and any point in the interval where <b><i>(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(yout = Xap1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))</i></b> is true and any point in the interval where <b><i>(mag ( Xr ) < r & mag ( r1 ) < mag ( r2 ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(yout = Xap1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "regular_condition_unexp_ft": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "regular_condition_unexp_pctl": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "regular_condition_SMV_pt": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "regular_condition_SMV_ft": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "regular_condition_MLTL_ft": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "regular_condition_PRISM_pctl": "((mag(Xr) < r) & (mag(r1) < mag(r2)))",
+        "post_condition_unexp_pt": "(yout = Xap1)",
+        "post_condition_unexp_ft": "(yout = Xap1)",
+        "post_condition_unexp_pctl": "(yout = Xap1)",
+        "post_condition_SMV_pt": "(yout = Xap1)",
+        "post_condition_SMV_ft": "(yout = Xap1)",
+        "post_condition_MLTL_ft": "(yout = Xap1)",
+        "post_condition_PRISM_pctl": "(yout = Xap1)",
+        "ft": "((LAST V (((! ((mag(Xr) < r) & (mag(r1) < mag(r2)))) & ((! LAST) & (X ((mag(Xr) < r) & (mag(r1) < mag(r2)))))) -> (X (LAST V (yout = Xap1))))) & (((mag(Xr) < r) & (mag(r1) < mag(r2))) -> (LAST V (yout = Xap1))))",
+        "pt": "(H ((H (! ((mag(Xr) < r) & (mag(r1) < mag(r2))))) | (yout = Xap1)))",
+        "pctl": "P>=1[((G (((! ((mag(Xr) < r) & (mag(r1) < mag(r2)))) & (X ((mag(Xr) < r) & (mag(r1) < mag(r2))))) => (X (P>=1[(G (yout = Xap1))])))) & (((mag(Xr) < r) & (mag(r1) < mag(r2))) => (P>=1[(G (yout = Xap1))])))]",
+        "ptExpanded": "(H ((H (! ((mag(Xr) < r) & (mag(r1) < mag(r2))))) | (yout = Xap1)))",
+        "CoCoSpecCode": "H((H(not (((mag(Xr) < r) and (mag(r1) < mag(r2))))) or (yout = Xap1)))",
+        "ftExpanded": "((LAST V (((! ((mag(Xr) < r) & (mag(r1) < mag(r2)))) & ((! LAST) & (X ((mag(Xr) < r) & (mag(r1) < mag(r2)))))) -> (X (LAST V (yout = Xap1))))) & (((mag(Xr) < r) & (mag(r1) < mag(r2))) -> (LAST V (yout = Xap1))))",
+        "pctlExpanded": "P>=1[((G (((! ((mag(Xr) < r) & (mag(r1) < mag(r2)))) & (X ((mag(Xr) < r) & (mag(r1) < mag(r2))))) => (X (P>=1[(G (yout = Xap1))])))) & (((mag(Xr) < r) & (mag(r1) < mag(r2))) => (P>=1[(G (yout = Xap1))])))]",
+        "ftInfAUExpanded": "((G (((! ((mag(Xr) < r) & (mag(r1) < mag(r2)))) & (X ((mag(Xr) < r) & (mag(r1) < mag(r2))))) -> (X (G (yout = Xap1))))) & (((mag(Xr) < r) & (mag(r1) < mag(r2))) -> (G (yout = Xap1))))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (G[1,M] p1))) & (p0 -> (G[0,M] p1)))",
+        "WESTMapping": "p0: ((mag(Xr) < r) & (mag(r1) < mag(r2)))<br/>p1: (yout = Xap1)",
+        "R2U2Code": "((((! ((mag(Xr) < r) && (mag(r1) < mag(r2)))) && (F[1,1] ((mag(Xr) < r) && (mag(r1) < mag(r2))))) -> (G[1,M] (yout == Xap1))) && (((TAU == 0) && ((mag(Xr) < r) && (mag(r1) < mag(r2)))) -> (G[0,M] (yout == Xap1))))",
+        "component": "NLGuidance"
+      },
+      "_id": "hq5igw56kkyloti9vykle"
+    },
+    {
+      "reqid": "NLG-005b",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "if mag(Xr) < r & mag(r1) >= mag(r2) NLGuidance shall always satisfy yout = Xap2",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "mag",
+          "Xr",
+          "r",
+          "r1",
+          "r2",
+          "yout",
+          "Xap2"
+        ],
+        "qualifier_word": "if",
+        "pre_condition": "(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))",
+        "regular_condition": "(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))",
+        "conditionTextRange": [
+          0,
+          34
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          36,
+          45
+        ],
+        "timingTextRange": [
+          53,
+          58
+        ],
+        "post_condition": "(yout = Xap2)",
+        "responseTextRange": [
+          60,
+          78
+        ],
+        "diagramVariables": "TC = <b><i>(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))</i></b>, Response = <b><i>(yout = Xap2)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))</i></b> is true and any point in the interval where <b><i>(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(yout = Xap2)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))</i></b> is true and any point in the interval where <b><i>(mag ( Xr ) < r & mag ( r1 ) >= mag ( r2 ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(yout = Xap2)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "regular_condition_unexp_ft": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "regular_condition_unexp_pctl": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "regular_condition_SMV_pt": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "regular_condition_SMV_ft": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "regular_condition_MLTL_ft": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "regular_condition_PRISM_pctl": "((mag(Xr) < r) & (mag(r1) >= mag(r2)))",
+        "post_condition_unexp_pt": "(yout = Xap2)",
+        "post_condition_unexp_ft": "(yout = Xap2)",
+        "post_condition_unexp_pctl": "(yout = Xap2)",
+        "post_condition_SMV_pt": "(yout = Xap2)",
+        "post_condition_SMV_ft": "(yout = Xap2)",
+        "post_condition_MLTL_ft": "(yout = Xap2)",
+        "post_condition_PRISM_pctl": "(yout = Xap2)",
+        "ft": "((LAST V (((! ((mag(Xr) < r) & (mag(r1) >= mag(r2)))) & ((! LAST) & (X ((mag(Xr) < r) & (mag(r1) >= mag(r2)))))) -> (X (LAST V (yout = Xap2))))) & (((mag(Xr) < r) & (mag(r1) >= mag(r2))) -> (LAST V (yout = Xap2))))",
+        "pt": "(H ((H (! ((mag(Xr) < r) & (mag(r1) >= mag(r2))))) | (yout = Xap2)))",
+        "pctl": "P>=1[((G (((! ((mag(Xr) < r) & (mag(r1) >= mag(r2)))) & (X ((mag(Xr) < r) & (mag(r1) >= mag(r2))))) => (X (P>=1[(G (yout = Xap2))])))) & (((mag(Xr) < r) & (mag(r1) >= mag(r2))) => (P>=1[(G (yout = Xap2))])))]",
+        "ptExpanded": "(H ((H (! ((mag(Xr) < r) & (mag(r1) >= mag(r2))))) | (yout = Xap2)))",
+        "CoCoSpecCode": "H((H(not (((mag(Xr) < r) and (mag(r1) >= mag(r2))))) or (yout = Xap2)))",
+        "ftExpanded": "((LAST V (((! ((mag(Xr) < r) & (mag(r1) >= mag(r2)))) & ((! LAST) & (X ((mag(Xr) < r) & (mag(r1) >= mag(r2)))))) -> (X (LAST V (yout = Xap2))))) & (((mag(Xr) < r) & (mag(r1) >= mag(r2))) -> (LAST V (yout = Xap2))))",
+        "pctlExpanded": "P>=1[((G (((! ((mag(Xr) < r) & (mag(r1) >= mag(r2)))) & (X ((mag(Xr) < r) & (mag(r1) >= mag(r2))))) => (X (P>=1[(G (yout = Xap2))])))) & (((mag(Xr) < r) & (mag(r1) >= mag(r2))) => (P>=1[(G (yout = Xap2))])))]",
+        "ftInfAUExpanded": "((G (((! ((mag(Xr) < r) & (mag(r1) >= mag(r2)))) & (X ((mag(Xr) < r) & (mag(r1) >= mag(r2))))) -> (X (G (yout = Xap2))))) & (((mag(Xr) < r) & (mag(r1) >= mag(r2))) -> (G (yout = Xap2))))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (G[1,M] p1))) & (p0 -> (G[0,M] p1)))",
+        "WESTMapping": "p0: ((mag(Xr) < r) & (mag(r1) >= mag(r2)))<br/>p1: (yout = Xap2)",
+        "R2U2Code": "((((! ((mag(Xr) < r) && (mag(r1) >= mag(r2)))) && (F[1,1] ((mag(Xr) < r) && (mag(r1) >= mag(r2))))) -> (G[1,M] (yout == Xap2))) && (((TAU == 0) && ((mag(Xr) < r) && (mag(r1) >= mag(r2)))) -> (G[0,M] (yout == Xap2))))",
+        "component": "NLGuidance"
+      },
+      "_id": "equ5bdawc5phe3qkmnav3e"
+    },
+    {
+      "reqid": "NLG-006",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NLGuidance shall always satisfy mag(yout - pre_yout) <= T_param * mag(Vt + Vv)",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "mag",
+          "yout",
+          "pre_yout",
+          "T_param",
+          "Vt",
+          "Vv"
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(mag ( yout - pre_yout ) <= T_param * mag ( Vt + Vv ))",
+        "responseTextRange": [
+          24,
+          77
+        ],
+        "diagramVariables": "Response = <b><i>(mag ( yout - pre_yout ) <= T_param * mag ( Vt + Vv ))</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(mag ( yout - pre_yout ) <= T_param * mag ( Vt + Vv ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(mag ( yout - pre_yout ) <= T_param * mag ( Vt + Vv ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "post_condition_unexp_ft": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "post_condition_unexp_pctl": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "post_condition_SMV_pt": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "post_condition_SMV_ft": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "post_condition_MLTL_ft": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "post_condition_PRISM_pctl": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv))))",
+        "ft": "(LAST V (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))",
+        "pt": "(H (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))",
+        "pctl": "(P>=1[(G (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))])",
+        "ptExpanded": "(H (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))",
+        "CoCoSpecCode": "H((mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))",
+        "ftExpanded": "(LAST V (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))",
+        "pctlExpanded": "(P>=1[(G (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))])",
+        "ftInfAUExpanded": "(G (mag((yout - pre_yout)) <= (T_param * mag((Vt + Vv)))))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (mag((yout - pre_yout)) <= (T_param * mag((Vt + Rv))))",
+        "R2U2Code": "(mag((yout - pre_yout)) <= (T_param * mag((Vt + Rv))))",
+        "component": "NLGuidance"
+      },
+      "_id": "108js9q79lchl0tn944xzg"
+    },
+    {
+      "reqid": "NLG-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NLGuidance shall always satisfy yout * Xr > 0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "yout",
+          "Xr"
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(yout * Xr > 0)",
+        "responseTextRange": [
+          24,
+          44
+        ],
+        "diagramVariables": "Response = <b><i>(yout * Xr > 0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(yout * Xr > 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(yout * Xr > 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((yout * Xr) > 0)",
+        "post_condition_unexp_ft": "((yout * Xr) > 0)",
+        "post_condition_unexp_pctl": "((yout * Xr) > 0)",
+        "post_condition_SMV_pt": "((yout * Xr) > 0)",
+        "post_condition_SMV_ft": "((yout * Xr) > 0)",
+        "post_condition_MLTL_ft": "((yout * Xr) > 0)",
+        "post_condition_PRISM_pctl": "((yout * Xr) > 0)",
+        "ft": "(LAST V ((yout * Xr) > 0))",
+        "pt": "(H ((yout * Xr) > 0))",
+        "pctl": "(P>=1[(G ((yout * Xr) > 0))])",
+        "ptExpanded": "(H ((yout * Xr) > 0))",
+        "CoCoSpecCode": "H(((yout * Xr) > 0))",
+        "ftExpanded": "(LAST V ((yout * Xr) > 0))",
+        "pctlExpanded": "(P>=1[(G ((yout * Xr) > 0))])",
+        "ftInfAUExpanded": "(G ((yout * Xr) > 0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((yout * Xr) > 0)",
+        "R2U2Code": "((yout * Xr) > 0)",
+        "component": "NLGuidance"
+      },
+      "_id": "4pgk8sz3fu1i4roc1hqv7"
+    },
+    {
+      "reqid": "NLG-007",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "NLGuidance shall always satisfy yout(3) - Xtarg(3) = 0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "yout",
+          "Xtarg"
+        ],
+        "component_name": "NLGuidance",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(yout ( 3 ) - Xtarg ( 3 ) = 0)",
+        "responseTextRange": [
+          24,
+          53
+        ],
+        "diagramVariables": "Response = <b><i>(yout ( 3 ) - Xtarg ( 3 ) = 0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(yout ( 3 ) - Xtarg ( 3 ) = 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(yout ( 3 ) - Xtarg ( 3 ) = 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((yout(3) - Xtarg(3)) = 0)",
+        "post_condition_unexp_ft": "((yout(3) - Xtarg(3)) = 0)",
+        "post_condition_unexp_pctl": "((yout(3) - Xtarg(3)) = 0)",
+        "post_condition_SMV_pt": "((yout(3) - Xtarg(3)) = 0)",
+        "post_condition_SMV_ft": "((yout(3) - Xtarg(3)) = 0)",
+        "post_condition_MLTL_ft": "((yout(3) - Xtarg(3)) = 0)",
+        "post_condition_PRISM_pctl": "((yout(3) - Xtarg(3)) = 0)",
+        "ft": "(LAST V ((yout(3) - Xtarg(3)) = 0))",
+        "pt": "(H ((yout(3) - Xtarg(3)) = 0))",
+        "pctl": "(P>=1[(G ((yout(3) - Xtarg(3)) = 0))])",
+        "ptExpanded": "(H ((yout(3) - Xtarg(3)) = 0))",
+        "CoCoSpecCode": "H(((yout(3) - Xtarg(3)) = 0))",
+        "ftExpanded": "(LAST V ((yout(3) - Xtarg(3)) = 0))",
+        "pctlExpanded": "(P>=1[(G ((yout(3) - Xtarg(3)) = 0))])",
+        "ftInfAUExpanded": "(G ((yout(3) - Xtarg(3)) = 0))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((yout(3) - Xtarg(3)) = 0)",
+        "R2U2Code": "((yout(3) - Xtarg(3)) == 0)",
+        "component": "NLGuidance"
+      },
+      "_id": "m9xm5g0c92a001kkvtl20856"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "T_param",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "hun0qmsxp5aw0knsv0nbl",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Vt",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "7d5admxiaepprw2vwdu2oe",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Vv",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "qjxtdg1flrq7gz1tcqvt43",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Xap1",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "uca53c8esnuvnuskp5e6b",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Xap2",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "t9lonhqv6tmarqt16mll3d",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Xr",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "247apayl6qfema6b6qidl",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Xtarg",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "qms6ui3z94ohrb4835d0s",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "Xv",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "rgf8ltzwy2oi4u20ck1ym",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "dot",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "7qw4xoqosmicfsp3x3qze",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "mag",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "a1fw5s2gfi5i5vnbf641wg",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "pre_yout",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "us8cyg48sjfexcopa3e0d",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "r",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "kt6mj4aq6ziwmuqj49by9m",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "r1",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ks271k830vi0s3jyz0cozbr",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "r2",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "rv3ebbewbj82q2j45kdnqs",
+      "completed": true
+    },
+    {
+      "component_name": "NLGuidance",
+      "variable_name": "yout",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "0l07guwaktkaeovxzlkcz4c",
+      "completed": true
+    }
+  ]
+}

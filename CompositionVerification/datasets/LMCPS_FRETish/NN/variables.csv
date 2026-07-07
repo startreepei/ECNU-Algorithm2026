@@ -1,0 +1,9 @@
+component,variable_name,idType,dataType,variableType
+NN,DeltaZDividedByXt,Internal,double,data
+NN,DeltaZDividedByYt,Internal,double,data
+NN,x,Input,double,data
+NN,xt,Internal,double,data
+NN,y,Input,double,data
+NN,yt,Internal,double,data
+NN,z,Output,double,data
+NN,zt,Internal,double,data

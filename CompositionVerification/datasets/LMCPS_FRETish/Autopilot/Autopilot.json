@@ -1,0 +1,771 @@
+{
+  "requirements": [
+    {
+      "reqid": "AP-010bv2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "When in hdg Autopilot shall always satisfy (Psi - (HDGmodeCmd - psiAtZero))/(HDGmodeCmd - psiAtZero) <=0.1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "in"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "hdg",
+          "Psi",
+          "HDGmodeCmd",
+          "psiAtZero"
+        ],
+        "scope_mode": "hdg",
+        "scopeTextRange": [
+          0,
+          10
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          12,
+          20
+        ],
+        "timingTextRange": [
+          28,
+          33
+        ],
+        "post_condition": "(( Psi - ( HDGmodeCmd - psiAtZero ) ) / ( HDGmodeCmd - psiAtZero ) <= 0.1)",
+        "responseTextRange": [
+          35,
+          105
+        ],
+        "diagramVariables": "M = <b><i>hdg</i></b>, Response = <b><i>(( Psi - ( HDGmodeCmd - psiAtZero ) ) / ( HDGmodeCmd - psiAtZero ) <= 0.1)</i></b>.",
+        "description": "SCOPE: in every interval where <b><i>hdg</i></b> holds.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( Psi - ( HDGmodeCmd - psiAtZero ) ) / ( HDGmodeCmd - psiAtZero ) <= 0.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in every interval where <b><i>hdg</i></b> holds.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( Psi - ( HDGmodeCmd - psiAtZero ) ) / ( HDGmodeCmd - psiAtZero ) <= 0.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/in_null_always_satisfaction.svg",
+        "scope_mode_pt": "hdg",
+        "scope_mode_ft": "hdg",
+        "scope_mode_pctl": "hdg",
+        "post_condition_unexp_pt": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "post_condition_unexp_ft": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "post_condition_unexp_pctl": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "post_condition_SMV_pt": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "post_condition_SMV_ft": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "post_condition_MLTL_ft": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "post_condition_PRISM_pctl": "(((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "ft": "(LAST V (hdg -> (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)))",
+        "pt": "(H (hdg -> (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)))",
+        "pctl": "P>=1[((G ((! (Fin_hdg & (! LAST))) | (X (P>=1[(Lin_hdg R (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1))])))) & (hdg => (Lin_hdg | (P>=1[(Lin_hdg R (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1))]))))]",
+        "ptExpanded": "(H (hdg -> (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)))",
+        "CoCoSpecCode": "H((hdg => (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)))",
+        "ftExpanded": "(LAST V (hdg -> (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)))",
+        "pctlExpanded": "P>=1[((G ((! (((! hdg) & (X hdg)) & (! false))) | (X (P>=1[((hdg & (X (! hdg))) R (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1))])))) & (hdg => ((hdg & (X (! hdg))) | (P>=1[((hdg & (X (! hdg))) R (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1))]))))]",
+        "ftInfAUExpanded": "(G (hdg -> (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)))",
+        "mltlExpanded": "(G[0,M] (p0 -> p1))",
+        "WESTMapping": "p0: hdg<br/>p1: (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1)",
+        "R2U2Code": "(hdg -> (((Psi - (HDGmodeCmd - psiAtZero)) / (HDGmodeCmd - psiAtZero)) <= 0.1))",
+        "component": "Autopilot"
+      },
+      "_id": "3yxckvh56rovu8r0sefzd"
+    },
+    {
+      "reqid": "AP-010av2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "When in hdg when preBool(false, absReal(Psi - HDGmodeCmd - preReal(113.0, Psi - HDGmodeCmd)) <= 1.0) Autopilot shall immediately satisfy absReal(Psi - HDGmodeCmd) <= 1.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "in"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "hdg",
+          "Psi",
+          "HDGmodeCmd"
+        ],
+        "scope_mode": "hdg",
+        "scopeTextRange": [
+          0,
+          10
+        ],
+        "qualifier_word": "when",
+        "pre_condition": "(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))",
+        "regular_condition": "(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))",
+        "conditionTextRange": [
+          12,
+          99
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          101,
+          109
+        ],
+        "timingTextRange": [
+          117,
+          127
+        ],
+        "post_condition": "(absReal ( Psi - HDGmodeCmd ) <= 1.0)",
+        "responseTextRange": [
+          129,
+          168
+        ],
+        "diagramVariables": "M = <b><i>hdg</i></b>, TC = <b><i>(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b>, Response = <b><i>(absReal ( Psi - HDGmodeCmd ) <= 1.0)</i></b>.",
+        "description": "SCOPE: in every interval where <b><i>hdg</i></b> holds.<br>TRIGGER: first point in the interval if <b><i>(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b> is true and any point in the interval where <b><i>(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(absReal ( Psi - HDGmodeCmd ) <= 1.0)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in every interval where <b><i>hdg</i></b> holds.<br>TRIGGER: first point in the interval if <b><i>(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b> is true and any point in the interval where <b><i>(preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(absReal ( Psi - HDGmodeCmd ) <= 1.0)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/in_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "hdg",
+        "scope_mode_ft": "hdg",
+        "scope_mode_pctl": "hdg",
+        "regular_condition_unexp_pt": "(((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))))",
+        "regular_condition_unexp_ft": "preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))",
+        "regular_condition_unexp_pctl": "preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))",
+        "regular_condition_SMV_pt": "(((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))))",
+        "regular_condition_SMV_ft": "preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))",
+        "regular_condition_MLTL_ft": "preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))",
+        "regular_condition_PRISM_pctl": "preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))",
+        "post_condition_unexp_pt": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_unexp_ft": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_unexp_pctl": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_SMV_pt": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_SMV_ft": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_MLTL_ft": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_PRISM_pctl": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "ft": "((LAST V ((! (Fin_hdg & (! LAST))) | (X (((Lin_hdg | LAST) V (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((! LAST) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (Lin_hdg | LAST))))) -> ((X (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (! (Lin_hdg | LAST))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))))) & (hdg -> (((Lin_hdg | LAST) V (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((! LAST) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (Lin_hdg | LAST))))) -> ((X (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (! (Lin_hdg | LAST))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))))",
+        "pt": "((H (Lin_hdg -> (Y ((((((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) & ((Y (! (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))))) | Fin_hdg)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) S ((((((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) & ((Y (! (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))))) | Fin_hdg)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) & Fin_hdg))))) & (((! Lin_hdg) S ((! Lin_hdg) & Fin_hdg)) -> ((((((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) & ((Y (! (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))))) | Fin_hdg)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) S ((((((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) & ((Y (! (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))))) | Fin_hdg)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) & Fin_hdg))))",
+        "pctl": "P>=1[((G ((! (Fin_hdg & (! LAST))) | (X ((Lin_hdg R (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! Lin_hdg))) => ((X (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])) & (! Lin_hdg)))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) => (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])))))) & (hdg => (Lin_hdg | ((Lin_hdg R (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! Lin_hdg))) => ((X (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])) & (! Lin_hdg)))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) => (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)]))))))]",
+        "ptExpanded": "((H (((! hdg) & (Y hdg)) -> (Y ((((Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) & ((Y (! (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) | (hdg & (Z (! hdg))))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) S ((((Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) & ((Y (! (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) | (hdg & (Z (! hdg))))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (hdg & (Z (! hdg)))))))) & (((! ((! hdg) & (Y hdg))) S ((! ((! hdg) & (Y hdg))) & (hdg & (Z (! hdg))))) -> ((((Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) & ((Y (! (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) | (hdg & (Z (! hdg))))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) S ((((Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) & ((Y (! (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) | (hdg & (Z (! hdg))))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (hdg & (Z (! hdg)))))))",
+        "CoCoSpecCode": "(H(((not (hdg) and YtoPre(hdg)) => YtoPre(SI((hdg and ZtoPre(not (hdg))),((YtoPre((absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) and (YtoPre(not (YtoPre((absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) or (hdg and ZtoPre(not (hdg))))) => (absReal((Psi - HDGmodeCmd)) <= 1.0)))))) and (SI((hdg and ZtoPre(not (hdg))),not ((not (hdg) and YtoPre(hdg)))) => SI((hdg and ZtoPre(not (hdg))),((YtoPre((absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) and (YtoPre(not (YtoPre((absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) or (hdg and ZtoPre(not (hdg))))) => (absReal((Psi - HDGmodeCmd)) <= 1.0)))))",
+        "ftExpanded": "((LAST V ((! ((((! hdg) & (! LAST)) & (X hdg)) & (! LAST))) | (X (((((hdg & (! LAST)) & (X (! hdg))) | LAST) V (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((! LAST) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (((hdg & (! LAST)) & (X (! hdg))) | LAST))))) -> ((X (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (! (((hdg & (! LAST)) & (X (! hdg))) | LAST))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))))) & (hdg -> (((((hdg & (! LAST)) & (X (! hdg))) | LAST) V (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((! LAST) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (((hdg & (! LAST)) & (X (! hdg))) | LAST))))) -> ((X (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (! (((hdg & (! LAST)) & (X (! hdg))) | LAST))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))))",
+        "pctlExpanded": "P>=1[((G ((! (((! hdg) & (X hdg)) & (! false))) | (X (((hdg & (X (! hdg))) R (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (hdg & (X (! hdg)))))) => ((X (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])) & (! (hdg & (X (! hdg))))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) => (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])))))) & (hdg => ((hdg & (X (! hdg))) | (((hdg & (X (! hdg))) R (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (hdg & (X (! hdg)))))) => ((X (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])) & (! (hdg & (X (! hdg))))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) => (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)]))))))]",
+        "ftInfAUExpanded": "((G ((! ((! hdg) & (X hdg))) | (X (((hdg & (X (! hdg))) V (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (hdg & (X (! hdg)))))) -> ((X (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (! (hdg & (X (! hdg))))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))))) & (hdg -> (((hdg & (X (! hdg))) V (((! preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & ((X preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) & (! (hdg & (X (! hdg)))))) -> ((X (absReal((Psi - HDGmodeCmd)) <= 1.0)) & (! (hdg & (X (! hdg))))))) & (preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))))",
+        "mltlExpanded": "((G[0,M] (((p0 & ((! p1) & ((F[1,1] p1) & (F[1,1] p0)))) -> (F[1,1] p2)) & (((! p0) & (F[1,1] p0)) -> (F[1,1] (p1 -> p2))))) & ((p0 & p1) -> p2))",
+        "WESTMapping": "p0: hdg<br/>p1: preBool(false,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))<br/>p2: (absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "R2U2Code": "((((hdg && ((! prev(false,(abs(((Psi - HDGmodeCmd) - prev(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) && ((F[1,1] prev(false,(abs(((Psi - HDGmodeCmd) - prev(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) && (F[1,1] hdg)))) -> (F[1,1] (abs((Psi - HDGmodeCmd)) <= 1.0))) && (((! hdg) && (F[1,1] hdg)) -> (F[1,1] (prev(false,(abs(((Psi - HDGmodeCmd) - prev(113.0,(Psi - HDGmodeCmd)))) <= 1.0)) -> (abs((Psi - HDGmodeCmd)) <= 1.0))))) && (((TAU == 0) && (hdg && prev(false,(abs(((Psi - HDGmodeCmd) - prev(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))) -> (abs((Psi - HDGmodeCmd)) <= 1.0)))",
+        "component": "Autopilot"
+      },
+      "_id": "ydu8le6rx7dnsll2dbmsd"
+    },
+    {
+      "reqid": "AP-010a",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "whenever hdg & preBool(false, absReal(Psi - HDGmodeCmd - preReal(113.0, Psi - HDGmodeCmd)) <= 1.0) Autopilot shall immediately satisfy absReal(Psi - HDGmodeCmd) <= 1.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "holding",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "hdg",
+          "Psi",
+          "HDGmodeCmd"
+        ],
+        "qualifier_word": "whenever",
+        "pre_condition": "(hdg & preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))",
+        "regular_condition": "(hdg & preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))",
+        "conditionTextRange": [
+          0,
+          97
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          99,
+          107
+        ],
+        "timingTextRange": [
+          115,
+          125
+        ],
+        "post_condition": "(absReal ( Psi - HDGmodeCmd ) <= 1.0)",
+        "responseTextRange": [
+          127,
+          166
+        ],
+        "diagramVariables": "CC = <b><i>(hdg & preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b>, Response = <b><i>(absReal ( Psi - HDGmodeCmd ) <= 1.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: every point in the interval where <b><i>(hdg & preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b> is true.<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(absReal ( Psi - HDGmodeCmd ) <= 1.0)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: every point in the interval where <b><i>(hdg & preBool ( false , absReal ( Psi - HDGmodeCmd - preReal ( 113.0 , Psi - HDGmodeCmd ) ) <= 1.0 ))</i></b> is true.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(absReal ( Psi - HDGmodeCmd ) <= 1.0)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_holding_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "(hdg & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))))",
+        "regular_condition_unexp_ft": "(hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))",
+        "regular_condition_unexp_pctl": "(hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))",
+        "regular_condition_SMV_pt": "(hdg & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))))",
+        "regular_condition_SMV_ft": "(hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))",
+        "regular_condition_MLTL_ft": "(hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))",
+        "regular_condition_PRISM_pctl": "(hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))",
+        "post_condition_unexp_pt": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_unexp_ft": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_unexp_pctl": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_SMV_pt": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_SMV_ft": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_MLTL_ft": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "post_condition_PRISM_pctl": "(absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "ft": "(LAST V ((hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))",
+        "pt": "(H ((hdg & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))",
+        "pctl": "P>=1[(G ((hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) => (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])))]",
+        "ptExpanded": "(H ((hdg & (Y (absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))",
+        "CoCoSpecCode": "H(((hdg and YtoPre((absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) => (absReal((Psi - HDGmodeCmd)) <= 1.0)))",
+        "ftExpanded": "(LAST V ((hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))",
+        "pctlExpanded": "P>=1[(G ((hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) => (P>=1[(absReal((Psi - HDGmodeCmd)) <= 1.0)])))]",
+        "ftInfAUExpanded": "(G ((hdg & preBool(FALSE,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) -> (absReal((Psi - HDGmodeCmd)) <= 1.0)))",
+        "mltlExpanded": "(G[0,M] (p0 -> p1))",
+        "WESTMapping": "p0: (hdg & preBool(false,(absReal(((Psi - HDGmodeCmd) - preReal(113.0,(Psi - HDGmodeCmd)))) <= 1.0)))<br/>p1: (absReal((Psi - HDGmodeCmd)) <= 1.0)",
+        "R2U2Code": "((hdg && prev(false,(abs(((Psi - HDGmodeCmd) - prev(113.0,(Psi - HDGmodeCmd)))) <= 1.0))) -> (abs((Psi - HDGmodeCmd)) <= 1.0))",
+        "component": "Autopilot"
+      },
+      "_id": "8379jay717s7ozttko2wnk"
+    },
+    {
+      "reqid": "AP-010b",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "when in hdg mode Autopilot shall always satisfy (roll_angle - roll_cmd - rollAtZero)/(roll_cmd - rollAtZero) <= 0.1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "in"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "hdg",
+          "roll_angle",
+          "roll_cmd",
+          "rollAtZero"
+        ],
+        "scope_mode": "hdg",
+        "scopeTextRange": [
+          0,
+          15
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          17,
+          25
+        ],
+        "timingTextRange": [
+          33,
+          38
+        ],
+        "post_condition": "(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)",
+        "responseTextRange": [
+          40,
+          114
+        ],
+        "diagramVariables": "M = <b><i>hdg</i></b>, Response = <b><i>(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)</i></b>.",
+        "description": "SCOPE: in every interval where <b><i>hdg</i></b> holds.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in every interval where <b><i>hdg</i></b> holds.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/in_null_always_satisfaction.svg",
+        "scope_mode_pt": "hdg",
+        "scope_mode_ft": "hdg",
+        "scope_mode_pctl": "hdg",
+        "post_condition_unexp_pt": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_unexp_ft": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_unexp_pctl": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_SMV_pt": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_SMV_ft": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_MLTL_ft": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_PRISM_pctl": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "ft": "(LAST V (hdg -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "pt": "(H (hdg -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "pctl": "P>=1[((G ((! (Fin_hdg & (! LAST))) | (X (P>=1[(Lin_hdg R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))])))) & (hdg => (Lin_hdg | (P>=1[(Lin_hdg R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))]))))]",
+        "ptExpanded": "(H (hdg -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "CoCoSpecCode": "H((hdg => ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "ftExpanded": "(LAST V (hdg -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "pctlExpanded": "P>=1[((G ((! (((! hdg) & (X hdg)) & (! false))) | (X (P>=1[((hdg & (X (! hdg))) R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))])))) & (hdg => ((hdg & (X (! hdg))) | (P>=1[((hdg & (X (! hdg))) R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))]))))]",
+        "ftInfAUExpanded": "(G (hdg -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "mltlExpanded": "(G[0,M] (p0 -> p1))",
+        "WESTMapping": "p0: hdg<br/>p1: ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "R2U2Code": "(hdg -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))",
+        "component": "Autopilot"
+      },
+      "_id": "y38paigpbrk1e66p4hx112"
+    },
+    {
+      "reqid": "AP-004a",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "whenever (autopilot_engaged & !hdg) & preBool(false, roll_angle - roll_cmd - preReal(roll_angle - roll_cmd, roll_angle - roll_cmd) <= epsilon) Autopilot shall immediately satisfy absReal(roll_angle - roll_cmd) <= 1.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "holding",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "autopilot_engaged",
+          "hdg",
+          "roll_angle",
+          "roll_cmd",
+          "epsilon"
+        ],
+        "qualifier_word": "whenever",
+        "pre_condition": "(( autopilot_engaged & ! hdg ) & preBool ( false , roll_angle - roll_cmd - preReal ( roll_angle - roll_cmd , roll_angle - roll_cmd ) <= epsilon ))",
+        "regular_condition": "(( autopilot_engaged & ! hdg ) & preBool ( false , roll_angle - roll_cmd - preReal ( roll_angle - roll_cmd , roll_angle - roll_cmd ) <= epsilon ))",
+        "conditionTextRange": [
+          0,
+          141
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          143,
+          151
+        ],
+        "timingTextRange": [
+          159,
+          169
+        ],
+        "post_condition": "(absReal ( roll_angle - roll_cmd ) <= 1.0)",
+        "responseTextRange": [
+          171,
+          215
+        ],
+        "diagramVariables": "CC = <b><i>(( autopilot_engaged & ! hdg ) & preBool ( false , roll_angle - roll_cmd - preReal ( roll_angle - roll_cmd , roll_angle - roll_cmd ) <= epsilon ))</i></b>, Response = <b><i>(absReal ( roll_angle - roll_cmd ) <= 1.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: every point in the interval where <b><i>(( autopilot_engaged & ! hdg ) & preBool ( false , roll_angle - roll_cmd - preReal ( roll_angle - roll_cmd , roll_angle - roll_cmd ) <= epsilon ))</i></b> is true.<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(absReal ( roll_angle - roll_cmd ) <= 1.0)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: every point in the interval where <b><i>(( autopilot_engaged & ! hdg ) & preBool ( false , roll_angle - roll_cmd - preReal ( roll_angle - roll_cmd , roll_angle - roll_cmd ) <= epsilon ))</i></b> is true.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(absReal ( roll_angle - roll_cmd ) <= 1.0)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_holding_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "((autopilot_engaged & (! hdg)) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))))",
+        "regular_condition_unexp_ft": "((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))",
+        "regular_condition_unexp_pctl": "((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))",
+        "regular_condition_SMV_pt": "((autopilot_engaged & (! hdg)) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))))",
+        "regular_condition_SMV_ft": "((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))",
+        "regular_condition_MLTL_ft": "((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))",
+        "regular_condition_PRISM_pctl": "((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))",
+        "post_condition_unexp_pt": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "post_condition_unexp_ft": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "post_condition_unexp_pctl": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "post_condition_SMV_pt": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "post_condition_SMV_ft": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "post_condition_MLTL_ft": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "post_condition_PRISM_pctl": "(absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "ft": "(LAST V (((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) -> (absReal((roll_angle - roll_cmd)) <= 1.0)))",
+        "pt": "(H (((autopilot_engaged & (! hdg)) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))))) -> (absReal((roll_angle - roll_cmd)) <= 1.0)))",
+        "pctl": "P>=1[(G (((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) => (P>=1[(absReal((roll_angle - roll_cmd)) <= 1.0)])))]",
+        "ptExpanded": "(H (((autopilot_engaged & (! hdg)) & (Y (((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) -> (absReal((roll_angle - roll_cmd)) <= 1.0)))",
+        "CoCoSpecCode": "H((((autopilot_engaged and not (hdg)) and YtoPre((((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) => (absReal((roll_angle - roll_cmd)) <= 1.0)))",
+        "ftExpanded": "(LAST V (((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) -> (absReal((roll_angle - roll_cmd)) <= 1.0)))",
+        "pctlExpanded": "P>=1[(G (((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) => (P>=1[(absReal((roll_angle - roll_cmd)) <= 1.0)])))]",
+        "ftInfAUExpanded": "(G (((autopilot_engaged & (! hdg)) & preBool(FALSE,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) -> (absReal((roll_angle - roll_cmd)) <= 1.0)))",
+        "mltlExpanded": "(G[0,M] (p0 -> p1))",
+        "WESTMapping": "p0: ((autopilot_engaged & (! hdg)) & preBool(false,(((roll_angle - roll_cmd) - preReal((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon)))<br/>p1: (absReal((roll_angle - roll_cmd)) <= 1.0)",
+        "R2U2Code": "(((autopilot_engaged && (! hdg)) && prev(false,(((roll_angle - roll_cmd) - prev((roll_angle - roll_cmd),(roll_angle - roll_cmd))) <= epsilon))) -> (abs((roll_angle - roll_cmd)) <= 1.0))",
+        "component": "Autopilot"
+      },
+      "_id": "amycb8phtdgk60oeks0q6"
+    },
+    {
+      "reqid": "AP-000",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Autopilot shall always satisfy altitude_hold => absReal(altitude - altitude_IC) <= 35.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "altitude_hold",
+          "altitude",
+          "altitude_IC"
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(altitude_hold => absReal ( altitude - altitude_IC ) <= 35.0)",
+        "responseTextRange": [
+          23,
+          86
+        ],
+        "diagramVariables": "Response = <b><i>(altitude_hold => absReal ( altitude - altitude_IC ) <= 35.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(altitude_hold => absReal ( altitude - altitude_IC ) <= 35.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(altitude_hold => absReal ( altitude - altitude_IC ) <= 35.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "post_condition_unexp_ft": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "post_condition_unexp_pctl": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "post_condition_SMV_pt": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "post_condition_SMV_ft": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "post_condition_MLTL_ft": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "post_condition_PRISM_pctl": "(altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "ft": "(LAST V (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))",
+        "pt": "(H (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))",
+        "pctl": "(P>=1[(G (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))])",
+        "ptExpanded": "(H (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))",
+        "CoCoSpecCode": "H((altitude_hold => (absReal((altitude - altitude_IC)) <= 35.0)))",
+        "ftExpanded": "(LAST V (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))",
+        "pctlExpanded": "(P>=1[(G (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))])",
+        "ftInfAUExpanded": "(G (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (altitude_hold -> (absReal((altitude - altitude_IC)) <= 35.0))",
+        "R2U2Code": "(altitude_hold -> (abs((altitude - altitude_IC)) <= 35.0))",
+        "component": "Autopilot"
+      },
+      "_id": "dmnma2lxwh4bgw0sakl7wq"
+    },
+    {
+      "reqid": "AP-004b",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "while (autopilot_engaged & !hdg) Autopilot shall always satisfy (roll_angle - roll_cmd - rollAtZero)/(roll_cmd - rollAtZero) <= 0.1",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "in"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "autopilot_engaged",
+          "hdg",
+          "roll_angle",
+          "roll_cmd",
+          "rollAtZero"
+        ],
+        "scope_mode": "(( autopilot_engaged & ! hdg ))",
+        "scopeTextRange": [
+          0,
+          31
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          33,
+          41
+        ],
+        "timingTextRange": [
+          49,
+          54
+        ],
+        "post_condition": "(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)",
+        "responseTextRange": [
+          56,
+          130
+        ],
+        "diagramVariables": "M = <b><i>(( autopilot_engaged & ! hdg ))</i></b>, Response = <b><i>(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)</i></b>.",
+        "description": "SCOPE: in every interval where <b><i>(( autopilot_engaged & ! hdg ))</i></b> holds.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in every interval where <b><i>(( autopilot_engaged & ! hdg ))</i></b> holds.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( roll_angle - roll_cmd - rollAtZero ) / ( roll_cmd - rollAtZero ) <= 0.1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/in_null_always_satisfaction.svg",
+        "scope_mode_pt": "(autopilot_engaged & (! hdg))",
+        "scope_mode_ft": "(autopilot_engaged & (! hdg))",
+        "scope_mode_pctl": "(autopilot_engaged & (! hdg))",
+        "post_condition_unexp_pt": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_unexp_ft": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_unexp_pctl": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_SMV_pt": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_SMV_ft": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_MLTL_ft": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "post_condition_PRISM_pctl": "((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "ft": "(LAST V ((autopilot_engaged & (! hdg)) -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "pt": "(H ((autopilot_engaged & (! hdg)) -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "pctl": "P>=1[((G ((! (Fin_(autopilot_engaged & (! hdg)) & (! LAST))) | (X (P>=1[(Lin_(autopilot_engaged & (! hdg)) R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))])))) & ((autopilot_engaged & (! hdg)) => (Lin_(autopilot_engaged & (! hdg)) | (P>=1[(Lin_(autopilot_engaged & (! hdg)) R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))]))))]",
+        "ptExpanded": "(H ((autopilot_engaged & (! hdg)) -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "CoCoSpecCode": "H(((autopilot_engaged and not (hdg)) => ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "ftExpanded": "(LAST V ((autopilot_engaged & (! hdg)) -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "pctlExpanded": "P>=1[((G ((! (((! (autopilot_engaged & (! hdg))) & (X (autopilot_engaged & (! hdg)))) & (! false))) | (X (P>=1[(((autopilot_engaged & (! hdg)) & (X (! (autopilot_engaged & (! hdg))))) R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))])))) & ((autopilot_engaged & (! hdg)) => (((autopilot_engaged & (! hdg)) & (X (! (autopilot_engaged & (! hdg))))) | (P>=1[(((autopilot_engaged & (! hdg)) & (X (! (autopilot_engaged & (! hdg))))) R ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))]))))]",
+        "ftInfAUExpanded": "(G ((autopilot_engaged & (! hdg)) -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)))",
+        "mltlExpanded": "(G[0,M] (p0 -> p1))",
+        "WESTMapping": "p0: (autopilot_engaged & (! hdg))<br/>p1: ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1)",
+        "R2U2Code": "((autopilot_engaged && (! hdg)) -> ((((roll_angle - roll_cmd) - rollAtZero) / (roll_cmd - rollAtZero)) <= 0.1))",
+        "component": "Autopilot"
+      },
+      "_id": "agcdepenu28cjh4ulhzc"
+    },
+    {
+      "reqid": "AP-005",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Autopilot shall always satisfy  absReal(roll_rate) <= 6.6",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "roll_rate"
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(absReal ( roll_rate ) <= 6.6)",
+        "responseTextRange": [
+          23,
+          56
+        ],
+        "diagramVariables": "Response = <b><i>(absReal ( roll_rate ) <= 6.6)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(absReal ( roll_rate ) <= 6.6)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(absReal ( roll_rate ) <= 6.6)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(absReal(roll_rate) <= 6.6)",
+        "post_condition_unexp_ft": "(absReal(roll_rate) <= 6.6)",
+        "post_condition_unexp_pctl": "(absReal(roll_rate) <= 6.6)",
+        "post_condition_SMV_pt": "(absReal(roll_rate) <= 6.6)",
+        "post_condition_SMV_ft": "(absReal(roll_rate) <= 6.6)",
+        "post_condition_MLTL_ft": "(absReal(roll_rate) <= 6.6)",
+        "post_condition_PRISM_pctl": "(absReal(roll_rate) <= 6.6)",
+        "ft": "(LAST V (absReal(roll_rate) <= 6.6))",
+        "pt": "(H (absReal(roll_rate) <= 6.6))",
+        "pctl": "(P>=1[(G (absReal(roll_rate) <= 6.6))])",
+        "ptExpanded": "(H (absReal(roll_rate) <= 6.6))",
+        "CoCoSpecCode": "H((absReal(roll_rate) <= 6.6))",
+        "ftExpanded": "(LAST V (absReal(roll_rate) <= 6.6))",
+        "pctlExpanded": "(P>=1[(G (absReal(roll_rate) <= 6.6))])",
+        "ftInfAUExpanded": "(G (absReal(roll_rate) <= 6.6))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (absReal(roll_rate) <= 6.6)",
+        "R2U2Code": "(abs(roll_rate) <= 6.6)",
+        "component": "Autopilot"
+      },
+      "_id": "lic3uof71jlgnuxzygu84v"
+    },
+    {
+      "reqid": "AP-006",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "Autopilot shall always satisfy -33.0 < roll_angle & roll_angle < 33.0",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "roll_angle"
+        ],
+        "component_name": "Autopilot",
+        "componentTextRange": [
+          0,
+          8
+        ],
+        "timingTextRange": [
+          16,
+          21
+        ],
+        "post_condition": "(-33.0 < roll_angle & roll_angle < 33.0)",
+        "responseTextRange": [
+          23,
+          68
+        ],
+        "diagramVariables": "Response = <b><i>(-33.0 < roll_angle & roll_angle < 33.0)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(-33.0 < roll_angle & roll_angle < 33.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(-33.0 < roll_angle & roll_angle < 33.0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "post_condition_unexp_ft": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "post_condition_unexp_pctl": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "post_condition_SMV_pt": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "post_condition_SMV_ft": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "post_condition_MLTL_ft": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "post_condition_PRISM_pctl": "((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "ft": "(LAST V ((-33.0 < roll_angle) & (roll_angle < 33.0)))",
+        "pt": "(H ((-33.0 < roll_angle) & (roll_angle < 33.0)))",
+        "pctl": "(P>=1[(G ((-33.0 < roll_angle) & (roll_angle < 33.0)))])",
+        "ptExpanded": "((H (-33.0 < roll_angle)) & (H (roll_angle < 33.0)))",
+        "CoCoSpecCode": "(H((-33.0 < roll_angle)) and H((roll_angle < 33.0)))",
+        "ftExpanded": "(LAST V ((-33.0 < roll_angle) & (roll_angle < 33.0)))",
+        "pctlExpanded": "(P>=1[(G ((-33.0 < roll_angle) & (roll_angle < 33.0)))])",
+        "ftInfAUExpanded": "(G ((-33.0 < roll_angle) & (roll_angle < 33.0)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((-33.0 < roll_angle) & (roll_angle < 33.0))",
+        "R2U2Code": "((-33.0 < roll_angle) && (roll_angle < 33.0))",
+        "component": "Autopilot"
+      },
+      "_id": "h5rhx307gxurfo5gvazmq9"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "Autopilot",
+      "variable_name": "HDGmodeCmd",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "6i19m3pllcr1rw3yvvbjpq",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "Psi",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "01enhf5v7skquyesxgzcu8f",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "altitude",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "1ip8xccc8d99i6o3jwd0mq",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "altitude_IC",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "cg4kur25gmo22nucpfaejt",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "altitude_hold",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "2st0lstr7qumvjv5q5e3he",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "autopilot_engaged",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "8505lkxlwhlwkbnpsqem5",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "epsilon",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "hzxzuew8olmjxs7tl61lz",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "hdg",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "sttj9e76cmnrh823uxz7i",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "psiAtZero",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "vsuoywqhazjy8pm18igm5r",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "rollAtZero",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "im5owlt9gan8fpx0kuwjio",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "roll_angle",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "7qxr1cot3jup24r7yp6sy",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "roll_cmd",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "gswxt6p8a8297vopt2kd",
+      "completed": true
+    },
+    {
+      "component_name": "Autopilot",
+      "variable_name": "roll_rate",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ze3kb4ronn0gav0dhdg04m",
+      "completed": true
+    }
+  ]
+}

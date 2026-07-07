@@ -1,0 +1,895 @@
+{
+  "requirements": [
+    {
+      "reqid": "FSM-003v2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_transition_state & good & supported & !standby) => STATE = ap_nominal_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_transition_state",
+          "good",
+          "supported",
+          "standby",
+          "STATE",
+          "ap_nominal_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_transition_state & good & supported & ! standby ) => STATE = ap_nominal_state)",
+        "responseTextRange": [
+          27,
+          121
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_transition_state & good & supported & ! standby ) => STATE = ap_nominal_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_transition_state & good & supported & ! standby ) => STATE = ap_nominal_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_transition_state & good & supported & ! standby ) => STATE = ap_nominal_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "post_condition_unexp_ft": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "post_condition_unexp_pctl": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "post_condition_SMV_pt": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "post_condition_SMV_ft": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "post_condition_MLTL_ft": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "post_condition_PRISM_pctl": "(((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "ft": "(LAST V (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))",
+        "pt": "(H (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))",
+        "pctl": "(P>=1[(G (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))])",
+        "ptExpanded": "(H (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))",
+        "CoCoSpecCode": "H((((((state = ap_transition_state) and good) and supported) and not (standby)) => (STATE = ap_nominal_state)))",
+        "ftExpanded": "(LAST V (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))",
+        "pctlExpanded": "(P>=1[(G (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))])",
+        "ftInfAUExpanded": "(G (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((((state = ap_transition_state) & good) & supported) & (! standby)) -> (STATE = ap_nominal_state))",
+        "R2U2Code": "(((((state == ap_transition_state) && good) && supported) && (! standby)) -> (STATE == ap_nominal_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "6n3t5qgqj7yf875m3yqujw"
+    },
+    {
+      "reqid": "FSM-002",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (standby & state = ap_transition_state) => STATE = ap_standby_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "standby",
+          "state",
+          "ap_transition_state",
+          "STATE",
+          "ap_standby_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( standby & state = ap_transition_state ) => STATE = ap_standby_state)",
+        "responseTextRange": [
+          27,
+          101
+        ],
+        "diagramVariables": "Response = <b><i>(( standby & state = ap_transition_state ) => STATE = ap_standby_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( standby & state = ap_transition_state ) => STATE = ap_standby_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( standby & state = ap_transition_state ) => STATE = ap_standby_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "post_condition_unexp_ft": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "post_condition_unexp_pctl": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "post_condition_SMV_pt": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "post_condition_SMV_ft": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "post_condition_MLTL_ft": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "post_condition_PRISM_pctl": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "ft": "(LAST V ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+        "pt": "(H ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+        "pctl": "(P>=1[(G ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))])",
+        "ptExpanded": "(H ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+        "CoCoSpecCode": "H(((standby and (state = ap_transition_state)) => (STATE = ap_standby_state)))",
+        "ftExpanded": "(LAST V ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+        "pctlExpanded": "(P>=1[(G ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))])",
+        "ftInfAUExpanded": "(G ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+        "R2U2Code": "((standby && (state == ap_transition_state)) -> (STATE == ap_standby_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "70worsvr9jwxm4l8ncxbd"
+    },
+    {
+      "reqid": "FSM-005",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state=ap_nominal_state & standby)  => STATE = ap_standby_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_nominal_state",
+          "standby",
+          "STATE",
+          "ap_standby_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_nominal_state & standby ) => STATE = ap_standby_state)",
+        "responseTextRange": [
+          27,
+          97
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_nominal_state & standby ) => STATE = ap_standby_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_nominal_state & standby ) => STATE = ap_standby_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_nominal_state & standby ) => STATE = ap_standby_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "post_condition_unexp_ft": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "post_condition_unexp_pctl": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "post_condition_SMV_pt": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "post_condition_SMV_ft": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "post_condition_MLTL_ft": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "post_condition_PRISM_pctl": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "ft": "(LAST V (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+        "pt": "(H (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+        "pctl": "(P>=1[(G (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))])",
+        "ptExpanded": "(H (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+        "CoCoSpecCode": "H((((state = ap_nominal_state) and standby) => (STATE = ap_standby_state)))",
+        "ftExpanded": "(LAST V (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+        "pctlExpanded": "(P>=1[(G (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))])",
+        "ftInfAUExpanded": "(G (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+        "R2U2Code": "(((state == ap_nominal_state) && standby) -> (STATE == ap_standby_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "fn5gikw436jie1tjlajq3"
+    },
+    {
+      "reqid": "FSM-003",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_transition_state & good & supported) => STATE = ap_nominal_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_transition_state",
+          "good",
+          "supported",
+          "STATE",
+          "ap_nominal_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_transition_state & good & supported ) => STATE = ap_nominal_state)",
+        "responseTextRange": [
+          27,
+          110
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_transition_state & good & supported ) => STATE = ap_nominal_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_transition_state & good & supported ) => STATE = ap_nominal_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_transition_state & good & supported ) => STATE = ap_nominal_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "post_condition_unexp_ft": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "post_condition_unexp_pctl": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "post_condition_SMV_pt": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "post_condition_SMV_ft": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "post_condition_MLTL_ft": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "post_condition_PRISM_pctl": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "ft": "(LAST V ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+        "pt": "(H ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+        "pctl": "(P>=1[(G ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))])",
+        "ptExpanded": "(H ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+        "CoCoSpecCode": "H(((((state = ap_transition_state) and good) and supported) => (STATE = ap_nominal_state)))",
+        "ftExpanded": "(LAST V ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+        "pctlExpanded": "(P>=1[(G ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))])",
+        "ftInfAUExpanded": "(G ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+        "R2U2Code": "((((state == ap_transition_state) && good) && supported) -> (STATE == ap_nominal_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "n5tovrubmmiu7ha6sf5wi"
+    },
+    {
+      "reqid": "FSM-008v1",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_standby_state & !standby) => STATE = ap_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_standby_state",
+          "standby",
+          "STATE",
+          "ap_transition_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_standby_state & ! standby ) => STATE = ap_transition_state)",
+        "responseTextRange": [
+          27,
+          102
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_standby_state & ! standby ) => STATE = ap_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_standby_state & ! standby ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_standby_state & ! standby ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_ft": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_pctl": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_pt": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_ft": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_MLTL_ft": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_PRISM_pctl": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "ft": "(LAST V (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+        "pt": "(H (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+        "pctl": "(P>=1[(G (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))])",
+        "ptExpanded": "(H (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+        "CoCoSpecCode": "H((((state = ap_standby_state) and not (standby)) => (STATE = ap_transition_state)))",
+        "ftExpanded": "(LAST V (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+        "pctlExpanded": "(P>=1[(G (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))])",
+        "ftInfAUExpanded": "(G (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+        "R2U2Code": "(((state == ap_standby_state) && (! standby)) -> (STATE == ap_transition_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "t53z9g86pmux1ewv092fa"
+    },
+    {
+      "reqid": "FSM-009",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_standby_state & apfail )=> STATE = ap_maneuver_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_standby_state",
+          "apfail",
+          "STATE",
+          "ap_maneuver_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_standby_state & apfail ) => STATE = ap_maneuver_state)",
+        "responseTextRange": [
+          27,
+          98
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_standby_state & apfail ) => STATE = ap_maneuver_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_standby_state & apfail ) => STATE = ap_maneuver_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_standby_state & apfail ) => STATE = ap_maneuver_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "post_condition_unexp_ft": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "post_condition_unexp_pctl": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "post_condition_SMV_pt": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "post_condition_SMV_ft": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "post_condition_MLTL_ft": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "post_condition_PRISM_pctl": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "ft": "(LAST V (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+        "pt": "(H (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+        "pctl": "(P>=1[(G (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))])",
+        "ptExpanded": "(H (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+        "CoCoSpecCode": "H((((state = ap_standby_state) and apfail) => (STATE = ap_maneuver_state)))",
+        "ftExpanded": "(LAST V (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+        "pctlExpanded": "(P>=1[(G (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))])",
+        "ftInfAUExpanded": "(G (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+        "R2U2Code": "(((state == ap_standby_state) && apfail) -> (STATE == ap_maneuver_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "o2z7u42rntk4okhlefk1"
+    },
+    {
+      "reqid": "FSM-004v2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_nominal_state & ! good & ! standby) => STATE = ap_maneuver_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_nominal_state",
+          "good",
+          "standby",
+          "STATE",
+          "ap_maneuver_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_nominal_state & ! good & ! standby ) => STATE = ap_maneuver_state)",
+        "responseTextRange": [
+          27,
+          110
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_nominal_state & ! good & ! standby ) => STATE = ap_maneuver_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_nominal_state & ! good & ! standby ) => STATE = ap_maneuver_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_nominal_state & ! good & ! standby ) => STATE = ap_maneuver_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "post_condition_unexp_ft": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "post_condition_unexp_pctl": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "post_condition_SMV_pt": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "post_condition_SMV_ft": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "post_condition_MLTL_ft": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "post_condition_PRISM_pctl": "((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "ft": "(LAST V ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))",
+        "pt": "(H ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))",
+        "pctl": "(P>=1[(G ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))])",
+        "ptExpanded": "(H ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))",
+        "CoCoSpecCode": "H(((((state = ap_nominal_state) and not (good)) and not (standby)) => (STATE = ap_maneuver_state)))",
+        "ftExpanded": "(LAST V ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))",
+        "pctlExpanded": "(P>=1[(G ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))])",
+        "ftInfAUExpanded": "(G ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((state = ap_nominal_state) & (! good)) & (! standby)) -> (STATE = ap_maneuver_state))",
+        "R2U2Code": "((((state == ap_nominal_state) && (! good)) && (! standby)) -> (STATE == ap_maneuver_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "osxvcp1f6jfpzpgutgq9vp"
+    },
+    {
+      "reqid": "FSM-008v2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_standby_state & ! standby & ! apfail ) => STATE = ap_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_standby_state",
+          "standby",
+          "apfail",
+          "STATE",
+          "ap_transition_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_standby_state & ! standby & ! apfail ) => STATE = ap_transition_state)",
+        "responseTextRange": [
+          27,
+          115
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_standby_state & ! standby & ! apfail ) => STATE = ap_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_standby_state & ! standby & ! apfail ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_standby_state & ! standby & ! apfail ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_ft": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_pctl": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_pt": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_ft": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "post_condition_MLTL_ft": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "post_condition_PRISM_pctl": "((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "ft": "(LAST V ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))",
+        "pt": "(H ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))",
+        "pctl": "(P>=1[(G ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))])",
+        "ptExpanded": "(H ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))",
+        "CoCoSpecCode": "H(((((state = ap_standby_state) and not (standby)) and not (apfail)) => (STATE = ap_transition_state)))",
+        "ftExpanded": "(LAST V ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))",
+        "pctlExpanded": "(P>=1[(G ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))])",
+        "ftInfAUExpanded": "(G ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((state = ap_standby_state) & (! standby)) & (! apfail)) -> (STATE = ap_transition_state))",
+        "R2U2Code": "((((state == ap_standby_state) && (! standby)) && (! apfail)) -> (STATE == ap_transition_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "o4m7t5h9ptah1lb6rlvl3"
+    },
+    {
+      "reqid": "FSM-007",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_maneuver_state & supported & good) => STATE = ap_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_maneuver_state",
+          "supported",
+          "good",
+          "STATE",
+          "ap_transition_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_maneuver_state & supported & good ) => STATE = ap_transition_state)",
+        "responseTextRange": [
+          27,
+          111
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_maneuver_state & supported & good ) => STATE = ap_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_maneuver_state & supported & good ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_maneuver_state & supported & good ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_ft": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_pctl": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_pt": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_ft": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "post_condition_MLTL_ft": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "post_condition_PRISM_pctl": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "ft": "(LAST V ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+        "pt": "(H ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+        "pctl": "(P>=1[(G ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))])",
+        "ptExpanded": "(H ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+        "CoCoSpecCode": "H(((((state = ap_maneuver_state) and supported) and good) => (STATE = ap_transition_state)))",
+        "ftExpanded": "(LAST V ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+        "pctlExpanded": "(P>=1[(G ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))])",
+        "ftInfAUExpanded": "(G ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+        "R2U2Code": "((((state == ap_maneuver_state) && supported) && good) -> (STATE == ap_transition_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "s4vxl47wj5m90akf11iemp"
+    },
+    {
+      "reqid": "FSM-004",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (! good & state = ap_nominal_state) => STATE = ap_maneuver_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "good",
+          "state",
+          "ap_nominal_state",
+          "STATE",
+          "ap_maneuver_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( ! good & state = ap_nominal_state ) => STATE = ap_maneuver_state)",
+        "responseTextRange": [
+          27,
+          98
+        ],
+        "diagramVariables": "Response = <b><i>(( ! good & state = ap_nominal_state ) => STATE = ap_maneuver_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( ! good & state = ap_nominal_state ) => STATE = ap_maneuver_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( ! good & state = ap_nominal_state ) => STATE = ap_maneuver_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "post_condition_unexp_ft": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "post_condition_unexp_pctl": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "post_condition_SMV_pt": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "post_condition_SMV_ft": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "post_condition_MLTL_ft": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "post_condition_PRISM_pctl": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "ft": "(LAST V (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+        "pt": "(H (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+        "pctl": "(P>=1[(G (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))])",
+        "ptExpanded": "(H (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+        "CoCoSpecCode": "H(((not (good) and (state = ap_nominal_state)) => (STATE = ap_maneuver_state)))",
+        "ftExpanded": "(LAST V (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+        "pctlExpanded": "(P>=1[(G (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))])",
+        "ftInfAUExpanded": "(G (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+        "R2U2Code": "(((! good) && (state == ap_nominal_state)) -> (STATE == ap_maneuver_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "i9y7jvu0grfb0mkmqp049"
+    },
+    {
+      "reqid": "FSM-007v2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_maneuver_state & supported & good & ! standby) => STATE = ap_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_maneuver_state",
+          "supported",
+          "good",
+          "standby",
+          "STATE",
+          "ap_transition_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_maneuver_state & supported & good & ! standby ) => STATE = ap_transition_state)",
+        "responseTextRange": [
+          27,
+          123
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_maneuver_state & supported & good & ! standby ) => STATE = ap_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_maneuver_state & supported & good & ! standby ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_maneuver_state & supported & good & ! standby ) => STATE = ap_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_ft": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_unexp_pctl": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_pt": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_SMV_ft": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_MLTL_ft": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "post_condition_PRISM_pctl": "(((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "ft": "(LAST V (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))",
+        "pt": "(H (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))",
+        "pctl": "(P>=1[(G (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))])",
+        "ptExpanded": "(H (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))",
+        "CoCoSpecCode": "H((((((state = ap_maneuver_state) and supported) and good) and not (standby)) => (STATE = ap_transition_state)))",
+        "ftExpanded": "(LAST V (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))",
+        "pctlExpanded": "(P>=1[(G (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))])",
+        "ftInfAUExpanded": "(G (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((((state = ap_maneuver_state) & supported) & good) & (! standby)) -> (STATE = ap_transition_state))",
+        "R2U2Code": "(((((state == ap_maneuver_state) && supported) && good) && (! standby)) -> (STATE == ap_transition_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "6zcvsetbs63pweob0gvdl"
+    },
+    {
+      "reqid": "FSM-006",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Autopilot shall always satisfy (state = ap_maneuver_state & standby & good) => STATE = ap_standby_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "state",
+          "ap_maneuver_state",
+          "standby",
+          "good",
+          "STATE",
+          "ap_standby_state"
+        ],
+        "component_name": "FSM_Autopilot",
+        "componentTextRange": [
+          0,
+          12
+        ],
+        "timingTextRange": [
+          20,
+          25
+        ],
+        "post_condition": "(( state = ap_maneuver_state & standby & good ) => STATE = ap_standby_state)",
+        "responseTextRange": [
+          27,
+          106
+        ],
+        "diagramVariables": "Response = <b><i>(( state = ap_maneuver_state & standby & good ) => STATE = ap_standby_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = ap_maneuver_state & standby & good ) => STATE = ap_standby_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = ap_maneuver_state & standby & good ) => STATE = ap_standby_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "post_condition_unexp_ft": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "post_condition_unexp_pctl": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "post_condition_SMV_pt": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "post_condition_SMV_ft": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "post_condition_MLTL_ft": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "post_condition_PRISM_pctl": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "ft": "(LAST V ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))",
+        "pt": "(H ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))",
+        "pctl": "(P>=1[(G ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))])",
+        "ptExpanded": "(H ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))",
+        "CoCoSpecCode": "H(((((state = ap_maneuver_state) and standby) and good) => (STATE = ap_standby_state)))",
+        "ftExpanded": "(LAST V ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))",
+        "pctlExpanded": "(P>=1[(G ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))])",
+        "ftInfAUExpanded": "(G ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+        "R2U2Code": "((((state == ap_maneuver_state) && standby) && good) -> (STATE == ap_standby_state))",
+        "component": "FSM_Autopilot"
+      },
+      "_id": "ffay2ybr2kr2gher5o7kk"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "STATE",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "zyj0b9dsg8ojlv3v7v3nh",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "ap_maneuver_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "sf1s53nxpsi5eu01n99fhn",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "ap_nominal_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "ijkcvx6j9cdcpoo2w3iu7",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "ap_standby_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "w4iykm7fjled6xot3115ro",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "ap_transition_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "8q2je3r0dvo8900ej5t27s",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "apfail",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "qflb49gtqxt0ig96y5u2",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "good",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ftwnniz7d8l2ydh0voij0t",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "standby",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "kyxwphigsnp576jc5cx2d3",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "state",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "1um9q4o5c8wgfj14kgymxk",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Autopilot",
+      "variable_name": "supported",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "ck4epeqji6obvzhhrkq3yq",
+      "completed": true
+    }
+  ]
+}

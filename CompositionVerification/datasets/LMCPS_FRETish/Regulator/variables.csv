@@ -1,0 +1,11 @@
+component,variable_name,idType,dataType,variableType
+Regulator,airspeed_command_acceleration,Internal,double,data
+Regulator,hcvdt_cmd_fcs_fps2,Output,double,data
+Regulator,height_command_acceleration,Internal,double,data
+Regulator,lcvdt_cmd_fcs_dps2,Output,double,data
+Regulator,mcvdt_cmd_fcs_dps2,Output,double,data
+Regulator,ncvdt_cmd_fcs_dps2,Output,double,data
+Regulator,pitch_command_acceleration,Internal,double,data
+Regulator,roll_command_acceleration,Internal,double,data
+Regulator,xcvdt_cmd_fcs_fps2,Output,double,data
+Regulator,yaw_command_acceleration,Internal,double,data

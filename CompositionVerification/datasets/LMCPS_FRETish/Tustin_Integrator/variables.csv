@@ -1,0 +1,13 @@
+component,variable_name,idType,dataType,variableType
+Tustin_Integrator,BL,Input,double,data
+Tustin_Integrator,IC,Input,double,data
+Tustin_Integrator,RESET,Input,boolean,data
+Tustin_Integrator,TL,Input,double,data
+Tustin_Integrator,normal,Internal,boolean,data
+Tustin_Integrator,normalv2,Internal,boolean,data
+Tustin_Integrator,normalv3,Internal,boolean,data
+Tustin_Integrator,timeStep,Input,double,data
+Tustin_Integrator,xin,Input,double,data
+Tustin_Integrator,xinpv,Internal,double,data
+Tustin_Integrator,yout,Output,double,data
+Tustin_Integrator,ypv,Internal,double,data

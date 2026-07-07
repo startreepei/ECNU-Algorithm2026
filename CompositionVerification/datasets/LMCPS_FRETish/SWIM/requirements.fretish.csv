@@ -1,0 +1,4 @@
+reqid,component,project,fulltext
+SWIM-002,SWIM,LM_requirements,SWIM shall always satisfy ((lowSpeedWarningAllowed = 1.0  & vehAirPress < warningTrigForMinPress) => swimGet_AgcasLowSpeedWarn = E_SWIM_WARNING_ON)
+SWIM-001a,SWIM,LM_requirements,SWIM shall always satisfy ((storeCat = CAT1) =>  (CalAirspeedMin = 1.25921 * sqrt(weight) + 10.0))
+SWIM-001b,SWIM,LM_requirements,SWIM shall always satisfy ((storeCat = CAT3) => (CalAirspeedMin = 1.33694 * sqrt(weight) + 10.0)) 

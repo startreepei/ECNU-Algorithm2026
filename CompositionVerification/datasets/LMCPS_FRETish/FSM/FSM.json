@@ -1,0 +1,285 @@
+{
+  "requirements": [
+    {
+      "reqid": "FSM-001v2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "if autopilot & preBool(false,autopilot) & preBool(false,limits) FSM shall immediately satisfy pullup",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "autopilot",
+          "limits",
+          "pullup"
+        ],
+        "qualifier_word": "if",
+        "pre_condition": "(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))",
+        "regular_condition": "(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))",
+        "conditionTextRange": [
+          0,
+          62
+        ],
+        "component_name": "FSM",
+        "componentTextRange": [
+          64,
+          66
+        ],
+        "timingTextRange": [
+          74,
+          84
+        ],
+        "post_condition": "(pullup)",
+        "responseTextRange": [
+          86,
+          99
+        ],
+        "diagramVariables": "TC = <b><i>(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))</i></b>, Response = <b><i>(pullup)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))</i></b> is true and any point in the interval where <b><i>(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(pullup)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))</i></b> is true and any point in the interval where <b><i>(autopilot & preBool ( false , autopilot ) & preBool ( false , limits ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(pullup)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "((autopilot & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y autopilot)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits))))",
+        "regular_condition_unexp_ft": "((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))",
+        "regular_condition_unexp_pctl": "((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))",
+        "regular_condition_SMV_pt": "((autopilot & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y autopilot)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits))))",
+        "regular_condition_SMV_ft": "((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))",
+        "regular_condition_MLTL_ft": "((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))",
+        "regular_condition_PRISM_pctl": "((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))",
+        "post_condition_unexp_pt": "pullup",
+        "post_condition_unexp_ft": "pullup",
+        "post_condition_unexp_pctl": "pullup",
+        "post_condition_SMV_pt": "pullup",
+        "post_condition_SMV_ft": "pullup",
+        "post_condition_MLTL_ft": "pullup",
+        "post_condition_PRISM_pctl": "pullup",
+        "ft": "((LAST V (((! ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))) & ((! LAST) & (X ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))))) -> (X pullup))) & (((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)) -> pullup))",
+        "pt": "(H ((((autopilot & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y autopilot)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits)))) & (Z (! ((autopilot & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y autopilot)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits))))))) -> pullup))",
+        "pctl": "P>=1[((G (((! ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))) & (X ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)))) => (X (P>=1[pullup])))) & (((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)) => (P>=1[pullup])))]",
+        "ptExpanded": "(H ((((autopilot & (Y autopilot)) & (Y limits)) & (Z (! ((autopilot & (Y autopilot)) & (Y limits))))) -> pullup))",
+        "CoCoSpecCode": "H(((((autopilot and YtoPre(autopilot)) and YtoPre(limits)) and ZtoPre(not (((autopilot and YtoPre(autopilot)) and YtoPre(limits))))) => pullup))",
+        "ftExpanded": "((LAST V (((! ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))) & ((! LAST) & (X ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))))) -> (X pullup))) & (((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)) -> pullup))",
+        "pctlExpanded": "P>=1[((G (((! ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))) & (X ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)))) => (X (P>=1[pullup])))) & (((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)) => (P>=1[pullup])))]",
+        "ftInfAUExpanded": "((G (((! ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits))) & (X ((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)))) -> (X pullup))) & (((autopilot & preBool(FALSE,autopilot)) & preBool(FALSE,limits)) -> pullup))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: ((autopilot & preBool(false,autopilot)) & preBool(false,limits))<br/>p1: pullup",
+        "R2U2Code": "((((! ((autopilot && prev(false,autopilot)) && prev(false,limits))) && (F[1,1] ((autopilot && prev(false,autopilot)) && prev(false,limits)))) -> (F[1,1] pullup)) && (((TAU == 0) && ((autopilot && prev(false,autopilot)) && prev(false,limits))) -> pullup))",
+        "component": "FSM"
+      },
+      "_id": "0miw4kmlpbk3dphst1tyee"
+    },
+    {
+      "reqid": "FSM-001v3",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "if  persisted(3, autopilot)  & persisted(3,preBool(false,preBool(false,!limits)))  &  preBool(false,limits)  FSM  shall  immediately satisfy pullup",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "regular",
+        "probability": "null",
+        "timing": "immediately",
+        "response": "satisfaction",
+        "variables": [
+          "autopilot",
+          "limits",
+          "pullup"
+        ],
+        "qualifier_word": "if",
+        "pre_condition": "(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))",
+        "regular_condition": "(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))",
+        "conditionTextRange": [
+          0,
+          106
+        ],
+        "component_name": "FSM",
+        "componentTextRange": [
+          109,
+          111
+        ],
+        "timingTextRange": [
+          121,
+          131
+        ],
+        "post_condition": "(pullup)",
+        "responseTextRange": [
+          133,
+          146
+        ],
+        "diagramVariables": "TC = <b><i>(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))</i></b>, Response = <b><i>(pullup)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))</i></b> is true and any point in the interval where <b><i>(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(pullup)</i></b> also holds at the same time point.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))</i></b> is true and any point in the interval where <b><i>(persisted ( 3 , autopilot ) & persisted ( 3 , preBool ( false , preBool ( false , ! limits ) ) ) & preBool ( false , limits ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(pullup)</i></b> also holds at the same time point.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_immediately_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "regular_condition_unexp_pt": "((((H[<=3] autopilot) & (H[<3] (! FTP))) & ((H[<=3] (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (! limits)))))))) & (H[<3] (! FTP)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits))))",
+        "regular_condition_unexp_ft": "((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))",
+        "regular_condition_unexp_pctl": "((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))",
+        "regular_condition_SMV_pt": "((((H[<=3] autopilot) & (H[<3] (! (!(Y TRUE))))) & ((H[<=3] (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (! limits)))))))) & (H[<3] (! (!(Y TRUE)))))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits))))",
+        "regular_condition_SMV_ft": "((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))",
+        "regular_condition_MLTL_ft": "((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))",
+        "regular_condition_PRISM_pctl": "((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))",
+        "post_condition_unexp_pt": "pullup",
+        "post_condition_unexp_ft": "pullup",
+        "post_condition_unexp_pctl": "pullup",
+        "post_condition_SMV_pt": "pullup",
+        "post_condition_SMV_ft": "pullup",
+        "post_condition_MLTL_ft": "pullup",
+        "post_condition_PRISM_pctl": "pullup",
+        "ft": "((LAST V (((! ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))) & ((! LAST) & (X ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))))) -> (X pullup))) & (((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)) -> pullup))",
+        "pt": "(H ((((((H[<=3] autopilot) & (H[<3] (! FTP))) & ((H[<=3] (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (! limits)))))))) & (H[<3] (! FTP)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits)))) & (Z (! ((((H[<=3] autopilot) & (H[<3] (! FTP))) & ((H[<=3] (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (((Z FALSE) & FALSE) | ((Y TRUE) & (Y (! limits)))))))) & (H[<3] (! FTP)))) & (((Z FALSE) & FALSE) | ((Y TRUE) & (Y limits))))))) -> pullup))",
+        "pctl": "P>=1[((G (((! ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))) & (X ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)))) => (X (P>=1[pullup])))) & (((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)) => (P>=1[pullup])))]",
+        "ptExpanded": "(H ((((((H[0,3] autopilot) & (H[0,2] (Y TRUE))) & ((H[0,3] (Y (Y (! limits)))) & (H[0,2] (Y TRUE)))) & (Y limits)) & (Z (! ((((H[0,3] autopilot) & (H[0,2] (Y TRUE))) & ((H[0,3] (Y (Y (! limits)))) & (H[0,2] (Y TRUE)))) & (Y limits))))) -> pullup))",
+        "CoCoSpecCode": "H((((((HT(3, 0, autopilot) and HT(2, 0, YtoPre(true))) and (HT(3, 0, YtoPre(YtoPre(not (limits)))) and HT(2, 0, YtoPre(true)))) and YtoPre(limits)) and ZtoPre(not ((((HT(3, 0, autopilot) and HT(2, 0, YtoPre(true))) and (HT(3, 0, YtoPre(YtoPre(not (limits)))) and HT(2, 0, YtoPre(true)))) and YtoPre(limits))))) => pullup))",
+        "ftExpanded": "((LAST V (((! ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))) & ((! LAST) & (X ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))))) -> (X pullup))) & (((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)) -> pullup))",
+        "pctlExpanded": "P>=1[((G (((! ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))) & (X ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)))) => (X (P>=1[pullup])))) & (((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)) => (P>=1[pullup])))]",
+        "ftInfAUExpanded": "((G (((! ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits))) & (X ((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)))) -> (X pullup))) & (((persisted(3,autopilot) & persisted(3,preBool(FALSE,preBool(FALSE,(! limits))))) & preBool(FALSE,limits)) -> pullup))",
+        "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[1,1] p1))) & (p0 -> p1))",
+        "WESTMapping": "p0: ((persisted(3,autopilot) & persisted(3,preBool(false,preBool(false,(! limits))))) & preBool(false,limits))<br/>p1: pullup",
+        "R2U2Code": "((((! ((persisted(3,autopilot) && persisted(3,prev(false,prev(false,(! limits))))) && prev(false,limits))) && (F[1,1] ((persisted(3,autopilot) && persisted(3,prev(false,prev(false,(! limits))))) && prev(false,limits)))) -> (F[1,1] pullup)) && (((TAU == 0) && ((persisted(3,autopilot) && persisted(3,prev(false,prev(false,(! limits))))) && prev(false,limits))) -> pullup))",
+        "component": "FSM"
+      },
+      "_id": "c7lmfnv76kl0ix1ww3525wg"
+    },
+    {
+      "reqid": "FSM-001v1",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM  shall  always  satisfy (limits & !standby & !apfail & supported) => pullup",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "limits",
+          "standby",
+          "apfail",
+          "supported",
+          "pullup"
+        ],
+        "component_name": "FSM",
+        "componentTextRange": [
+          0,
+          2
+        ],
+        "timingTextRange": [
+          12,
+          17
+        ],
+        "post_condition": "(( limits & ! standby & ! apfail & supported ) => pullup)",
+        "responseTextRange": [
+          20,
+          78
+        ],
+        "diagramVariables": "Response = <b><i>(( limits & ! standby & ! apfail & supported ) => pullup)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( limits & ! standby & ! apfail & supported ) => pullup)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( limits & ! standby & ! apfail & supported ) => pullup)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "post_condition_unexp_ft": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "post_condition_unexp_pctl": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "post_condition_SMV_pt": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "post_condition_SMV_ft": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "post_condition_MLTL_ft": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "post_condition_PRISM_pctl": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "ft": "(LAST V ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+        "pt": "(H ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+        "pctl": "(P>=1[(G ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))])",
+        "ptExpanded": "(H ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+        "CoCoSpecCode": "H(((((limits and not (standby)) and not (apfail)) and supported) => pullup))",
+        "ftExpanded": "(LAST V ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+        "pctlExpanded": "(P>=1[(G ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))])",
+        "ftInfAUExpanded": "(G ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+        "R2U2Code": "((((limits && (! standby)) && (! apfail)) && supported) -> pullup)",
+        "component": "FSM"
+      },
+      "_id": "y3b94m3sonekget3x400g"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "FSM",
+      "variable_name": "apfail",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "vzy8xut3a6mou7cu34au4n",
+      "completed": true
+    },
+    {
+      "component_name": "FSM",
+      "variable_name": "autopilot",
+      "idType": "Internal",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "xov98bvsw2rr0zoru6z34k",
+      "completed": true
+    },
+    {
+      "component_name": "FSM",
+      "variable_name": "limits",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "g2iwipsbp0tymr4v9rdrh",
+      "completed": true
+    },
+    {
+      "component_name": "FSM",
+      "variable_name": "pullup",
+      "idType": "Output",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "e2bih697a57fhe4cpsf62",
+      "completed": true
+    },
+    {
+      "component_name": "FSM",
+      "variable_name": "standby",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "8n90t223yxupedwrkhe22s",
+      "completed": true
+    },
+    {
+      "component_name": "FSM",
+      "variable_name": "supported",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "4xmckeqfw8vni2udix85w",
+      "completed": true
+    }
+  ]
+}

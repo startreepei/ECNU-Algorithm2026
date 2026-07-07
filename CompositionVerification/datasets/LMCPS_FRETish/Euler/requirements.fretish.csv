@@ -1,0 +1,21 @@
+reqid,component,project,fulltext
+EUL-006C,Euler,LM_requirements,Euler shall always satisfy c1xc1Transpose = 1.0 & c2xc2Transpose = 1.0 & c3xc3Transpose = 1.0
+EUL-006D,Euler,LM_requirements,Euler shall always satisfy c1xc2Transpose = 0.0 & c1xc3Transpose = 0.0 & c2xc3Transpose = 0.0
+EUL-004,Euler,LM_requirements,"Euler shall always satisfy absReal(theta) != pi/2.0 => det_3x3(DCM321_11, DCM321_21, DCM321_31, DCM321_12, DCM321_22, DCM321_32, DCM321_23, DCM321_33)"
+EUL-003,Euler,LM_requirements,Euler shall always satisfy Vb_1 * Vb_1 + Vb_2 * Vb_2 + Vb_3 * Vb_3 = Vi_1 * Vi_1 + Vi_2 * Vi_2 + Vi_3 * Vi_3
+EUL-007,Euler,LM_requirements,Euler shall always satisfy DCMxDCMTranspose_11 = 1.0 & DCMxDCMTranspose_12 = 0.0 & DCMxDCMTranspose_13 = 0.0 & DCMxDCMTranspose_21 = 0.0 & DCMxDCMTranspose_22 = 1.0 & DCMxDCMTranspose_23 = 0.0 & DCMxDCMTranspose_31 = 0.0 & DCMxDCMTranspose_32 = 0.0 & DCMxDCMTranspose_33 = 1.0
+EUL-006A,Euler,LM_requirements,Euler shall always satisfy r1xr1Transpose = 1.0 & r2xr2Transpose = 1.0 & r3xr3Transpose = 1.0
+EUL-008,Euler,LM_requirements,"Euler shall always satisfy det_3x3(DCM321_11, DCM321_21, DCM321_31, DCM321_12, DCM321_22, DCM321_32, DCM321_13, DCM321_23, DCM321_33)"
+EUL-001C,Euler,LM_requirements,Euler shall always satisfy DCM321_13 = - sin(theta)
+EUL-001I,Euler,LM_requirements,Euler shall always satisfy DCM321_33 = cos(phi) * cos(theta)
+EUL-001A,Euler,LM_requirements,Euler shall always satisfy DCM321_11 = cos(theta) * cos(psi)
+EUL-002C,Euler,LM_requirements,Euler shall always satisfy Vb_3 = Vi_1 * DCM321_31 + Vi_2 * DCM321_32 + Vi_3 * DCM321_33
+EUL-001d,Euler,LM_requirements,Euler shall always satisfy DCM321_21 = (- cos(phi) * sin(psi) + sin(phi) * sin(theta) * cos(psi))
+EUL-002A,Euler,LM_requirements,Euler shall always satisfy Vb_1 = Vi_1 * DCM321_11 + Vi_2 * DCM321_12 + Vi_3 * DCM321_13
+EUL-001F,Euler,LM_requirements,Euler shall always satisfy DCM321_23 = sin(phi) * cos(theta)
+EUL-001G,Euler,LM_requirements,Euler shall always satisfy DCM321_31 = sin(phi) * sin(psi) + cos(theta) * sin(theta) * cos(psi)
+EUL-001E,Euler,LM_requirements,Euler shall always satisfy DCM321_22 = (cos(phi) * cos(psi) + sin(phi) * sin(theta) * sin(psi))
+EUL-002B,Euler,LM_requirements,Euler shall always satisfy Vb_2 = Vi_1 * DCM321_21 + Vi_2 * DCM321_22 + Vi_3 * DCM321_23
+EUL-001B,Euler,LM_requirements,Euler shall always satisfy DCM321_12 = cos(theta) * sin(psi)
+EUL-001H,Euler,LM_requirements,Euler shall always satisfy DCM321_32 = (- sin(phi) * cos(psi)) + (cos(phi) * sin(theta) * sin(psi))
+EUL-006B,Euler,LM_requirements,Euler shall always satisfy r1xr2Transpose = 0.0 & r1xr3Transpose = 0.0 & r2xr3Transpose = 0.0

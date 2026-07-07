@@ -1,0 +1,7 @@
+reqid,component,project,fulltext
+FSM-012_weak,FSM_Sensor,LM_requirements,FSM_Sensor shall always satisfy (senstate = sen_fault_state & (!request | !limits)) => SENSTATE = sen_transition_state
+FSM-011v1,FSM_Sensor,LM_requirements,FSM_Sensor shall always  satisfy (senstate = sen_nominal_state & !request) => SENSTATE = sen_transition_state
+FSM-012,FSM_Sensor,LM_requirements,FSM_Sensor shall  always  satisfy (senstate = sen_fault_state & !request & !limits) => SENSTATE = sen_transition_state
+FSM-010,FSM_Sensor,LM_requirements,FSM_Sensor shall always satisfy (senstate = sen_nominal_state & limits) => SENSTATE = sen_fault_state
+FSM-013,FSM_Sensor,LM_requirements,FSM_Sensor shall always satisfy (senstate = sen_transition_state & request & activeMode) => SENSTATE = sen_nominal_state
+FSM-011v2,FSM_Sensor,LM_requirements,FSM_Sensor shall always satisfy (senstate = sen_nominal_state & !request & !limits) => SENSTATE = sen_transition_state

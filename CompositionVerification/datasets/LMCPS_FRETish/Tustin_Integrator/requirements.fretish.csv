@@ -1,0 +1,6 @@
+reqid,component,project,fulltext
+TUI-003v2,Tustin_Integrator,LM_requirements,Tustin_Integrator shall always satisfy normalv2 => yout = timeStep * 0.5 * ( xin + xinpv ) + ypv
+TUI-003v3,Tustin_Integrator,LM_requirements,Tustin_Integrator shall always satisfy normalv3 => yout = timeStep * 0.5 * ( xin + xinpv ) + ypv
+TUI-002,Tustin_Integrator,LM_requirements,Tustin_Integrator shall always satisfy yout <= TL &  yout >= BL
+TUI-001,Tustin_Integrator,LM_requirements,Tustin_Integrator shall always satisfy (BL <= IC & IC <= TL & RESET)  => yout = IC
+TUI-003,Tustin_Integrator,LM_requirements,Tustin_Integrator shall always satisfy normal => yout = timeStep * 0.5 * ( xin + xinpv ) + ypv

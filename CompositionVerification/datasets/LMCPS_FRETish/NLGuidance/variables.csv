@@ -1,0 +1,16 @@
+component,variable_name,idType,dataType,variableType
+NLGuidance,T_param,Input,double,data
+NLGuidance,Vt,Input,double,data
+NLGuidance,Vv,Input,double,data
+NLGuidance,Xap1,Input,double,data
+NLGuidance,Xap2,Input,double,data
+NLGuidance,Xr,Input,double,data
+NLGuidance,Xtarg,Input,double,data
+NLGuidance,Xv,Input,double,data
+NLGuidance,dot,Input,double,data
+NLGuidance,mag,Input,double,data
+NLGuidance,pre_yout,Input,double,data
+NLGuidance,r,Input,double,data
+NLGuidance,r1,Input,double,data
+NLGuidance,r2,Input,double,data
+NLGuidance,yout,Output,double,data

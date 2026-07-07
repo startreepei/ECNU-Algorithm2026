@@ -1,0 +1,480 @@
+{
+  "requirements": [
+    {
+      "reqid": "FSM-012_weak",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Sensor shall always satisfy (senstate = sen_fault_state & (!request | !limits)) => SENSTATE = sen_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "senstate",
+          "sen_fault_state",
+          "request",
+          "limits",
+          "SENSTATE",
+          "sen_transition_state"
+        ],
+        "component_name": "FSM_Sensor",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(( senstate = sen_fault_state & ( ! request | ! limits ) ) => SENSTATE = sen_transition_state)",
+        "responseTextRange": [
+          24,
+          117
+        ],
+        "diagramVariables": "Response = <b><i>(( senstate = sen_fault_state & ( ! request | ! limits ) ) => SENSTATE = sen_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( senstate = sen_fault_state & ( ! request | ! limits ) ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( senstate = sen_fault_state & ( ! request | ! limits ) ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_ft": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_pctl": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_pt": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_ft": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "post_condition_MLTL_ft": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "post_condition_PRISM_pctl": "(((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "ft": "(LAST V (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))",
+        "pt": "(H (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))",
+        "pctl": "(P>=1[(G (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))])",
+        "ptExpanded": "(H (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))",
+        "CoCoSpecCode": "H((((senstate = sen_fault_state) and (not (request) or not (limits))) => (SENSTATE = sen_transition_state)))",
+        "ftExpanded": "(LAST V (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))",
+        "pctlExpanded": "(P>=1[(G (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))])",
+        "ftInfAUExpanded": "(G (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((senstate = sen_fault_state) & ((! request) | (! limits))) -> (SENSTATE = sen_transition_state))",
+        "R2U2Code": "(((senstate == sen_fault_state) && (request -> (! limits))) -> (SENSTATE == sen_transition_state))",
+        "component": "FSM_Sensor"
+      },
+      "_id": "ac438qn4qdpfge2c7tzi1"
+    },
+    {
+      "reqid": "FSM-011v1",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Sensor shall always  satisfy (senstate = sen_nominal_state & !request) => SENSTATE = sen_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "senstate",
+          "sen_nominal_state",
+          "request",
+          "SENSTATE",
+          "sen_transition_state"
+        ],
+        "component_name": "FSM_Sensor",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(( senstate = sen_nominal_state & ! request ) => SENSTATE = sen_transition_state)",
+        "responseTextRange": [
+          25,
+          108
+        ],
+        "diagramVariables": "Response = <b><i>(( senstate = sen_nominal_state & ! request ) => SENSTATE = sen_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( senstate = sen_nominal_state & ! request ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( senstate = sen_nominal_state & ! request ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_ft": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_pctl": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_pt": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_ft": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_MLTL_ft": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_PRISM_pctl": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "ft": "(LAST V (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+        "pt": "(H (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+        "pctl": "(P>=1[(G (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))])",
+        "ptExpanded": "(H (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+        "CoCoSpecCode": "H((((senstate = sen_nominal_state) and not (request)) => (SENSTATE = sen_transition_state)))",
+        "ftExpanded": "(LAST V (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+        "pctlExpanded": "(P>=1[(G (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))])",
+        "ftInfAUExpanded": "(G (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+        "R2U2Code": "(((senstate == sen_nominal_state) && (! request)) -> (SENSTATE == sen_transition_state))",
+        "component": "FSM_Sensor"
+      },
+      "_id": "ut1b3xx4mninu5hede5ab"
+    },
+    {
+      "reqid": "FSM-012",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Sensor shall  always  satisfy (senstate = sen_fault_state & !request & !limits) => SENSTATE = sen_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "senstate",
+          "sen_fault_state",
+          "request",
+          "limits",
+          "SENSTATE",
+          "sen_transition_state"
+        ],
+        "component_name": "FSM_Sensor",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          18,
+          23
+        ],
+        "post_condition": "(( senstate = sen_fault_state & ! request & ! limits ) => SENSTATE = sen_transition_state)",
+        "responseTextRange": [
+          26,
+          117
+        ],
+        "diagramVariables": "Response = <b><i>(( senstate = sen_fault_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( senstate = sen_fault_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( senstate = sen_fault_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_ft": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_pctl": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_pt": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_ft": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_MLTL_ft": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_PRISM_pctl": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "ft": "(LAST V ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "pt": "(H ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "pctl": "(P>=1[(G ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))])",
+        "ptExpanded": "(H ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "CoCoSpecCode": "H(((((senstate = sen_fault_state) and not (request)) and not (limits)) => (SENSTATE = sen_transition_state)))",
+        "ftExpanded": "(LAST V ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "pctlExpanded": "(P>=1[(G ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))])",
+        "ftInfAUExpanded": "(G ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "R2U2Code": "((((senstate == sen_fault_state) && (! request)) && (! limits)) -> (SENSTATE == sen_transition_state))",
+        "component": "FSM_Sensor"
+      },
+      "_id": "z876w4uhfxjy3og1k1zbya"
+    },
+    {
+      "reqid": "FSM-010",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Sensor shall always satisfy (senstate = sen_nominal_state & limits) => SENSTATE = sen_fault_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "senstate",
+          "sen_nominal_state",
+          "limits",
+          "SENSTATE",
+          "sen_fault_state"
+        ],
+        "component_name": "FSM_Sensor",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(( senstate = sen_nominal_state & limits ) => SENSTATE = sen_fault_state)",
+        "responseTextRange": [
+          24,
+          100
+        ],
+        "diagramVariables": "Response = <b><i>(( senstate = sen_nominal_state & limits ) => SENSTATE = sen_fault_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( senstate = sen_nominal_state & limits ) => SENSTATE = sen_fault_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( senstate = sen_nominal_state & limits ) => SENSTATE = sen_fault_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "post_condition_unexp_ft": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "post_condition_unexp_pctl": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "post_condition_SMV_pt": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "post_condition_SMV_ft": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "post_condition_MLTL_ft": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "post_condition_PRISM_pctl": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "ft": "(LAST V (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+        "pt": "(H (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+        "pctl": "(P>=1[(G (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))])",
+        "ptExpanded": "(H (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+        "CoCoSpecCode": "H((((senstate = sen_nominal_state) and limits) => (SENSTATE = sen_fault_state)))",
+        "ftExpanded": "(LAST V (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+        "pctlExpanded": "(P>=1[(G (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))])",
+        "ftInfAUExpanded": "(G (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+        "R2U2Code": "(((senstate == sen_nominal_state) && limits) -> (SENSTATE == sen_fault_state))",
+        "component": "FSM_Sensor"
+      },
+      "_id": "la9esgl0h9b2p21ypd727u"
+    },
+    {
+      "reqid": "FSM-013",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Sensor shall always satisfy (senstate = sen_transition_state & request & activeMode) => SENSTATE = sen_nominal_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "senstate",
+          "sen_transition_state",
+          "request",
+          "activeMode",
+          "SENSTATE",
+          "sen_nominal_state"
+        ],
+        "component_name": "FSM_Sensor",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(( senstate = sen_transition_state & request & activeMode ) => SENSTATE = sen_nominal_state)",
+        "responseTextRange": [
+          24,
+          119
+        ],
+        "diagramVariables": "Response = <b><i>(( senstate = sen_transition_state & request & activeMode ) => SENSTATE = sen_nominal_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( senstate = sen_transition_state & request & activeMode ) => SENSTATE = sen_nominal_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( senstate = sen_transition_state & request & activeMode ) => SENSTATE = sen_nominal_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "post_condition_unexp_ft": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "post_condition_unexp_pctl": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "post_condition_SMV_pt": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "post_condition_SMV_ft": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "post_condition_MLTL_ft": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "post_condition_PRISM_pctl": "((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "ft": "(LAST V ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))",
+        "pt": "(H ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))",
+        "pctl": "(P>=1[(G ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))])",
+        "ptExpanded": "(H ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))",
+        "CoCoSpecCode": "H(((((senstate = sen_transition_state) and request) and activeMode) => (SENSTATE = sen_nominal_state)))",
+        "ftExpanded": "(LAST V ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))",
+        "pctlExpanded": "(P>=1[(G ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))])",
+        "ftInfAUExpanded": "(G ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((senstate = sen_transition_state) & request) & activeMode) -> (SENSTATE = sen_nominal_state))",
+        "R2U2Code": "((((senstate == sen_transition_state) && request) && activeMode) -> (SENSTATE == sen_nominal_state))",
+        "component": "FSM_Sensor"
+      },
+      "_id": "veu2n8fip21i9evcl2oxl"
+    },
+    {
+      "reqid": "FSM-011v2",
+      "parent_reqid": "",
+      "project": "LM_requirements",
+      "rationale": "",
+      "fulltext": "FSM_Sensor shall always satisfy (senstate = sen_nominal_state & !request & !limits) => SENSTATE = sen_transition_state",
+      "status": "",
+      "semantics": {
+        "type": "nasa",
+        "scope": {
+          "type": "null"
+        },
+        "condition": "null",
+        "probability": "null",
+        "timing": "always",
+        "response": "satisfaction",
+        "variables": [
+          "senstate",
+          "sen_nominal_state",
+          "request",
+          "limits",
+          "SENSTATE",
+          "sen_transition_state"
+        ],
+        "component_name": "FSM_Sensor",
+        "componentTextRange": [
+          0,
+          9
+        ],
+        "timingTextRange": [
+          17,
+          22
+        ],
+        "post_condition": "(( senstate = sen_nominal_state & ! request & ! limits ) => SENSTATE = sen_transition_state)",
+        "responseTextRange": [
+          24,
+          117
+        ],
+        "diagramVariables": "Response = <b><i>(( senstate = sen_nominal_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b>.",
+        "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( senstate = sen_nominal_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( senstate = sen_nominal_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+        "scope_mode_pt": "BAD_PT",
+        "scope_mode_ft": "BAD_FT",
+        "post_condition_unexp_pt": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_ft": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_unexp_pctl": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_pt": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_SMV_ft": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_MLTL_ft": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "post_condition_PRISM_pctl": "((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "ft": "(LAST V ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "pt": "(H ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "pctl": "(P>=1[(G ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))])",
+        "ptExpanded": "(H ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "CoCoSpecCode": "H(((((senstate = sen_nominal_state) and not (request)) and not (limits)) => (SENSTATE = sen_transition_state)))",
+        "ftExpanded": "(LAST V ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "pctlExpanded": "(P>=1[(G ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))])",
+        "ftInfAUExpanded": "(G ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+        "mltlExpanded": "(G[0,M] p0)",
+        "WESTMapping": "p0: ((((senstate = sen_nominal_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+        "R2U2Code": "((((senstate == sen_nominal_state) && (! request)) && (! limits)) -> (SENSTATE == sen_transition_state))",
+        "component": "FSM_Sensor"
+      },
+      "_id": "vxxzjr6ppfhp4xmxt0duj"
+    }
+  ],
+  "variables": [
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "SENSTATE",
+      "idType": "Output",
+      "dataType": "double",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "7vgqa3hr67ajrc4c3qkvdb",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "activeMode",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "aiis31srmem3hlxzb92o65",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "limits",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "iafwmixgw75x3gfcvbtt7",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "request",
+      "idType": "Input",
+      "dataType": "boolean",
+      "variableType": "data",
+      "modeldoc": false,
+      "modeldoc_id": "mn52irxdi6sm1ui77hvos",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "sen_fault_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "68oy3exl3096m3kzr643t",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "sen_nominal_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "kp7oeu6zr7yp92ix87t7j",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "sen_transition_state",
+      "idType": "Internal",
+      "dataType": "double",
+      "variableType": "state_value",
+      "modeldoc": false,
+      "modeldoc_id": "qdahzajfcobjoc65if2r7g",
+      "completed": true
+    },
+    {
+      "component_name": "FSM_Sensor",
+      "variable_name": "senstate",
+      "idType": "Input",
+      "dataType": "double",
+      "variableType": "state",
+      "modeldoc": false,
+      "modeldoc_id": "18rzwao5qkhih614l6srgs",
+      "completed": true
+    }
+  ]
+}

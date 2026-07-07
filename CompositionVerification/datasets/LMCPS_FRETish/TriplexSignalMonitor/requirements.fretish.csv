@@ -1,0 +1,7 @@
+reqid,component,project,fulltext
+TSM-004,TriplexSignalMonitor,LM_requirements,"TriplexSignalMonitor shall always satisfy (single_fail_reported & (((!(absReal(ia - ib) > Tlevel) & (absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & !(absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & (absReal(ib - ic) > Tlevel) & !(absReal(ia - ic) > Tlevel))) & preInt(0,PC) <= PCLimit & PC > 0) => set_val = preReal(0.0,set_val))"
+TSM-001,TriplexSignalMonitor,LM_requirements,"TriplexSignalMonitor shall always satisfy ((preBool(true, no_fail) & (((!((absReal(ia - ib) > Tlevel)) & (absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & !(absReal(ib - ic) > Tlevel) & (absReal(ia - ic) > Tlevel)) | ((absReal(ia - ib) > Tlevel) & (absReal(ib - ic) > Tlevel) & !(absReal(ia - ic) > Tlevel))) & preInt(0, PC) > PCLimit)) => single_fail_reported)"
+TSM-003b,TriplexSignalMonitor,LM_requirements,TriplexSignalMonitor shall always satisfy FC =2 =>  set_val = 0.5 * (ia +ic)
+TSM-003c,TriplexSignalMonitor,LM_requirements,TriplexSignalMonitor shall always satisfy FC =4 => set_val = 0.5 * (ib +ic)
+TSM-002,TriplexSignalMonitor,LM_requirements,TriplexSignalMonitor  shall  always  satisfy  (no_fail => (set_val = mid_value))
+TSM-003a,TriplexSignalMonitor,LM_requirements,TriplexSignalMonitor shall always satisfy FC =1 => set_val = 0.5 * (ia +ib)

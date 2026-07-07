@@ -1,0 +1,14 @@
+component,requirements,nasa_components,nasa_max_size,nasa_avg_size,ours_groups,ours_max_size,ours_avg_size,ours_edges,ours_data_edges,ours_state_edges,ours_shared_target_edges,ours_state_variables
+Autopilot,9,4,4,2.25,4,4,2.25,32,0,0,32,0
+EB,3,2,2,1.5,2,2,1.5,22,0,0,22,0
+Euler,20,1,20,20,6,15,3.33,108,0,0,108,0
+FSM,3,1,3,3,1,3,3,6,0,0,6,0
+FSM_Autopilot,12,1,12,12,1,12,12,254,0,0,254,0
+FSM_Sensor,6,1,6,6,1,6,6,68,0,0,68,0
+NLGuidance,7,7,1,1,7,1,1,0,0,0,0,0
+NN,5,1,5,5,3,3,1.67,6,0,0,6,0
+Regulator,10,5,2,2,10,1,1,0,0,0,0,0
+RollAutopilot,8,2,6,4,2,6,4,24,0,0,24,0
+SWIM,3,2,2,1.5,2,2,1.5,2,0,0,2,0
+TriplexSignalMonitor,6,1,6,6,1,6,6,32,0,0,32,0
+Tustin_Integrator,5,1,5,5,1,5,5,32,0,0,32,0

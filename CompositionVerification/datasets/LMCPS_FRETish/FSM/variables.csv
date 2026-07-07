@@ -1,0 +1,7 @@
+component,variable_name,idType,dataType,variableType
+FSM,apfail,Input,boolean,data
+FSM,autopilot,Internal,boolean,data
+FSM,limits,Input,boolean,data
+FSM,pullup,Output,boolean,data
+FSM,standby,Input,boolean,state
+FSM,supported,Input,boolean,data

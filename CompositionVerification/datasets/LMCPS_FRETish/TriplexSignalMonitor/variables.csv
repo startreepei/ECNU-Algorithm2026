@@ -1,0 +1,12 @@
+component,variable_name,idType,dataType,variableType
+TriplexSignalMonitor,FC,Output,int32,data
+TriplexSignalMonitor,PC,Output,int32,data
+TriplexSignalMonitor,PCLimit,Input,int32,data
+TriplexSignalMonitor,Tlevel,Input,double,data
+TriplexSignalMonitor,ia,Input,double,data
+TriplexSignalMonitor,ib,Input,double,data
+TriplexSignalMonitor,ic,Input,double,data
+TriplexSignalMonitor,mid_value,Internal,double,data
+TriplexSignalMonitor,no_fail,Internal,boolean,data
+TriplexSignalMonitor,set_val,Output,double,data
+TriplexSignalMonitor,single_fail_reported,Internal,boolean,data
